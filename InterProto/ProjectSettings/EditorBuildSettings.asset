@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/cena texte.unity
-    guid: eedcc2315d3850a46825f8d3fe53db37
+    path: Assets/scena/Prot.unity
+    guid: fe60bde1fff590b4d8e5d96a8571d67a
+  - enabled: 1
+    path: Assets/scena/CenaInterna.unity
+    guid: 37b0ac2740345be47a1878fbaf2a7dcd
