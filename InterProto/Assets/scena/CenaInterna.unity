@@ -533,7 +533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ecd058417721fb4b9a46caf44fc243b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelInteraction: {fileID: 0}
   ItemIcon: {fileID: 134615812}
+  Player: {fileID: 0}
 --- !u!1 &1779281582
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -661,8 +663,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -220, y: 69}
-  m_SizeDelta: {x: -475.8, y: -171.1}
+  m_AnchoredPosition: {x: -264.9, y: 103.5}
+  m_SizeDelta: {x: -565.5, y: -240.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898724295
 MonoBehaviour:
@@ -727,6 +729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e33d4be389da1a49b1b9f16155303b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PanelInteraction: {fileID: 0}
   NextCene: prot
   setPos: {x: 6.7, y: -3}
 --- !u!50 &2020786066

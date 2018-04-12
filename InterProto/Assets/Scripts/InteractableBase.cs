@@ -5,19 +5,17 @@ using UnityEngine;
 public class InteractableBase : MonoBehaviour {
 
    protected bool interactTime; // indica quando o item esta interativo
+   static public bool ClickOnObject;
+
+    public GameObject PanelInteraction;
 
     // funçao que checa o clique no objeto
     private void OnMouseDown()
     {
-        StartCoroutine("CheckPlayer");
+        ClickOnObject = true;
+        PanelInteraction.SetActive(true);
     }
 
-    // funçao que mantem o item interativel por serto tempo
-    IEnumerator CheckPlayer()
-    {
-        interactTime = true;
-        yield return new WaitForSeconds(5);
-        interactTime = false;
-    }
+  
 
 }
