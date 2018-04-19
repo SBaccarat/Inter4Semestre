@@ -9,6 +9,7 @@ public class CliclToMove : MonoBehaviour {
     public Rigidbody2D rgb; // fisicas do corpo do personagem
     public float Speed = 5; // velocidade de movimentaçao
     public static int Direçao;   // direçao em que o personagem esta andando
+    private bool _movedFinguer;
 
 
     private void Start()
@@ -19,17 +20,44 @@ public class CliclToMove : MonoBehaviour {
 
     private void Update()
     {
+        rgb.velocity = new Vector2(Speed * Direçao, rgb.velocity.y);
+#if UNITY_EDITOR
         Debug.Log(InteractableBase.ClickOnObject);
         Debug.Log(Direçao);
         // aplica as forças vetorias no objeto
-        rgb.velocity = new Vector2(Speed * Direçao, rgb.velocity.y);
+        
 
         // checa o input para realizar a movimentaçao e salva a posiçao do click
-        if (Input.GetMouseButton(0)&&!InteractableBase.ClickOnObject)
+        
+        if (Input.GetMouseButtonUp(0)&&!InteractableBase.ClickOnObject)
         {
             newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             inComing = true;
+            
         }
+#endif
+#if PLATFORM_ANDROID
+        if (Input.touchCount == 1)
+        {
+            if (Input.GetTouch(0).phase == TouchPhase.Began && !InteractableBase.ClickOnObject)
+            {
+                _movedFinguer = false;
+            }
+            if (Input.GetTouch(0).phase == TouchPhase.Moved && !InteractableBase.ClickOnObject)
+            {
+                _movedFinguer = true;
+            }
+            if (Input.GetTouch(0).phase == TouchPhase.Ended && !InteractableBase.ClickOnObject)
+            {
+                if (!_movedFinguer)
+                {
+                    newPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                    inComing = true;
+                }
+            }
+        }
+        
+#endif
 
         // realiza o movimento baseado na posiçao do click
 
