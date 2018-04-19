@@ -4,24 +4,37 @@ using UnityEngine;
 
 public class ObjectClickDetection : MonoBehaviour {
 
+    public enum Objects {Nothing,Door,Item}
+    public static Objects ActualObject;
+
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if(Physics.Raycast(ray,out hit, 100.0f))
+        if (Input.GetMouseButtonDown(0))
         {
-            if(hit.transform != null)
+            RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.up, 0);
+            if (hit)
             {
-                print("mizeravi");
+                Debug.Log(ActualObject);
+            }
+            if(hit.collider.gameObject.tag == "Item")
+            {
+                ActualObject = Objects.Item;
+            }
+            if (hit.collider.gameObject.tag == "Door")
+            {
+                ActualObject = Objects.Door;
+            }
+            if (!hit)
+            {
+                ActualObject = Objects.Nothing;
             }
         }
-
 	}
 }
