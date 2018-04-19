@@ -328,6 +328,7 @@ GameObject:
   - component: {fileID: 291134234}
   - component: {fileID: 291134233}
   - component: {fileID: 291134232}
+  - component: {fileID: 291134237}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -405,6 +406,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &291134237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 291134231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47507c44aa351664e95f7aa3a4a2fd2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &649671265
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +820,7 @@ GameObject:
   - component: {fileID: 1198420602}
   m_Layer: 0
   m_Name: item
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1038,7 +1050,7 @@ GameObject:
   - component: {fileID: 1470749210}
   m_Layer: 0
   m_Name: Door
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1154,7 +1166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e33d4be389da1a49b1b9f16155303b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PanelInteraction: {fileID: 0}
   NextCene: CenaInterna
   setPos: {x: -6.5, y: -3}
 --- !u!1 &1517754032
