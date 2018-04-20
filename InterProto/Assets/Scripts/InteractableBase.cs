@@ -12,10 +12,17 @@ public class InteractableBase : MonoBehaviour {
     // funçao que checa o clique no objeto
     private void OnMouseDown()
     {
-        ClickOnObject = true;
-        PanelInteraction.SetActive(true);
+        StartCoroutine(OpenInteractUI());
     }
 
-  
+    IEnumerator OpenInteractUI()
+    {
+        ClickOnObject = true;
+        PanelInteraction.SetActive(true);
+        yield return new WaitForSeconds(5);
+        ClickOnObject = false;
+        PanelInteraction.SetActive(false);
+        Debug.Log("Nao importa");
+    }
 
 }
