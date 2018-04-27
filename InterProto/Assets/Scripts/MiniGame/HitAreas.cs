@@ -10,32 +10,30 @@ public class HitAreas : MonoBehaviour
 	[SerializeField] private Vector3 _limitScale;
 	[SerializeField] private float _time;
 
-	private bool _left;
+
 	// Use this for initialization
 	private void Awake()
 	{
-		transform.DOScale(4f, 5 - _time);
+		Invoke("ChangePosition",2);
 	}
 
 	private void ChangePosition()
 	{
-		var randonXposi = Random.Range(-2, 2);
-		var randonyposi = Random.Range(-2.3f, 2.3f);
-		if(!_left)
-		transform.position = _posiLeft + new Vector2(randonXposi,randonyposi);
-		else
-		transform.position = _posiRight + new Vector2(randonXposi,randonyposi);		
-		transform.DOScale(15,0);
-		transform.DOScale(4f, 5 - _time);
+		var randTime = Random.Range(0, 1.5f);
+		var randonXposi = Random.Range(-7.5f, 7.5f);
+		var randonyposi = Random.Range(-2.3f, 3.5f);
+		
+		transform.position = new Vector2(randonXposi, randonyposi);
+		
+		transform.GetComponent<SpriteRenderer>().DOFade(1, 0);
+		
+		var anima =transform.GetComponent<SpriteRenderer>().DOFade(0, 3);
+		anima.SetDelay(randTime);
+		anima.OnComplete (ChangePosition);
 	}
 
 	// Update is called once per frame
-	void Update () {
-		if(transform.localScale==_limitScale)
-		{
-			ChangePosition();
-			_time += 0.2f;
-			_left=!_left;
-		}
+	void Update()
+	{
 	}
 }

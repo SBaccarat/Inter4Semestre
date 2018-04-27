@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Item
   - Door
+  - amarelo
+  - vermelho
+  - verde
+  - branco
+  - azul
   layers:
   - Default
   - TransparentFX
