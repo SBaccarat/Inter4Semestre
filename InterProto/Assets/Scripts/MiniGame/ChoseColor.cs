@@ -25,7 +25,7 @@ public class ChoseColor : MonoBehaviour
 	public void ActiveColor()
 	{
 		var cores = GetChildren(this.gameObject);
-		var index= (int) Random.Range(0, 4);
+		var index= Random.Range(0, cores.Length);
 		cores[index].gameObject.SetActive(true);
 	}
 }
