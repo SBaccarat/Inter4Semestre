@@ -7,7 +7,7 @@ public class InteractableBase : MonoBehaviour {
    protected bool interactTime; // indica quando o item esta interativo
    static public bool ClickOnObject;
 
-    public GameObject PanelInteraction;
+   public GameObject PanelInteraction;
 
     // funçao que checa o clique no objeto
     private void OnMouseDown()
@@ -19,10 +19,9 @@ public class InteractableBase : MonoBehaviour {
     {
         ClickOnObject = true;
         PanelInteraction.SetActive(true);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         ClickOnObject = false;
         PanelInteraction.SetActive(false);
-        Debug.Log("Nao importa");
     }
 
 }

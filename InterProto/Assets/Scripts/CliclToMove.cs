@@ -20,21 +20,19 @@ public class CliclToMove : MonoBehaviour {
 
     private void Update()
     {
-        rgb.velocity = new Vector2(Speed * Direçao, rgb.velocity.y);
-#if UNITY_EDITOR
-        Debug.Log(InteractableBase.ClickOnObject);
-        Debug.Log(Direçao);
         // aplica as forças vetorias no objeto
-        
+        rgb.velocity = new Vector2(Speed * Direçao, rgb.velocity.y);
+
+#if UNITY_EDITOR
 
         // checa o input para realizar a movimentaçao e salva a posiçao do click
-        
         if (Input.GetMouseButtonUp(0)&&!InteractableBase.ClickOnObject)
         {
             newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             inComing = true;
             
         }
+
 #endif
 #if PLATFORM_ANDROID
         if (Input.touchCount == 1)

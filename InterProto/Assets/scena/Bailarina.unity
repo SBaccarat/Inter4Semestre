@@ -215,7 +215,7 @@ Prefab:
     - target: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
         type: 2}
@@ -260,27 +260,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3db9cc08ee4d76b498899813188f3d48, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &378597229 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1030147602070430, guid: a262e26aaaceaed499ffa664cc48dc33,
-    type: 2}
-  m_PrefabInternal: {fileID: 638035728}
---- !u!114 &378597234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 378597229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c41a91203a79a96498c87483c126183e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Amarelo: 0
-  Vermelho: 0
-  Verde: 0
-  Branco: 1
-  Azul: 0
 --- !u!1001 &599252629
 Prefab:
   m_ObjectHideFlags: 0
@@ -336,7 +315,7 @@ Prefab:
     - target: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
         type: 2}
@@ -556,27 +535,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &856735880 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1083782872897886, guid: c88d162b4cc8ce64aba494334c3bdc40,
-    type: 2}
-  m_PrefabInternal: {fileID: 929452147}
---- !u!114 &856735885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 856735880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c41a91203a79a96498c87483c126183e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Amarelo: 0
-  Vermelho: 0
-  Verde: 0
-  Branco: 0
-  Azul: 1
 --- !u!1001 &929452147
 Prefab:
   m_ObjectHideFlags: 0
@@ -679,7 +637,7 @@ Prefab:
     - target: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
         type: 2}
@@ -896,27 +854,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecad18ca4c6bdd242a219c01b3ff1991, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1494892293 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1320203468057310, guid: 5a022e0077eb58d408ef9e9a6e17e4e5,
-    type: 2}
-  m_PrefabInternal: {fileID: 691530465}
---- !u!114 &1494892298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1494892293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c41a91203a79a96498c87483c126183e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Amarelo: 0
-  Vermelho: 1
-  Verde: 0
-  Branco: 0
-  Azul: 0
 --- !u!1 &1604385993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,27 +943,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1637110693 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1513698342718098, guid: ecad18ca4c6bdd242a219c01b3ff1991,
-    type: 2}
-  m_PrefabInternal: {fileID: 1460956759}
---- !u!114 &1637110698
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1637110693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c41a91203a79a96498c87483c126183e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Amarelo: 0
-  Vermelho: 0
-  Verde: 1
-  Branco: 0
-  Azul: 0
 --- !u!1001 &1785116993
 Prefab:
   m_ObjectHideFlags: 0
@@ -1082,7 +998,7 @@ Prefab:
     - target: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
         type: 2}
@@ -1206,7 +1122,7 @@ Prefab:
     - target: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -15
       objectReference: {fileID: 0}
     - target: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
         type: 2}
@@ -1369,24 +1285,3 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224084291723091800, guid: 3db9cc08ee4d76b498899813188f3d48,
     type: 2}
   m_PrefabInternal: {fileID: 295827415}
---- !u!1 &2058899906 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1047406198649304, guid: 5845b86addee11c4ab94ea17140f3480,
-    type: 2}
-  m_PrefabInternal: {fileID: 62897228}
---- !u!114 &2058899911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2058899906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c41a91203a79a96498c87483c126183e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Amarelo: 1
-  Vermelho: 0
-  Verde: 0
-  Branco: 0
-  Azul: 0
