@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ChoseColor : MonoBehaviour
 {
-	private GameObject[] _cores;
+	private static GameObject[] _cores;
 	private void Awake()
 	{
 		ActiveColor();
@@ -25,7 +25,47 @@ public class ChoseColor : MonoBehaviour
 	public void ActiveColor()
 	{
 		var cores = GetChildren(this.gameObject);
-		var index= (int) Random.Range(0, 4);
+		var index= Random.Range(0, cores.Length); 
 		cores[index].gameObject.SetActive(true);
+		_cores = cores;
+	}
+
+	protected static void CheckHit(string colorClicked)
+	{
+		
+		switch (colorClicked)
+		{
+				case "bola amarela":
+					if (_cores[0].activeSelf)
+						_cores[0].transform.parent.gameObject.SetActive(false);
+					else
+					return;
+					break;
+				case "bola azul":
+					if (_cores[1].activeSelf)
+						_cores[1].transform.parent.gameObject.SetActive(false);
+					else
+						return;
+					break;
+				case "bola branca":
+					if (_cores[2].activeSelf)
+						_cores[2].transform.parent.gameObject.SetActive(false);
+					else
+						return;
+					break;
+				case "bola vermelha":
+					if (_cores[3].activeSelf)
+						_cores[3].transform.parent.gameObject.SetActive(false);
+					else
+						return;
+					break;
+				case "bola verde":
+					if (_cores[4].activeSelf)
+						_cores[4].transform.parent.gameObject.SetActive(false);
+					else
+						return;
+					break;
+					
+		}
 	}
 }

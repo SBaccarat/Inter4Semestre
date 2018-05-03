@@ -4,10 +4,8 @@ using System.Runtime.InteropServices;
 using DG.Tweening;
 using UnityEngine;
 
-public class HitAreas : MonoBehaviour
+public class HitAreas : ChoseColor
 {
-	[SerializeField] private Vector2 _posiLeft, _posiRight;
-	[SerializeField] private Vector3 _limitScale;
 	[SerializeField] private float _time;
 
 
@@ -27,7 +25,7 @@ public class HitAreas : MonoBehaviour
 		
 		transform.GetComponent<SpriteRenderer>().DOFade(1, 0);
 		
-		var anima =transform.GetComponent<SpriteRenderer>().DOFade(0, 3);
+		var anima =transform.GetComponent<SpriteRenderer>().DOFade(0, _time);
 		anima.SetDelay(randTime);
 		anima.OnComplete (ChangePosition);
 	}
@@ -35,5 +33,21 @@ public class HitAreas : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
+		//If the left mouse button is clicked.
+		if (Input.GetMouseButtonDown(0))
+		{
+			//Get the mouse position on the screen and send a raycast into the game world from that position.
+			Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+
+			//If something was hit, the RaycastHit2D.collider will not be null.
+			if (hit.collider != null)
+			{
+				hit.collider.transform.localPosition = Vector2.right*100;
+				Debug.Log(hit.collider.name);
+				CheckHit(hit.collider.name);
+				
+			}
+		}
 	}
 }
