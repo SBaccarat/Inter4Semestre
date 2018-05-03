@@ -18,11 +18,18 @@ public class HitAreas : MonoBehaviour
 	private void ChangePosition()
 	{
 		var randTime = Random.Range(0, 1.5f);
-		var randonXposi = Random.Range(-7.5f, 7.5f);
+		var randSide = Random.Range(0,10);
 		var randonyposi = Random.Range(-2.3f, 3.5f);
-		
-		transform.position = new Vector2(randonXposi, randonyposi);
-		
+		if (randSide >5 )
+		{
+			var randonXposi = Random.Range(-7.5f,-2.5f);
+			transform.position = new Vector2(randonXposi, randonyposi);
+		}
+		else
+		{
+			var randonXposi = Random.Range(2.5f, 7.5f);
+			transform.position = new Vector2(randonXposi, randonyposi);
+		}
 		transform.GetComponent<SpriteRenderer>().DOFade(1, 0);
 		
 		var anima =transform.GetComponent<SpriteRenderer>().DOFade(0, _time);
