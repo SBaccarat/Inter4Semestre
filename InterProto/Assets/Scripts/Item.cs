@@ -5,16 +5,66 @@ using UnityEngine;
 public class Item : InteractableBase {
 
 
-    public GameObject ItemIcon; //icone do feedback por ter pego o item
     public GameObject Player;
+    public enum Items { RedBox, GreenBox }
+    public Items WhatIten;
+    enum States {Avaliable,Piked,Used}
+    States ItemState;
     bool PlayerInComeToPick;
 
-    private void Update()
-    { 
-        // checa se o item esta pego ou n. se em uma cena exite um item que ja foi pego, ele é destruido
-        if (!Persistence.itemAvailable)
+    private void Start()
+    {
+      if(WhatIten == Items.RedBox)
         {
-            ItemIcon.SetActive(true);
+            if (Persistence.redBoxStatus == 0)
+                ItemState = States.Avaliable;
+            if (Persistence.redBoxStatus == 1)
+                ItemState = States.Piked;
+            if (Persistence.redBoxStatus == 2)
+                ItemState = States.Used;
+        }else
+        if (WhatIten == Items.GreenBox)
+        {
+            if (Persistence.greenBoxStatus == 0)
+                ItemState = States.Avaliable;
+            if (Persistence.greenBoxStatus == 1)
+                ItemState = States.Piked;
+            if (Persistence.greenBoxStatus == 2)
+                ItemState = States.Used;
+        }
+    }
+
+    private void Update()
+    {
+        switch (WhatIten)
+        {
+            case Items.RedBox:
+                switch (ItemState)
+                {
+                    case States.Avaliable:
+                        Persistence.redBoxStatus = 0;
+                        break;
+                    case States.Piked:
+                        Persistence.redBoxStatus = 1;
+                        break;
+                }
+                break;
+            case Items.GreenBox:
+                switch (ItemState)
+                {
+                    case States.Avaliable:
+                        Persistence.greenBoxStatus = 0;
+                        break;
+                    case States.Piked:
+                        Persistence.greenBoxStatus = 1;
+                        break;
+                }
+                break;
+        }
+
+        // checa se o item esta pego ou n. se em uma cena exite um item que ja foi pego, ele é destruido
+        if (ItemState != States.Avaliable)
+        {
             Destroy(gameObject);
         }
 
@@ -39,7 +89,7 @@ public class Item : InteractableBase {
     void Interaction()
     {
         // muda o status do item para pego
-        Persistence.itemAvailable = false;
+        ItemState = States.Piked;
     }
 
    public void BottonVer()

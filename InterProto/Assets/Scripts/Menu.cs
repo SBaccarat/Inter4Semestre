@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour {
 
@@ -17,9 +16,7 @@ public class Menu : MonoBehaviour {
         Persistence.ReturnValues();
         if (Persistence.Scene == 1)
             SceneToLoad = "Prot";
-        else if (Persistence.Scene == 2)
-            SceneToLoad = "CenaInterna";
-        SceneManager.LoadScene(SceneToLoad);
+        MyLoad.Loading(SceneToLoad);
     }
 
     public void LoadGame()
@@ -28,6 +25,6 @@ public class Menu : MonoBehaviour {
             SceneToLoad = "Prot";
         else if (Persistence.Scene == 2)
             SceneToLoad = "CenaInterna";
-        SceneManager.LoadScene(SceneToLoad);
+        MyLoad.Loading(SceneToLoad);
     }
 }
