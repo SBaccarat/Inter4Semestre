@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class ChoseColor : MonoBehaviour
 {
-	private static GameObject[] _cores;
+	private GameObject _senha;
+	private GameObject[] _cores;
 	private void Awake()
 	{
 		ActiveColor();
 	}
 
-	public static GameObject[] GetChildren(GameObject parent)
+	private GameObject[] GetChildren(GameObject parent)
 	{
 		List<GameObject> items = new List<GameObject>();
 		for (int i = 0; i < parent.transform.childCount; i++)
@@ -22,15 +23,20 @@ public class ChoseColor : MonoBehaviour
 		return items.ToArray();
 	}
 
-	public void ActiveColor()
+	private void ActiveColor()
 	{
-		var cores = GetChildren(this.gameObject);
-		var index= Random.Range(0, cores.Length); 
-		cores[index].gameObject.SetActive(true);
-		_cores = cores;
+		_cores = GetChildren(this.gameObject);
+		var index= Random.Range(0, _cores.Length); 
+		_cores[index].gameObject.SetActive(true);
+		_senha = _cores[index];
 	}
 
-	protected static void CheckHit(string colorClicked)
+	public GameObject GetCores()
+	{
+		return _senha;
+	}
+/*
+	private void CheckHit(string colorClicked)
 	{
 		
 		switch (colorClicked)
@@ -68,4 +74,5 @@ public class ChoseColor : MonoBehaviour
 					
 		}
 	}
+	*/
 }

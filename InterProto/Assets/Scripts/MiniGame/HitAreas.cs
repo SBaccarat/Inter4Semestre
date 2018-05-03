@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using DG.Tweening;
 using UnityEngine;
 
-public class HitAreas : ChoseColor
+public class HitAreas : MonoBehaviour
 {
 	[SerializeField] private float _time;
 
@@ -45,7 +45,7 @@ public class HitAreas : ChoseColor
 			{
 				hit.collider.transform.localPosition = Vector2.right*100;
 				Debug.Log(hit.collider.name);
-				CheckHit(hit.collider.name);
+				MiniGameManeger.Instace.CheckColor(hit.collider.name);
 				
 			}
 		}
