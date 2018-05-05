@@ -93,6 +93,8 @@
     <Compile Include="Assets\Scripts\ButtonItem.cs" />
     <Compile Include="Assets\Scripts\ButtoUseItem.cs" />
     <Compile Include="Assets\Scripts\CliclToMove.cs" />
+    <Compile Include="Assets\Scripts\DialogInteract.cs" />
+    <Compile Include="Assets\Scripts\DialogSystem.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\FollowCam.cs" />
     <Compile Include="Assets\Scripts\InteractableBase.cs" />

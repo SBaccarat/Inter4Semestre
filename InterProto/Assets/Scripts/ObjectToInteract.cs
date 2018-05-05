@@ -12,7 +12,7 @@ public class ObjectToInteract : InteractableBase {
     public Items WhatIten;
     enum States { Avaliable, Piked, Used }
     States ItemState;
-    bool PlayerInComeToPick;
+
 
     private void Start()
     {
