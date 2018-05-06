@@ -9,6 +9,7 @@ public class DialogInteract : InteractableBase{
     public DialogSystem ScriptDialogo;
     public string[] thisSentences;
     bool PlayerInCome;
+    public bool CharacterFirst;
     
 
     private void Update()
@@ -50,6 +51,15 @@ public class DialogInteract : InteractableBase{
         PlayerInCome = true;
         ClickOnObject = false;
         PanelInteraction.SetActive(false);
+        if (CharacterFirst)
+        {
+            ScriptDialogo.Character.SetActive(true);
+            ScriptDialogo.OtherPerson.SetActive(false);
+        }else
+        {
+            ScriptDialogo.Character.SetActive(false);
+            ScriptDialogo.OtherPerson.SetActive(true);
+        }
     }
 
     public void Setsentences()

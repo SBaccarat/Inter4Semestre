@@ -2445,6 +2445,7 @@ MonoBehaviour:
   - "tomate cru \xE9 vitamina, como tu e tua prima "
   - tomate cru vai na salada, e o teu cu vai pra mossada
   - "vai se fuder crian\xE7a escrota"
+  CharacterFirst: 1
 --- !u!1 &1169471883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,11 +3675,11 @@ MonoBehaviour:
   DialogCanvas: {fileID: 799530084}
   ScriptDialogo: {fileID: 1457232046}
   thisSentences:
-  - '...'
-  - 'e ai muleque ta afim de uns doce diferenciado '
-  - ta querendo que eu chupe seu pau?? viado..
-  - olha aqui, um boquete e um copo de agua n se nega a ninguem
-  - mais tarde nois conversa...
+  - 'e ai garota ta afim de uns doce diferenciado '
+  - 'aquele picole com a ponta vermelha que n derrete na boca '
+  - esse mesmo hehehehehe
+  - 'vc ja me deu semana passada, eu n gostei mto '
+  CharacterFirst: 0
 --- !u!61 &1927047568
 BoxCollider2D:
   m_ObjectHideFlags: 0
