@@ -107,9 +107,9 @@
     <Compile Include="Assets\Scripts\MiniGame\HitAreas.cs" />
     <Compile Include="Assets\Scripts\ObjectClickDetection.cs" />
     <Compile Include="Assets\Scripts\ObjectToInteract.cs" />
+    <Compile Include="Assets\Scripts\PauseScript.cs" />
     <Compile Include="Assets\Scripts\Persistence.cs" />
     <Compile Include="Assets\Scripts\PlayerPrefsX.cs" />
-    <Compile Include="Assets\Scripts\SaveGameTrigger.cs" />
     <Compile Include="Assets\Scripts\SetActualScene.cs" />
     <Compile Include="Assets\Scripts\SimpleInvertory.cs" />
   </ItemGroup>

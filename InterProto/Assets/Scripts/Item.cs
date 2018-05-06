@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Item : InteractableBase {
 
@@ -11,6 +12,12 @@ public class Item : InteractableBase {
     enum States {Avaliable,Piked,Used}
     States ItemState;
     bool PlayerInComeToPick;
+
+    public string SeeText;
+    float typingSpeed = 0.04f;
+    public GameObject PanelSee;
+    public GameObject ButtonSee;
+    public Text MainText;
 
     private void Start()
     {
@@ -45,6 +52,12 @@ public class Item : InteractableBase {
 
     private void Update()
     {
+
+        if (MainText.text == SeeText)
+        {
+            ButtonSee.SetActive(true);
+        }
+
         switch (WhatIten)
         {
             case Items.RedBox:
@@ -114,7 +127,8 @@ public class Item : InteractableBase {
 
    public void BottonVer()
     {
-        Debug.Log("É uma caixa vermelha");
+        StartCoroutine(Type());
+        PanelSee.SetActive(true);
         ClickOnObject = false;
         PanelInteraction.SetActive(false);
     }
@@ -126,4 +140,18 @@ public class Item : InteractableBase {
         PanelInteraction.SetActive(false);
     }
 
+    public IEnumerator Type()
+    {
+        foreach (char letter in SeeText.ToCharArray())
+        {
+            MainText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+
+        }
+    }
+    public void SeeClose()
+    {
+        MainText.text = "";
+        PanelSee.SetActive(false);
+    }
 }

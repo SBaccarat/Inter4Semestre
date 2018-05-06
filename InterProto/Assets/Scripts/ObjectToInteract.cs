@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectToInteract : InteractableBase {
 
@@ -10,6 +11,14 @@ public class ObjectToInteract : InteractableBase {
     bool PlayerInCome;
     public enum Items { RedBox, GreenBox,cigarro}
     public Items WhatIten;
+
+    public string preSeeText;
+    public string posSeeText;
+    float typingSpeed = 0.04f;
+    public GameObject PanelSee;
+    public GameObject ButtonSee;
+    public Text MainText;
+
     [HideInInspector] public enum States { Avaliable, Piked, Used }
     [HideInInspector] public States ItemState;
 
@@ -51,6 +60,10 @@ public class ObjectToInteract : InteractableBase {
 
     void Update()
     {
+        if (MainText.text == posSeeText || MainText.text == preSeeText)
+        {
+           ButtonSee.SetActive(true);
+        }
         switch (WhatIten)
         {
             case Items.RedBox:
@@ -114,12 +127,13 @@ public class ObjectToInteract : InteractableBase {
     public void BottonVer()
     {
         if (ItemState != States.Used){
-            Debug.Log("É uma pedra vermelha, parece ter um epaço para encaixar algo...");
+            StartCoroutine(Type(preSeeText));
         }else
         if(ItemState == States.Used) {
-            Debug.Log("Agora é uma bela pedra azul!");
+            StartCoroutine(Type(posSeeText));
         }
 
+        PanelSee.SetActive(true);
         ClickOnObject = false;
         PanelInteraction.SetActive(false);
     }
@@ -131,4 +145,19 @@ public class ObjectToInteract : InteractableBase {
         PanelInteraction.SetActive(false);
     }
 
+    public IEnumerator Type(string text)
+    {
+        foreach (char letter in text.ToCharArray())
+        {
+            MainText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+
+        }
+    }
+
+    public void SeeClose()
+    {
+        MainText.text = "";
+        PanelSee.SetActive (false);
+    }
 }
