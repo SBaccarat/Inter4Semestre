@@ -750,6 +750,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RedBoxIcon: {fileID: 1568009348}
   GreenBoxIcon: {fileID: 2066911609}
+  cigarroIcon: {fileID: 471082544}
 --- !u!1 &275425120
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,7 +1127,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 0.69483, y: 0.53976977}
+  m_Size: {x: 0.69483, y: 0.64665806}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1138,14 +1139,83 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 411664599}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.276, y: 0.09899999, z: -0.13961723}
+  m_LocalPosition: {x: 0.276, y: 0.12092, z: -0.13961723}
   m_LocalScale: {x: 0.7269649, y: 0.41008386, z: 1}
   m_Children:
   - {fileID: 1483147717}
   - {fileID: 977928430}
+  - {fileID: 1831179862}
   m_Father: {fileID: 1158326267}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &471082544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 471082545}
+  - component: {fileID: 471082547}
+  - component: {fileID: 471082546}
+  m_Layer: 5
+  m_Name: cigarrroIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &471082545
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471082544}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 649671266}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -57.80005, y: -27.560028}
+  m_SizeDelta: {x: 21.625, y: 33.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &471082546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471082544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &471082547
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 471082544}
 --- !u!1 &555378248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1487,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 471082545}
   - {fileID: 1568009349}
   - {fileID: 2066911610}
   m_Father: {fileID: 1646775644}
@@ -1850,7 +1921,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 977928429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.061, z: 0}
+  m_LocalPosition: {x: -0, y: 0.006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1364406509}
@@ -2337,6 +2408,7 @@ GameObject:
   - component: {fileID: 1158326266}
   - component: {fileID: 1158326264}
   - component: {fileID: 1158326268}
+  - component: {fileID: 1158326265}
   m_Layer: 0
   m_Name: Person
   m_TagString: Untagged
@@ -2369,6 +2441,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.17214683, y: 0.20989992}
   m_EdgeRadius: 0
+--- !u!114 &1158326265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1158326263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d897de69a1bc02e4aad802470fd7ac64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PanelInteraction: {fileID: 411664599}
+  UseItemButton: {fileID: 1831179861}
+  Player: {fileID: 267767299}
+  WhatIten: 2
+  ItemState: 0
 --- !u!212 &1158326266
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2440,12 +2528,17 @@ MonoBehaviour:
   Player: {fileID: 267767299}
   DialogCanvas: {fileID: 799530084}
   ScriptDialogo: {fileID: 1457232046}
-  thisSentences:
-  - toma no seu cu
-  - "tomate cru \xE9 vitamina, como tu e tua prima "
-  - tomate cru vai na salada, e o teu cu vai pra mossada
-  - "vai se fuder crian\xE7a escrota"
-  CharacterFirst: 1
+  objectToInteractScript: {fileID: 1158326265}
+  "pr\xE9InteractionSentences":
+  - I garota, eu quero um cigarro
+  - 'Foda-se '
+  - Se vc pegar eu dou 10 no inter
+  - "Blz.. Mas s\xF3 pq isso \xE9 um prototipo..."
+  "p\xF3sInteractionSentences":
+  - Como eu amo cigarro... <3
+  WhatWish: 0
+  quest: 1
+  CharacterFirst: 0
 --- !u!1 &1169471883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,7 +3117,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1483147716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0017, y: 0.1152, z: 0}
+  m_LocalPosition: {x: 0.0017, y: 0.18219998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 213692349}
@@ -3213,7 +3306,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 649671266}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3253,6 +3346,89 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1568009348}
+--- !u!1 &1597975147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1597975148}
+  - component: {fileID: 1597975150}
+  - component: {fileID: 1597975149}
+  m_Layer: 0
+  m_Name: PegarText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1597975148
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597975147}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.226, y: 0.037, z: -0.22000001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1831179862}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!102 &1597975149
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597975147}
+  m_Text: entregar cigarro
+  m_OffsetZ: 0
+  m_CharacterSize: 0.05
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190080
+--- !u!23 &1597975150
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597975147}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &1646775640
 GameObject:
   m_ObjectHideFlags: 0
@@ -3443,6 +3619,118 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1670734775}
+--- !u!1 &1831179861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1831179862}
+  - component: {fileID: 1831179865}
+  - component: {fileID: 1831179864}
+  - component: {fileID: 1831179863}
+  m_Layer: 0
+  m_Name: entrgar cigarro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1831179862
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831179861}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.165, z: 0}
+  m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1.0000006}
+  m_Children:
+  - {fileID: 1597975148}
+  m_Father: {fileID: 411664601}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1831179863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831179861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212714391b776b44d8c16a6b6a9e5799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToInteractScript: {fileID: 1158326265}
+  WhatButton: 1
+--- !u!61 &1831179864
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831179861}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0013991892, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.48410773, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 2
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.45383823, y: 0.13320392}
+  m_EdgeRadius: 0
+--- !u!212 &1831179865
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831179861}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 0.48410773, y: 0.16}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &1852539785
 GameObject:
   m_ObjectHideFlags: 0
@@ -3674,12 +3962,20 @@ MonoBehaviour:
   Player: {fileID: 267767299}
   DialogCanvas: {fileID: 799530084}
   ScriptDialogo: {fileID: 1457232046}
-  thisSentences:
-  - 'e ai garota ta afim de uns doce diferenciado '
-  - 'aquele picole com a ponta vermelha que n derrete na boca '
-  - esse mesmo hehehehehe
-  - 'vc ja me deu semana passada, eu n gostei mto '
-  CharacterFirst: 0
+  objectToInteractScript: {fileID: 0}
+  "pr\xE9InteractionSentences":
+  - e ai tio, o q se ta fazendo ?
+  - "um ritual secreto, mas pra funcionar eu precizo de alguma crian\xE7a muito corajosa"
+  - bem, vc acaba de encontrar uma!!!
+  - "Perfeito!! eu precizo que vc va at\xE9 a outra sala e deixe as pedras azuis "
+  - "pra j\xE1 tio !!"
+  "p\xF3sInteractionSentences":
+  - 'Pronto ja Fiz '
+  - 'Hahahaha! agora meu plano do mal sera comcretizado '
+  - Eita... Deu ruim...
+  WhatWish: 1
+  quest: 0
+  CharacterFirst: 1
 --- !u!61 &1927047568
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4002,7 +4298,7 @@ RectTransform:
   m_LocalScale: {x: 0.9999999, y: 0.9999999, z: 0.9999999}
   m_Children: []
   m_Father: {fileID: 649671266}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

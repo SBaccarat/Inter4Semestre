@@ -2,15 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogInteract : InteractableBase{
+public class DialogInteract : InteractableBase {
 
     public GameObject Player;
     public GameObject DialogCanvas;
     public DialogSystem ScriptDialogo;
-    public string[] thisSentences;
+    [HideInInspector] public ObjectToInteract objectToInteractScript;
+    public string[] préInteractionSentences;
+    public string[] pósInteractionSentences;
+    public enum Wish { NeedAItem, NeedAQuest, NeedNothing }
+    public Wish WhatWish;
+    public enum Quest {TurnBlueTheRock,Nothing}
+    public Quest quest;
     bool PlayerInCome;
     public bool CharacterFirst;
-    
+
+    private void Start()
+    {
+        objectToInteractScript = GetComponent<ObjectToInteract>();
+
+    }
 
     private void Update()
     {
@@ -55,7 +66,7 @@ public class DialogInteract : InteractableBase{
         {
             ScriptDialogo.Character.SetActive(true);
             ScriptDialogo.OtherPerson.SetActive(false);
-        }else
+        } else
         {
             ScriptDialogo.Character.SetActive(false);
             ScriptDialogo.OtherPerson.SetActive(true);
@@ -64,7 +75,32 @@ public class DialogInteract : InteractableBase{
 
     public void Setsentences()
     {
-        ScriptDialogo.sentences = thisSentences;
+        if (WhatWish == Wish.NeedAItem)
+        {
+            if (objectToInteractScript.ItemState != ObjectToInteract.States.Used)
+            {
+                ScriptDialogo.sentences = préInteractionSentences;
+            } else
+            if (objectToInteractScript.ItemState == ObjectToInteract.States.Used)
+            {
+                ScriptDialogo.sentences = pósInteractionSentences;
+            }
+        } else
+        if (WhatWish == Wish.NeedAQuest)
+        {
+            if(quest == Quest.TurnBlueTheRock)
+            {
+                if(Persistence.redBoxStatus != 2 || Persistence.greenBoxStatus != 2)
+                {
+                    ScriptDialogo.sentences = préInteractionSentences;
+                }
+                else
+                {
+                    ScriptDialogo.sentences = pósInteractionSentences;
+                }
+            }
+        }
+  
         ScriptDialogo.Index = 0;
     }
 

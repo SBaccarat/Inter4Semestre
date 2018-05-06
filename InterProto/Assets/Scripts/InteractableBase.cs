@@ -13,6 +13,7 @@ public class InteractableBase : MonoBehaviour {
     // funçao que checa o clique no objeto
     private void OnMouseDown()
     {
+        if(!ClickOnObject)
         StartCoroutine(OpenInteractUI());
     }
 

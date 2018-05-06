@@ -8,10 +8,10 @@ public class ObjectToInteract : InteractableBase {
     public GameObject Player;
     private SpriteRenderer sprite;
     bool PlayerInCome;
-    public enum Items { RedBox, GreenBox }
+    public enum Items { RedBox, GreenBox,cigarro}
     public Items WhatIten;
-    enum States { Avaliable, Piked, Used }
-    States ItemState;
+    [HideInInspector] public enum States { Avaliable, Piked, Used }
+    [HideInInspector] public States ItemState;
 
 
     private void Start()
@@ -37,6 +37,16 @@ public class ObjectToInteract : InteractableBase {
             if (Persistence.greenBoxStatus == 2)
                 ItemState = States.Used;
         }
+        else
+        if (WhatIten == Items.cigarro)
+        {
+            if (Persistence.cigarroStatus == 0)
+                ItemState = States.Avaliable;
+            if (Persistence.cigarroStatus == 1)
+                ItemState = States.Piked;
+            if (Persistence.cigarroStatus == 2)
+                ItemState = States.Used;
+        }
     }
 
     void Update()
@@ -55,6 +65,14 @@ public class ObjectToInteract : InteractableBase {
                 {
                     case States.Used:
                         Persistence.greenBoxStatus = 2;
+                        break;
+                }
+                break;
+            case Items.cigarro:
+                switch (ItemState)
+                {
+                    case States.Used:
+                        Persistence.cigarroStatus = 2;
                         break;
                 }
                 break;

@@ -6,7 +6,7 @@ public class Item : InteractableBase {
 
 
     public GameObject Player;
-    public enum Items { RedBox, GreenBox }
+    public enum Items { RedBox, GreenBox,cigarro }
     public Items WhatIten;
     enum States {Avaliable,Piked,Used}
     States ItemState;
@@ -30,6 +30,15 @@ public class Item : InteractableBase {
             if (Persistence.greenBoxStatus == 1)
                 ItemState = States.Piked;
             if (Persistence.greenBoxStatus == 2)
+                ItemState = States.Used;
+        } else 
+        if(WhatIten == Items.cigarro)
+        {
+            if (Persistence.cigarroStatus == 0)
+                ItemState = States.Avaliable;
+            if (Persistence.cigarroStatus == 1)
+                ItemState = States.Piked;
+            if (Persistence.cigarroStatus == 2)
                 ItemState = States.Used;
         }
     }
@@ -57,6 +66,17 @@ public class Item : InteractableBase {
                         break;
                     case States.Piked:
                         Persistence.greenBoxStatus = 1;
+                        break;
+                }
+                break;
+            case Items.cigarro:
+                switch (ItemState)
+                {
+                    case States.Avaliable:
+                        Persistence.cigarroStatus = 0;
+                        break;
+                    case States.Piked:
+                        Persistence.cigarroStatus = 1;
                         break;
                 }
                 break;

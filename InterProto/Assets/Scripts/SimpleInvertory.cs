@@ -6,6 +6,7 @@ public class SimpleInvertory : MonoBehaviour {
 
     public GameObject RedBoxIcon; //icone do feedback por ter pego o item
     public GameObject GreenBoxIcon; //icone do feedback por ter pego o item
+    public GameObject cigarroIcon; // icone do cigarro
 
     void Update () {
         
@@ -24,6 +25,15 @@ public class SimpleInvertory : MonoBehaviour {
         }else
         {
             GreenBoxIcon.SetActive(false);
+        }
+
+        if (Persistence.cigarroStatus == 1)
+        {
+            cigarroIcon.SetActive(true);
+        }
+        else
+        {
+           cigarroIcon.SetActive(false);
         }
     }
 }

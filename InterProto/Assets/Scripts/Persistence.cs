@@ -9,6 +9,8 @@ public static class Persistence {
     public static int greenBoxStatus=0;
     //redBox
     public static int redBoxStatus=0;
+    //cigarro
+    public static int cigarroStatus = 0;
 
     //valor da prox faze para o loading 
     public static string NextLevel;
@@ -26,6 +28,7 @@ public static class Persistence {
         PlayerPrefs.SetInt("Scene", Scene);
         PlayerPrefs.SetInt("greenBoxStatus", greenBoxStatus);
         PlayerPrefs.SetInt("redBoxStatus", redBoxStatus);
+        PlayerPrefs.SetInt("cigarroStatus", cigarroStatus);
         PlayerPrefsX.SetVector2("newPos", NewPos);
         PlayerPrefs.Save();
         Debug.Log("Caraio");
@@ -38,6 +41,7 @@ public static class Persistence {
         NewPos = PlayerPrefsX.GetVector2("newPos", NewPos);
         redBoxStatus = PlayerPrefs.GetInt("redBoxStatus");
         greenBoxStatus = PlayerPrefs.GetInt("greenBoxStatus");
+        cigarroStatus = PlayerPrefs.GetInt("cigarroStatus");
     }
 
     public static void ReturnValues()
@@ -47,6 +51,7 @@ public static class Persistence {
         NewPos = new Vector2(0, -3);
         greenBoxStatus = 0;
         redBoxStatus = 0;
+        cigarroStatus = 0;
     }
 
 }
