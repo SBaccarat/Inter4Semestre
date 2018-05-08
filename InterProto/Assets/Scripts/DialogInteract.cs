@@ -22,11 +22,11 @@ public class DialogInteract : InteractableBase
     bool PlayerInCome;//player se movendo   
     public bool CharacterFirst;// é true quando o personagem comessa falando em um dialogo 
 
-    public string preSeeText;
-    public string posSeeText;
-    float typingSpeed = 0.04f;
-    public GameObject PanelSee;
-    public GameObject ButtonSee;
+    public string preSeeText;//texto da primeira fala do npc
+    public string posSeeText;//texto da segunda fala do npc
+    float typingSpeed = 0.04f; //velocidade de digitaçao
+    public GameObject PanelSee;//painel da opçao ver 
+    public GameObject ButtonExitSee;//botao pra pular de texto
     public Text MainText;
 
     private void Start()
@@ -40,7 +40,7 @@ public class DialogInteract : InteractableBase
         //verifica se os itens foram escritos para ativar o botao de passar a frase 
         if (MainText.text == posSeeText || MainText.text == preSeeText)
         {
-            ButtonSee.SetActive(true);
+            ButtonExitSee.SetActive(true);
         }
         
     }
@@ -113,45 +113,32 @@ public class DialogInteract : InteractableBase
         if (WhatWish == Wish.NeedAItem)
         {
             if (objectToInteractScript.ItemState != ObjectToInteract.States.Used)
-            {
-                ScriptDialogo.sentences = préInteractionSentences;
-            } else
-            if (objectToInteractScript.ItemState == ObjectToInteract.States.Used)
-            {
-                ScriptDialogo.sentences = pósInteractionSentences;
-            }
-        } else
-        if (WhatWish == Wish.NeedAQuest)
+            { ScriptDialogo.sentences = préInteractionSentences;}
+            else if (objectToInteractScript.ItemState == ObjectToInteract.States.Used)
+            { ScriptDialogo.sentences = pósInteractionSentences;}
+        }
+        else if (WhatWish == Wish.NeedAQuest)
         {
             if(quest == Quest.TurnBlueTheRock)
             {
                 if(Persistence.redBoxStatus != 2 || Persistence.greenBoxStatus != 2)
-                {
-                    ScriptDialogo.sentences = préInteractionSentences;
-                }
-                else
-                {
-                    ScriptDialogo.sentences = pósInteractionSentences;
-                }
+                { ScriptDialogo.sentences = préInteractionSentences; }
+                else { ScriptDialogo.sentences = pósInteractionSentences; }
             }
-        }
-  
+        }  
         ScriptDialogo.Index = 0;
     }
 
     public IEnumerator Type(string text)//funçao que escreve o texto letra por letra 
     {
-        foreach (char letter in text.ToCharArray())
-        {
+        foreach (char letter in text.ToCharArray()){
             MainText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
-
         }
     }
 
     public void SeeClose()//funçao que desliga o texto da observaçao 
-    {
-        MainText.text = "";
+    {   MainText.text = "";
         PanelSee.SetActive(false);
         StartCoroutine(ReturToMove());
     }
