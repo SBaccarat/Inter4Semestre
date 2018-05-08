@@ -113,7 +113,7 @@ public class Item : InteractableBase {
             {
                 Interaction();
                 CliclToMove.Direçao = 0;
-                PlayerInComeToPick = false;
+                PlayerInComeToPick = false;             
             }
         }
     }
@@ -122,22 +122,21 @@ public class Item : InteractableBase {
     void Interaction()
     {
         // muda o status do item para pego
-        ItemState = States.Piked;
+        ItemState = States.Piked;      
     }
 
-   public void BottonVer()
+    public void BottonVer()
     {
         StartCoroutine(Type());
         PanelSee.SetActive(true);
-        ClickOnObject = false;
         PanelInteraction.SetActive(false);
     }
 
     public void ButtonPegar()
     {
         PlayerInComeToPick = true;
-        ClickOnObject = false;
         PanelInteraction.SetActive(false);
+        ClickOnObject = false;
     }
 
     public IEnumerator Type()
@@ -153,5 +152,6 @@ public class Item : InteractableBase {
     {
         MainText.text = "";
         PanelSee.SetActive(false);
+        StartCoroutine(ReturToMove());
     }
 }

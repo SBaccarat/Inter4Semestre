@@ -124,7 +124,7 @@ public class ObjectToInteract : InteractableBase {
         ItemState = States.Used;
     }
 
-    public void BottonVer()
+    public void ButtonVer()
     {
         if (ItemState != States.Used){
             StartCoroutine(Type(preSeeText));
@@ -134,15 +134,14 @@ public class ObjectToInteract : InteractableBase {
         }
 
         PanelSee.SetActive(true);
-        ClickOnObject = false;
         PanelInteraction.SetActive(false);
     }
 
     public void ButtonUsar()
     {
         PlayerInCome = true;
-        ClickOnObject = false;
         PanelInteraction.SetActive(false);
+        ClickOnObject = false;
     }
 
     public IEnumerator Type(string text)
@@ -159,5 +158,6 @@ public class ObjectToInteract : InteractableBase {
     {
         MainText.text = "";
         PanelSee.SetActive (false);
+        StartCoroutine(ReturToMove());
     }
 }

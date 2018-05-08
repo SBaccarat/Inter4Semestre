@@ -148,10 +148,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 13585386}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212714391b776b44d8c16a6b6a9e5799, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dfc0de604bbf454ea4e58f0f6cdc083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInteractScript: {fileID: 1801890612}
+  ObjectScript: {fileID: 1801890612}
   WhatButton: 0
 --- !u!61 &13585389
 BoxCollider2D:
@@ -951,10 +951,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 383290107}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212714391b776b44d8c16a6b6a9e5799, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dfc0de604bbf454ea4e58f0f6cdc083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInteractScript: {fileID: 1801890612}
+  ObjectScript: {fileID: 1801890612}
   WhatButton: 1
 --- !u!61 &383290109
 BoxCollider2D:
@@ -1518,10 +1518,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 709691171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212714391b776b44d8c16a6b6a9e5799, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dfc0de604bbf454ea4e58f0f6cdc083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInteractScript: {fileID: 1881497327}
+  ObjectScript: {fileID: 1881497327}
   WhatButton: 0
 --- !u!61 &709691174
 BoxCollider2D:
@@ -3438,10 +3438,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1857981023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212714391b776b44d8c16a6b6a9e5799, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dfc0de604bbf454ea4e58f0f6cdc083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInteractScript: {fileID: 1881497327}
+  ObjectScript: {fileID: 1881497327}
   WhatButton: 1
 --- !u!61 &1857981025
 BoxCollider2D:

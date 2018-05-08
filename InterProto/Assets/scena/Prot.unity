@@ -642,6 +642,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1080458677}
+        m_MethodName: SeeClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1158326265}
+        m_MethodName: SeeClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1927047567}
+        m_MethodName: SeeClose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!222 &172198942
@@ -3265,6 +3298,11 @@ MonoBehaviour:
   WhatWish: 0
   quest: 1
   CharacterFirst: 0
+  preSeeText: ' '
+  posSeeText: ' '
+  PanelSee: {fileID: 234404226}
+  ButtonSee: {fileID: 172198939}
+  MainText: {fileID: 282126666}
 --- !u!1 &1169471883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3936,10 +3974,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1483147716}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212714391b776b44d8c16a6b6a9e5799, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dfc0de604bbf454ea4e58f0f6cdc083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInteractScript: {fileID: 1158326265}
+  ObjectScript: {fileID: 1158326265}
   WhatButton: 0
 --- !u!61 &1483147719
 BoxCollider2D:
@@ -4586,10 +4624,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1831179861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212714391b776b44d8c16a6b6a9e5799, type: 3}
+  m_Script: {fileID: 11500000, guid: 5dfc0de604bbf454ea4e58f0f6cdc083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToInteractScript: {fileID: 1158326265}
+  ObjectScript: {fileID: 1158326265}
   WhatButton: 1
 --- !u!61 &1831179864
 BoxCollider2D:
@@ -4977,6 +5015,11 @@ MonoBehaviour:
   WhatWish: 1
   quest: 0
   CharacterFirst: 1
+  preSeeText: 'Um velho bizarro, parece tramar um plano '
+  posSeeText: 'Um velho gargalhando de forma maligna '
+  PanelSee: {fileID: 234404226}
+  ButtonSee: {fileID: 172198939}
+  MainText: {fileID: 282126666}
 --- !u!61 &1927047568
 BoxCollider2D:
   m_ObjectHideFlags: 0

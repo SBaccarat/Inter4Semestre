@@ -26,4 +26,10 @@ public class InteractableBase : MonoBehaviour {
         PanelInteraction.SetActive(false);
     }
 
+    static public IEnumerator ReturToMove()
+    {
+        yield return new WaitForSeconds(0.04f);
+        ClickOnObject = false;
+    }
+
 }

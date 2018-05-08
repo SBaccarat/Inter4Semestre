@@ -48,7 +48,7 @@ public class DialogSystem : MonoBehaviour {
         } else
         {
             MainText.text = "";
-            InteractableBase.ClickOnObject = false;
+            StartCoroutine(InteractableBase.ReturToMove());
             NextButton.SetActive(false);
             Everything.SetActive(false);
             callOneTime = true;
