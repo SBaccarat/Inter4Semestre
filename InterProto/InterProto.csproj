@@ -90,9 +90,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ButtonItem.cs" />
-    <Compile Include="Assets\Scripts\ButtoUseItem.cs" />
+    <Compile Include="Assets\Scripts\ButtonItemENpc.cs" />
+    <Compile Include="Assets\Scripts\ButtonUseItem.cs" />
     <Compile Include="Assets\Scripts\CliclToMove.cs" />
+    <Compile Include="Assets\Scripts\DialogInteract.cs" />
+    <Compile Include="Assets\Scripts\DialogSystem.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\FollowCam.cs" />
     <Compile Include="Assets\Scripts\InteractableBase.cs" />
@@ -106,9 +108,9 @@
     <Compile Include="Assets\Scripts\MiniGame\MiniGameManeger.cs" />
     <Compile Include="Assets\Scripts\ObjectClickDetection.cs" />
     <Compile Include="Assets\Scripts\ObjectToInteract.cs" />
+    <Compile Include="Assets\Scripts\PauseScript.cs" />
     <Compile Include="Assets\Scripts\Persistence.cs" />
     <Compile Include="Assets\Scripts\PlayerPrefsX.cs" />
-    <Compile Include="Assets\Scripts\SaveGameTrigger.cs" />
     <Compile Include="Assets\Scripts\SetActualScene.cs" />
     <Compile Include="Assets\Scripts\SimpleInvertory.cs" />
   </ItemGroup>

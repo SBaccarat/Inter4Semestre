@@ -1,16 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Item : InteractableBase {
 
 
     public GameObject Player;
-    public enum Items { RedBox, GreenBox }
+    public enum Items { RedBox, GreenBox,cigarro }
     public Items WhatIten;
     enum States {Avaliable,Piked,Used}
     States ItemState;
     bool PlayerInComeToPick;
+
+    public string SeeText;
+    float typingSpeed = 0.04f;
+    public GameObject PanelSee;
+    public GameObject ButtonSee;
+    public Text MainText;
 
     private void Start()
     {
@@ -31,11 +38,26 @@ public class Item : InteractableBase {
                 ItemState = States.Piked;
             if (Persistence.greenBoxStatus == 2)
                 ItemState = States.Used;
+        } else 
+        if(WhatIten == Items.cigarro)
+        {
+            if (Persistence.cigarroStatus == 0)
+                ItemState = States.Avaliable;
+            if (Persistence.cigarroStatus == 1)
+                ItemState = States.Piked;
+            if (Persistence.cigarroStatus == 2)
+                ItemState = States.Used;
         }
     }
 
     private void Update()
     {
+
+        if (MainText.text == SeeText)
+        {
+            ButtonSee.SetActive(true);
+        }
+
         switch (WhatIten)
         {
             case Items.RedBox:
@@ -60,6 +82,17 @@ public class Item : InteractableBase {
                         break;
                 }
                 break;
+            case Items.cigarro:
+                switch (ItemState)
+                {
+                    case States.Avaliable:
+                        Persistence.cigarroStatus = 0;
+                        break;
+                    case States.Piked:
+                        Persistence.cigarroStatus = 1;
+                        break;
+                }
+                break;
         }
 
         // checa se o item esta pego ou n. se em uma cena exite um item que ja foi pego, ele é destruido
@@ -80,7 +113,7 @@ public class Item : InteractableBase {
             {
                 Interaction();
                 CliclToMove.Direçao = 0;
-                PlayerInComeToPick = false;
+                PlayerInComeToPick = false;             
             }
         }
     }
@@ -89,21 +122,36 @@ public class Item : InteractableBase {
     void Interaction()
     {
         // muda o status do item para pego
-        ItemState = States.Piked;
+        ItemState = States.Piked;      
     }
 
-   public void BottonVer()
+    public void BottonVer()
     {
-        Debug.Log("É uma caixa vermelha");
-        ClickOnObject = false;
+        StartCoroutine(Type());
+        PanelSee.SetActive(true);
         PanelInteraction.SetActive(false);
     }
 
     public void ButtonPegar()
     {
         PlayerInComeToPick = true;
-        ClickOnObject = false;
         PanelInteraction.SetActive(false);
+        ClickOnObject = false;
     }
 
+    public IEnumerator Type()
+    {
+        foreach (char letter in SeeText.ToCharArray())
+        {
+            MainText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+
+        }
+    }
+    public void SeeClose()
+    {
+        MainText.text = "";
+        PanelSee.SetActive(false);
+        StartCoroutine(ReturToMove());
+    }
 }
