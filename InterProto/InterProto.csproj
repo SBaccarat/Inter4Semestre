@@ -90,7 +90,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ButtonItem.cs" />
+    <Compile Include="Assets\Scripts\ButtonItemENpc.cs" />
     <Compile Include="Assets\Scripts\ButtoUseItem.cs" />
     <Compile Include="Assets\Scripts\CliclToMove.cs" />
     <Compile Include="Assets\Scripts\DialogInteract.cs" />

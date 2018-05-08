@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class DialogInteract : InteractableBase {
 
-    public GameObject Player;
-    public GameObject DialogCanvas;
-    public DialogSystem ScriptDialogo;
-    [HideInInspector] public ObjectToInteract objectToInteractScript;
-    public string[] préInteractionSentences;
-    public string[] pósInteractionSentences;
+    public GameObject Player;//salva o objeto do player 
+    public GameObject DialogCanvas;//salva o objeto do canvas responsavel por conter as UIs do dialogo 
+    public DialogSystem ScriptDialogo;//salva o script responsavel pelos dialogos 
+    [HideInInspector] public ObjectToInteract objectToInteractScript;//savla o game script do objeto interativel(que tbm pode estar em um npc)
+    public string[] préInteractionSentences;//dialogos que ele tem antes de vc fazer o q ele quer 
+    public string[] pósInteractionSentences;//dialogos dps que vc ja fez o que ele quer 
     public enum Wish { NeedAItem, NeedAQuest, NeedNothing }
     public Wish WhatWish;
     public enum Quest {TurnBlueTheRock,Nothing}
