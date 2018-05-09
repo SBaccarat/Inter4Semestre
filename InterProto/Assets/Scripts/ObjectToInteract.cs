@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectToInteract : InteractableBase {
 
@@ -8,11 +9,19 @@ public class ObjectToInteract : InteractableBase {
     public GameObject Player;
     private SpriteRenderer sprite;
     bool PlayerInCome;
-    public enum Items { RedBox, GreenBox }
+    public enum Items { RedBox, GreenBox,cigarro}
     public Items WhatIten;
-    enum States { Avaliable, Piked, Used }
-    States ItemState;
-    bool PlayerInComeToPick;
+
+    public string preSeeText;
+    public string posSeeText;
+    float typingSpeed = 0.04f;
+    public GameObject PanelSee;
+    public GameObject ButtonSee;
+    public Text MainText;
+
+    [HideInInspector] public enum States { Avaliable, Piked, Used }
+    [HideInInspector] public States ItemState;
+
 
     private void Start()
     {
@@ -37,10 +46,24 @@ public class ObjectToInteract : InteractableBase {
             if (Persistence.greenBoxStatus == 2)
                 ItemState = States.Used;
         }
+        else
+        if (WhatIten == Items.cigarro)
+        {
+            if (Persistence.cigarroStatus == 0)
+                ItemState = States.Avaliable;
+            if (Persistence.cigarroStatus == 1)
+                ItemState = States.Piked;
+            if (Persistence.cigarroStatus == 2)
+                ItemState = States.Used;
+        }
     }
 
     void Update()
     {
+        if (MainText.text == posSeeText || MainText.text == preSeeText)
+        {
+           ButtonSee.SetActive(true);
+        }
         switch (WhatIten)
         {
             case Items.RedBox:
@@ -55,6 +78,14 @@ public class ObjectToInteract : InteractableBase {
                 {
                     case States.Used:
                         Persistence.greenBoxStatus = 2;
+                        break;
+                }
+                break;
+            case Items.cigarro:
+                switch (ItemState)
+                {
+                    case States.Used:
+                        Persistence.cigarroStatus = 2;
                         break;
                 }
                 break;
@@ -93,24 +124,40 @@ public class ObjectToInteract : InteractableBase {
         ItemState = States.Used;
     }
 
-    public void BottonVer()
+    public void ButtonVer()
     {
         if (ItemState != States.Used){
-            Debug.Log("É uma pedra vermelha, parece ter um epaço para encaixar algo...");
+            StartCoroutine(Type(preSeeText));
         }else
         if(ItemState == States.Used) {
-            Debug.Log("Agora é uma bela pedra azul!");
+            StartCoroutine(Type(posSeeText));
         }
 
-        ClickOnObject = false;
+        PanelSee.SetActive(true);
         PanelInteraction.SetActive(false);
     }
 
     public void ButtonUsar()
     {
         PlayerInCome = true;
-        ClickOnObject = false;
         PanelInteraction.SetActive(false);
+        ClickOnObject = false;
     }
 
+    public IEnumerator Type(string text)
+    {
+        foreach (char letter in text.ToCharArray())
+        {
+            MainText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
+
+        }
+    }
+
+    public void SeeClose()
+    {
+        MainText.text = "";
+        PanelSee.SetActive (false);
+        StartCoroutine(ReturToMove());
+    }
 }
