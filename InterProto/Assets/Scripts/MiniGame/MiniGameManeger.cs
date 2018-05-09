@@ -19,8 +19,18 @@ public class MiniGameManeger : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+		/*
+		var array = _senha.ToArray();
+		if (_senha.Capacity<1)
+		{
+			for (int i = 0; i > array.Length; i++)
+			{
+				array[i].transform.parent.gameObject.SetActive(true);
+			}
+		}
+		*/
 	}
 
 	public void CheckColor(string colorClicked)
@@ -28,9 +38,8 @@ public class MiniGameManeger : MonoBehaviour
 		var array = _senha.ToArray();
 		if (array[0].name.Equals(colorClicked))
 		{
-			array[0].transform.parent.gameObject.SetActive(false);	
-			_senha.RemoveAt(0);
-		}
-		
+			array[0].transform.parent.gameObject.SetActive(false);
+			_senha.RemoveAt(0);	
+		}	
 	}
 }
