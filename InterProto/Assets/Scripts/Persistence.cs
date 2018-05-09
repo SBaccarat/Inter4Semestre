@@ -19,7 +19,7 @@ public static class Persistence {
     public static int Scene = 1;
 
     //salva a posiçao em que o player vai aparecer
-    public static Vector2 NewPos = new Vector2(0, -3);
+    public static Vector2 NewPos = new Vector2(29, -4);
 
 
     //comando para dar SaveGame
@@ -48,7 +48,7 @@ public static class Persistence {
     {
         PlayerPrefs.DeleteAll();
         Scene = 1;
-        NewPos = new Vector2(0, -3);
+        NewPos = new Vector2(29, -4);
         greenBoxStatus = 0;
         redBoxStatus = 0;
         cigarroStatus = 0;

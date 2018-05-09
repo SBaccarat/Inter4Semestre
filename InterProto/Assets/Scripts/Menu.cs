@@ -17,6 +17,7 @@ public class Menu : MonoBehaviour {
         if (Persistence.Scene == 1)
             SceneToLoad = "Prot";
         MyLoad.Loading(SceneToLoad);
+        InteractableBase.ClickOnObject = false;
     }
 
     public void LoadGame()
@@ -26,5 +27,6 @@ public class Menu : MonoBehaviour {
         else if (Persistence.Scene == 2)
             SceneToLoad = "CenaInterna";
         MyLoad.Loading(SceneToLoad);
+        InteractableBase.ClickOnObject = false;
     }
 }
