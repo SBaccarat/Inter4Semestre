@@ -23,7 +23,7 @@ public class ChoseColor : MonoBehaviour
 		return items.ToArray();
 	}
 
-	private void ActiveColor()
+	public void ActiveColor()
 	{
 		_cores = GetChildren(this.gameObject);
 		var index= Random.Range(0, _cores.Length); 
@@ -35,44 +35,9 @@ public class ChoseColor : MonoBehaviour
 	{
 		return _senha;
 	}
-/*
-	private void CheckHit(string colorClicked)
+
+	private void OnEnable()
 	{
-		
-		switch (colorClicked)
-		{
-				case "bola amarela":
-					if (_cores[0].activeSelf)
-						_cores[0].transform.parent.gameObject.SetActive(false);
-					else
-					return;
-					break;
-				case "bola azul":
-					if (_cores[1].activeSelf)
-						_cores[1].transform.parent.gameObject.SetActive(false);
-					else
-						return;
-					break;
-				case "bola branca":
-					if (_cores[2].activeSelf)
-						_cores[2].transform.parent.gameObject.SetActive(false);
-					else
-						return;
-					break;
-				case "bola vermelha":
-					if (_cores[3].activeSelf)
-						_cores[3].transform.parent.gameObject.SetActive(false);
-					else
-						return;
-					break;
-				case "bola verde":
-					if (_cores[4].activeSelf)
-						_cores[4].transform.parent.gameObject.SetActive(false);
-					else
-						return;
-					break;
-					
-		}
+		ActiveColor();
 	}
-	*/
 }
