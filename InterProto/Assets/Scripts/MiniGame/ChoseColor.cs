@@ -36,8 +36,4 @@ public class ChoseColor : MonoBehaviour
 		return _senha;
 	}
 
-	private void OnEnable()
-	{
-		ActiveColor();
-	}
 }
