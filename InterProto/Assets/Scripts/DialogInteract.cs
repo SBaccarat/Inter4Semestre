@@ -128,7 +128,8 @@ public class DialogInteract : InteractableBase
                 if(Persistence.paoStatus != 2 || Persistence.toalhaStatus != 1)
                 { ScriptDialogo.sentences = préInteractionSentences;}
                 else { ScriptDialogo.sentences = pósInteractionSentences;
-                    Stair.SetActive(true);
+                    //Stair.SetActive(true);
+                    MiniGameInteract.CanPlay = true;
                 }
             }
         }  

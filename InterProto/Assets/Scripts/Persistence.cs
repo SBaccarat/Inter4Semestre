@@ -37,6 +37,7 @@ public static class Persistence {
         PlayerPrefs.SetInt("paoStatus", paoStatus);
         PlayerPrefsX.SetVector2("newPos", NewPos);
         PlayerPrefsX.SetBool("FirstDialog", DialogSystem.FirstDialog);
+        PlayerPrefsX.SetBool("canPlay", MiniGameInteract.CanPlay);
         PlayerPrefs.Save();
         Debug.Log("Caraio");
     }
@@ -51,6 +52,7 @@ public static class Persistence {
         cigarroStatus = PlayerPrefs.GetInt("cigarroStatus");
         toalhaStatus = PlayerPrefs.GetInt("toalhaStatus");
         paoStatus = PlayerPrefs.GetInt("paoStatus");
+        MiniGameInteract.CanPlay = PlayerPrefsX.GetBool("canPlay");
         DialogSystem.FirstDialog = PlayerPrefsX.GetBool("FirstDialog");
     }
 
@@ -65,6 +67,7 @@ public static class Persistence {
         toalhaStatus = 0;
         paoStatus = 0;
         DialogSystem.FirstDialog = true;
+        MiniGameInteract.CanPlay = false;
     }
 
 }

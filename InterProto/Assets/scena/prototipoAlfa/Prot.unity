@@ -399,12 +399,13 @@ Prefab:
     - target: {fileID: 114072509863716618, guid: 6a5ceec76a897cf468e8bea798eade0b,
         type: 2}
       propertyPath: "p\xF3sInteractionSentences.Array.data[1]"
-      value: Agora sim, Vem comigo entao garota..
+      value: Agora sim, mas o banheiro estourou denovo, acho que vai demorar pra arrumar.
+        Vai pra Casa brincar vai..
       objectReference: {fileID: 0}
     - target: {fileID: 114072509863716618, guid: 6a5ceec76a897cf468e8bea798eade0b,
         type: 2}
       propertyPath: "p\xF3sInteractionSentences.Array.data[2]"
-      value: pra ja !
+      value: Opa! Pra ja! Minha boneca me aguarda !!
       objectReference: {fileID: 0}
     - target: {fileID: 114072509863716618, guid: 6a5ceec76a897cf468e8bea798eade0b,
         type: 2}
@@ -981,22 +982,22 @@ Prefab:
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -216.72
+      value: -205.9
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: 66.54999
+      value: -405.9
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 3.4600067
+      value: -0.70001
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_SizeDelta.x
-      value: 829.88
+      value: -20.1
       objectReference: {fileID: 0}
     - target: {fileID: 114993471496820850, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
@@ -1041,7 +1042,7 @@ Prefab:
     - target: {fileID: 224118997507769820, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -152.44
+      value: -157.8
       objectReference: {fileID: 0}
     - target: {fileID: 224118997507769820, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
@@ -1051,7 +1052,7 @@ Prefab:
     - target: {fileID: 224118997507769820, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_SizeDelta.y
-      value: -272.72
+      value: -289.8
       objectReference: {fileID: 0}
     - target: {fileID: 1857565807955558, guid: 3301ea1caf0948744894e0f99fa11f3d, type: 2}
       propertyPath: m_IsActive
@@ -1226,23 +1227,49 @@ Prefab:
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114299386581353812, guid: 3301ea1caf0948744894e0f99fa11f3d,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114299386581353812, guid: 3301ea1caf0948744894e0f99fa11f3d,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: cd5d2702a38a890458a3a0635f525d76,
+        type: 3}
+    - target: {fileID: 1897037699951768, guid: 3301ea1caf0948744894e0f99fa11f3d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114612673189337314, guid: 3301ea1caf0948744894e0f99fa11f3d,
+        type: 2}
+      propertyPath: m_FontData.m_FontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114612673189337314, guid: 3301ea1caf0948744894e0f99fa11f3d,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: cd5d2702a38a890458a3a0635f525d76,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3301ea1caf0948744894e0f99fa11f3d, type: 2}
   m_IsPrefabParent: 0

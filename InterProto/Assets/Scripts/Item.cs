@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class Item : InteractableBase {
 
 
-    public GameObject Player;
+    
     public enum Items { RedBox, GreenBox,cigarro,Toalha,pao}
     public Items WhatIten;
     enum States {Avaliable,Piked,Used}
     States ItemState;
+
+    public GameObject Player;
     bool PlayerInComeToPick;
 
     public string SeeText;
