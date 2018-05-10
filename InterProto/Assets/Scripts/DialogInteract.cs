@@ -12,12 +12,14 @@ public class DialogInteract : InteractableBase
     public GameObject Player;//salva o objeto do player 
     public GameObject DialogCanvas;//salva o objeto do canvas responsavel por conter as UIs do dialogo 
     public DialogSystem ScriptDialogo;//salva o script responsavel pelos dialogos 
+    public GameObject ThisPerson;
+    public GameObject Stair;
     [HideInInspector] public ObjectToInteract objectToInteractScript;//savla o game script do objeto interativel(que tbm pode estar em um npc)
     public string[] préInteractionSentences;//dialogos que ele tem antes de vc fazer o q ele quer 
     public string[] pósInteractionSentences;//dialogos dps que vc ja fez o que ele quer 
     public enum Wish { NeedAItem, NeedAQuest, NeedNothing }//o que o npc espera do player       
     public Wish WhatWish;
-    public enum Quest {TurnBlueTheRock,Nothing}//caso seja uma quest, qual quest    
+    public enum Quest {ToalhaEPao,Nothing}//caso seja uma quest, qual quest    
     public Quest quest;
     bool PlayerInCome;//player se movendo   
     public bool CharacterFirst;// é true quando o personagem comessa falando em um dialogo 
@@ -42,7 +44,8 @@ public class DialogInteract : InteractableBase
         {
             ButtonExitSee.SetActive(true);
         }
-        
+       
+
     }
 
     private void FixedUpdate()
@@ -79,9 +82,9 @@ public class DialogInteract : InteractableBase
         else
        if (WhatWish == Wish.NeedAQuest)//se o sejedo do npc foi uma quest, checa se o item foi ou nao pego, e muda o dialogo do npc 
         {
-            if (quest == Quest.TurnBlueTheRock)//se a quest for x, checa se a missao foi concluida e muda o dialogo
+            if (quest == Quest.ToalhaEPao)//se a quest for x, checa se a missao foi concluida e muda o dialogo
             {
-                if (Persistence.redBoxStatus != 2 || Persistence.greenBoxStatus != 2)
+                if (Persistence.paoStatus != 2 || Persistence.toalhaStatus != 1)
                 { StartCoroutine(Type(preSeeText)); }
                 else{ StartCoroutine(Type(posSeeText)); }
             }
@@ -96,15 +99,16 @@ public class DialogInteract : InteractableBase
         Setsentences();//checa as sentenças 
         PlayerInCome = true;//player se mexe
         PanelInteraction.SetActive(false);
+        DialogSystem.OtherPerson = ThisPerson;
         //checa quem vai falar primeiro 
         if (CharacterFirst)
         {
             ScriptDialogo.Character.SetActive(true);
-            ScriptDialogo.OtherPerson.SetActive(false);
+            DialogSystem.OtherPerson.SetActive(false);
         } else
         {
             ScriptDialogo.Character.SetActive(false);
-            ScriptDialogo.OtherPerson.SetActive(true);
+            DialogSystem.OtherPerson.SetActive(true);
         }
     }
 
@@ -119,11 +123,13 @@ public class DialogInteract : InteractableBase
         }
         else if (WhatWish == Wish.NeedAQuest)
         {
-            if(quest == Quest.TurnBlueTheRock)
+            if(quest == Quest.ToalhaEPao)
             {
-                if(Persistence.redBoxStatus != 2 || Persistence.greenBoxStatus != 2)
-                { ScriptDialogo.sentences = préInteractionSentences; }
-                else { ScriptDialogo.sentences = pósInteractionSentences; }
+                if(Persistence.paoStatus != 2 || Persistence.toalhaStatus != 1)
+                { ScriptDialogo.sentences = préInteractionSentences;}
+                else { ScriptDialogo.sentences = pósInteractionSentences;
+                    Stair.SetActive(true);
+                }
             }
         }  
         ScriptDialogo.Index = 0;

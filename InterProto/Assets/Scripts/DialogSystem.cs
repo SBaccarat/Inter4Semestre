@@ -11,18 +11,33 @@ public class DialogSystem : MonoBehaviour {
     public float typingSpeed;
     public GameObject NextButton;
     public GameObject Character;
-    public GameObject OtherPerson;
+    public GameObject Mae;
+    static public GameObject OtherPerson;
     public GameObject Everything;
     bool callOneTime;
+    static public bool FirstDialog = true;
+    public Image ImageMae;
+    public Image ImageIrmao;
 
+    private void Start()
+    {
+        if (FirstDialog)
+        {
+            Everything.SetActive(true);
+            OtherPerson = Mae;
+            InteractableBase.ClickOnObject = true;
+            StartCoroutine(Type());
+            FirstDialog = false;
+        } 
+    }
 
     private void Update()
-    { 
+    {
 
         if(MainText.text == sentences[Index])
         {
             NextButton.SetActive(true);        
-        }
+        }       
 
     }
 
@@ -37,16 +52,18 @@ public class DialogSystem : MonoBehaviour {
 
     public void NextSentence()
     {
-        Character.SetActive(!Character.activeSelf);
-        OtherPerson.SetActive(!OtherPerson.activeSelf);
         NextButton.SetActive(false);
         if (Index < sentences.Length - 1)
         {
+            Character.SetActive(!Character.activeSelf);
+            OtherPerson.SetActive(!OtherPerson.activeSelf);
             Index++;
             MainText.text = "";
             StartCoroutine(Type());
         } else
         {
+            Character.SetActive(false);
+            OtherPerson.SetActive(false);
             MainText.text = "";
             StartCoroutine(InteractableBase.ReturToMove());
             NextButton.SetActive(false);

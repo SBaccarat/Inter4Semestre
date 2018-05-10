@@ -7,11 +7,19 @@ public class Door : MonoBehaviour {
     public string NextCene; //Nome da cena onde a porta vai levar 
     public Vector2 setPos; //posiçao em que o personagem vai aparecer na prox cena
     protected bool interactTime = false; // indica quando o item esta interativo
+    public bool IsStair=false;
 
     private void OnMouseDown()
     {
-        interactTime = true;
-        StartCoroutine("InteractableDoor");
+        if (!IsStair)
+        {
+            interactTime = true;
+            StartCoroutine("InteractableDoor");
+        }
+        else
+        {
+            StartCoroutine(DoorTransition());
+        }
     }
 
     //chechagem de colisao, para executar a funçao 
