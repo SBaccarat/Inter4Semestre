@@ -53,13 +53,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainText: {fileID: 0}
   sentences:
-  - 
-  - 
-  - 
-  - 
+  - "Acoorda menina! Voc\xEA sabe que tem que acordar cedo pra conseguir tomar banho
+    sem problemas..."
+  - "Ta... Tudo bem mae, ja to levantando... S\xF3 mais 5 minutinhos "
+  - "Nada disso! evanta logo, toma seu caf\xE9, pega suas coisas e me encontra la "
   Index: 0
   typingSpeed: 0.03
   NextButton: {fileID: 0}
   Character: {fileID: 0}
-  OtherPerson: {fileID: 0}
+  Mae: {fileID: 0}
   Everything: {fileID: 0}

@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/scena/Menu.unity
+    path: Assets/scena/prototipoAlfa/Menu.unity
     guid: b2ce15d06f84e1949a5bd47d50b19393
   - enabled: 1
-    path: Assets/scena/Load.unity
-    guid: ea8dc004e5f10364180a961a663911cb
-  - enabled: 1
-    path: Assets/scena/prototipo/Prot.unity
+    path: Assets/scena/prototipoAlfa/Prot.unity
     guid: 27cd56271026ebc418fa1175b4de3d8e
   - enabled: 1
-    path: Assets/scena/prototipo/CenaInterna.unity
+    path: Assets/scena/prototipoAlfa/CenaInterna.unity
     guid: ecc79e0840b1bf14990750a8cbc12178
+  - enabled: 1
+    path: Assets/scena/prototipoAlfa/Load.unity
+    guid: ea8dc004e5f10364180a961a663911cb
   - enabled: 0
     path: 
     guid: eedcc2315d3850a46825f8d3fe53db37

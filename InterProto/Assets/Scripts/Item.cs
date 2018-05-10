@@ -7,7 +7,7 @@ public class Item : InteractableBase {
 
 
     public GameObject Player;
-    public enum Items { RedBox, GreenBox,cigarro }
+    public enum Items { RedBox, GreenBox,cigarro,Toalha,pao}
     public Items WhatIten;
     enum States {Avaliable,Piked,Used}
     States ItemState;
@@ -22,32 +22,50 @@ public class Item : InteractableBase {
     private void Start()
     {
       if(WhatIten == Items.RedBox)
-        {
+      {
             if (Persistence.redBoxStatus == 0)
                 ItemState = States.Avaliable;
             if (Persistence.redBoxStatus == 1)
                 ItemState = States.Piked;
             if (Persistence.redBoxStatus == 2)
                 ItemState = States.Used;
-        }else
-        if (WhatIten == Items.GreenBox)
-        {
+      }else
+      if (WhatIten == Items.GreenBox)
+      {
             if (Persistence.greenBoxStatus == 0)
                 ItemState = States.Avaliable;
             if (Persistence.greenBoxStatus == 1)
                 ItemState = States.Piked;
             if (Persistence.greenBoxStatus == 2)
                 ItemState = States.Used;
-        } else 
-        if(WhatIten == Items.cigarro)
-        {
+      } else 
+       if(WhatIten == Items.cigarro)
+       {
             if (Persistence.cigarroStatus == 0)
                 ItemState = States.Avaliable;
             if (Persistence.cigarroStatus == 1)
                 ItemState = States.Piked;
             if (Persistence.cigarroStatus == 2)
                 ItemState = States.Used;
+       }else
+       if(WhatIten == Items.Toalha)
+       {
+            if (Persistence.toalhaStatus == 0)
+                ItemState = States.Avaliable;
+            if (Persistence.toalhaStatus == 1)
+                ItemState = States.Piked;
+            if (Persistence.toalhaStatus == 2)
+                ItemState = States.Used;
         }
+        else
+       if (WhatIten == Items.pao)
+        {
+            if (Persistence.paoStatus == 0)
+                ItemState = States.Avaliable;
+            if (Persistence.paoStatus == 2)
+                ItemState = States.Used;
+        }
+
     }
 
     private void Update()
@@ -93,6 +111,28 @@ public class Item : InteractableBase {
                         break;
                 }
                 break;
+            case Items.Toalha:
+                switch (ItemState)
+                {
+                    case States.Avaliable:
+                        Persistence.toalhaStatus = 0;
+                        break;
+                    case States.Piked:
+                        Persistence.toalhaStatus = 1;
+                        break;
+                }
+                break;
+            case Items.pao:
+                switch (ItemState)
+                {
+                    case States.Avaliable:
+                        Persistence.paoStatus = 0;
+                        break;
+                    case States.Used:
+                        Persistence.paoStatus = 2;
+                        break;
+                }
+                break;
         }
 
         // checa se o item esta pego ou n. se em uma cena exite um item que ja foi pego, ele é destruido
@@ -122,7 +162,10 @@ public class Item : InteractableBase {
     void Interaction()
     {
         // muda o status do item para pego
-        ItemState = States.Piked;      
+        if (WhatIten == Items.pao)
+            ItemState = States.Used;
+        else
+            ItemState = States.Piked;
     }
 
     public void BottonVer()
