@@ -15,7 +15,7 @@ public class DialogSystem : MonoBehaviour {
     static public GameObject OtherPerson;
     public GameObject Everything;
     bool callOneTime;
-    static bool FirstDialog = true;
+    static public bool FirstDialog = true;
     public Image ImageMae;
     public Image ImageIrmao;
 

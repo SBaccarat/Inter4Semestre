@@ -13,6 +13,7 @@ public class DialogInteract : InteractableBase
     public GameObject DialogCanvas;//salva o objeto do canvas responsavel por conter as UIs do dialogo 
     public DialogSystem ScriptDialogo;//salva o script responsavel pelos dialogos 
     public GameObject ThisPerson;
+    public GameObject Stair;
     [HideInInspector] public ObjectToInteract objectToInteractScript;//savla o game script do objeto interativel(que tbm pode estar em um npc)
     public string[] préInteractionSentences;//dialogos que ele tem antes de vc fazer o q ele quer 
     public string[] pósInteractionSentences;//dialogos dps que vc ja fez o que ele quer 
@@ -125,8 +126,10 @@ public class DialogInteract : InteractableBase
             if(quest == Quest.ToalhaEPao)
             {
                 if(Persistence.paoStatus != 2 || Persistence.toalhaStatus != 1)
-                { ScriptDialogo.sentences = préInteractionSentences; }
-                else { ScriptDialogo.sentences = pósInteractionSentences; }
+                { ScriptDialogo.sentences = préInteractionSentences;}
+                else { ScriptDialogo.sentences = pósInteractionSentences;
+                    Stair.SetActive(true);
+                }
             }
         }  
         ScriptDialogo.Index = 0;

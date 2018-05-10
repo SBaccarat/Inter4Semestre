@@ -36,6 +36,7 @@ public static class Persistence {
         PlayerPrefs.SetInt("toalhaStatus", toalhaStatus);
         PlayerPrefs.SetInt("paoStatus", paoStatus);
         PlayerPrefsX.SetVector2("newPos", NewPos);
+        PlayerPrefsX.SetBool("FirstDialog", DialogSystem.FirstDialog);
         PlayerPrefs.Save();
         Debug.Log("Caraio");
     }
@@ -50,6 +51,7 @@ public static class Persistence {
         cigarroStatus = PlayerPrefs.GetInt("cigarroStatus");
         toalhaStatus = PlayerPrefs.GetInt("toalhaStatus");
         paoStatus = PlayerPrefs.GetInt("paoStatus");
+        DialogSystem.FirstDialog = PlayerPrefsX.GetBool("FirstDialog");
     }
 
     public static void ReturnValues()
@@ -62,6 +64,7 @@ public static class Persistence {
         cigarroStatus = 0;
         toalhaStatus = 0;
         paoStatus = 0;
+        DialogSystem.FirstDialog = true;
     }
 
 }

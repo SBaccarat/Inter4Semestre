@@ -158,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1289975846899904}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.68, y: -2.829, z: -0.037}
+  m_LocalPosition: {x: -0.582, y: -2.34, z: -0.037}
   m_LocalScale: {x: 5.4219666, y: 10.03797, z: 5.4219666}
   m_Children:
   - {fileID: 4600972754882320}
@@ -395,18 +395,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0008007176, y: 0.0011954978}
+  m_Offset: {x: -0.002053149, y: -0.0011167228}
   m_SpriteTilingProperty:
     border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.16, y: 0.16}
-    newSize: {x: 0.20426369, y: 0.24107234}
+    newSize: {x: 0.25527757, y: 0.36448076}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.17214683, y: 0.20989992}
+  m_Size: {x: 0.22922422, y: 0.3440109}
   m_EdgeRadius: 0
 --- !u!61 &61488534820964094
 BoxCollider2D:
@@ -564,8 +564,8 @@ MonoBehaviour:
   UseItemButton: {fileID: 1569413143985278}
   Player: {fileID: 0}
   WhatIten: 2
-  preSeeText: Um japones, parece angustiado e triste
-  posSeeText: Um velho japones feliz fumanso seu cigarro
+  preSeeText: Meu Irmao mais velho, seu rosto estra aflito
+  posSeeText: Meu irmao esta mais calmo agora.
   PanelSee: {fileID: 0}
   ButtonSee: {fileID: 0}
   MainText: {fileID: 0}
@@ -585,14 +585,18 @@ MonoBehaviour:
   Player: {fileID: 0}
   DialogCanvas: {fileID: 0}
   ScriptDialogo: {fileID: 0}
+  ThisPerson: {fileID: 0}
   objectToInteractScript: {fileID: 114404643925381736}
   "pr\xE9InteractionSentences":
-  - I garota, eu quero um cigarro
-  - 'Foda-se '
-  - Se vc pegar eu dou 10 no inter
-  - "Blz.. Mas s\xF3 pq isso \xE9 um prototipo..."
+  - Maninha,que bom que vc acordou! A tia esqueceu o Cigarro em casa, vc pode pegar
+    pra mim ?
+  - "Serio isso? \xC9 o quarto \xE9 ali do lado "
+  - 'Ahh maninha, faz essa pra mim, por favor?? '
+  - 'Ta bom.. Ta bom .. '
   "p\xF3sInteractionSentences":
-  - Como eu amo cigarro... <3
+  - "\xC9ra esse mesmo maninha, obrigado por me trazer"
+  - "Nao \xE9 nada , mas voc\xEA me deve uma!!"
+  - kkkk Certo, certo.
   WhatWish: 0
   quest: 1
   CharacterFirst: 0
@@ -732,11 +736,11 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0.93103456, a: 1}
+  m_Color: {r: 0.11724138, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 0.20426369, y: 0.24107234}
+  m_Size: {x: 0.25527757, y: 0.36448076}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
