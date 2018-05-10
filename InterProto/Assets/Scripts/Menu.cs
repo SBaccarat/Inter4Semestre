@@ -29,4 +29,10 @@ public class Menu : MonoBehaviour {
         MyLoad.Loading(SceneToLoad);
         InteractableBase.ClickOnObject = false;
     }
+
+    public void sair() {
+
+        Application.Quit();
+        
+    }
 }

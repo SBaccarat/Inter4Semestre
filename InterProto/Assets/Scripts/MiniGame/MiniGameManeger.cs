@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MiniGameManeger : MonoBehaviour
 {
-
+    public Animator anim;
 	private List<GameObject> _senha;
 	// Use this for initialization
 	public static MiniGameManeger Instace;
 	private bool once= false;
 	void Start ()
 	{
+
 		Instace = this;
 		_senha=new List<GameObject>();
 		foreach (var choseColor in FindObjectsOfType<ChoseColor>())
@@ -28,8 +30,10 @@ public class MiniGameManeger : MonoBehaviour
 		{
 			Debug.Log("sai");
 			once = true;
-			//colocar aq para tocar a animação da baliarina dançando
-			var animTime = 300; //mude o valor para o tempo q quiser q a bailarina fique dançando;
+
+            //colocar aq para tocar a animação da baliarina dançando
+            anim.SetBool("ativado", true);
+            var animTime = 4; //mude o valor para o tempo q quiser q a bailarina fique dançando;
 			Invoke("ExitLevel",animTime);
 		}
 		
@@ -37,8 +41,8 @@ public class MiniGameManeger : MonoBehaviour
 
 	void ExitLevel()
 	{
-		//coloca aq para carregar a cena
-	}
+        SceneManager.LoadScene("EndAlfaScene");
+    }
 
 	public void CheckColor(string colorClicked)
 	{
