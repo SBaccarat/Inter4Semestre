@@ -6,55 +6,56 @@ using UnityEngine;
 
 public class HitAreas : MonoBehaviour
 {
-	[SerializeField] private float _time;
+    [SerializeField] private float _time;
 
 
-	// Use this for initialization
-	private void Awake()
-	{
-		Invoke("ChangePosition",2);
-	}
+    private void Awake()
+    {
+        Invoke("ChangePosition", 2);
+    }
 
-	private void ChangePosition()
-	{
-		var randTime = Random.Range(0, 1.5f);
-		var randSide = Random.Range(0,10);
-		var randonyposi = Random.Range(-2.3f, 3.5f);
-		if (randSide >5 )
-		{
-			var randonXposi = Random.Range(-7.5f,-2.5f);
-			transform.position = new Vector2(randonXposi, randonyposi);
-		}
-		else
-		{
-			var randonXposi = Random.Range(2.5f, 7.5f);
-			transform.position = new Vector2(randonXposi, randonyposi);
-		}
-		transform.GetComponent<SpriteRenderer>().DOFade(1, 0);
-		
-		var anima =transform.GetComponent<SpriteRenderer>().DOFade(0, _time);
-		anima.SetDelay(randTime);
-		anima.OnComplete (ChangePosition);
-	}
+    private void ChangePosition()
+    {
+        var rnd = new System.Random((gameObject.name + Time.time).GetHashCode());
 
-	// Update is called once per frame
-	void Update()
-	{
-		//If the left mouse button is clicked.
-		if (Input.GetMouseButtonDown(0))
-		{
-			//Get the mouse position on the screen and send a raycast into the game world from that position.
-			Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-			RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+        var randTime = (float) rnd.NextDouble() * 1.5f;
+        var randSide = rnd.Next(0, 100);
+        var randonyposi = (float) rnd.Next(-340, 125) / 100f;
 
-			//If something was hit, the RaycastHit2D.collider will not be null.
-			if (hit.collider != null)
-			{
-				hit.collider.transform.localPosition = Vector2.right*100;
-				Debug.Log(hit.collider.name);
-				MiniGameManeger.Instace.CheckColor(hit.collider.name);
-				
-			}
-		}
-	}
+        if (randSide > 50)
+        {
+            var randonXposi = (float) rnd.Next(-750, -350) / 100f;
+            transform.position = new Vector2(randonXposi, randonyposi);
+        }
+        else
+        {
+            var randonXposi = (float) rnd.Next(350, 750) / 100f;
+            transform.position = new Vector2(randonXposi, randonyposi);
+        }
+
+        transform.GetComponent<SpriteRenderer>().DOFade(1, 0);
+
+        var anima = transform.GetComponent<SpriteRenderer>().DOFade(0, _time);
+        anima.SetDelay(randTime);
+        anima.OnComplete(ChangePosition);
+    }
+
+    void Update()
+    {
+        //If the left mouse button is clicked.
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Get the mouse position on the screen and send a raycast into the game world from that position.
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+
+            //If something was hit, the RaycastHit2D.collider will not be null.
+            if (hit.collider != null)
+            {
+                hit.collider.transform.localPosition = Vector2.right * 100;
+                Debug.Log(hit.collider.name);
+                MiniGameManeger.Instace.CheckColor(hit.collider.name);
+            }
+        }
+    }
 }
