@@ -67,7 +67,13 @@ public class DialogInteract : InteractableBase
     void Interaction()//funçao que chama a interaçao 
     {
         DialogCanvas.SetActive(true);
-        StartCoroutine(ScriptDialogo.Type());
+        DialogSystem.StartType = true;
+    }
+
+    public void ButtonQuit()
+    {
+        StartCoroutine(InteractableBase.ReturToMove());
+        PanelInteraction.SetActive(false);
     }
 
     public void BottonVer()//Funçao que deve ser chamada caso o botao ver desse item seja pressionado 

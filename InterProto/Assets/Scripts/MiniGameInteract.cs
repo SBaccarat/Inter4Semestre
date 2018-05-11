@@ -67,6 +67,12 @@ public class MiniGameInteract : InteractableBase {
         ClickOnObject = false;
     }
 
+    public void ButtonQuit()
+    {
+        StartCoroutine(InteractableBase.ReturToMove());
+        PanelInteraction.SetActive(false);
+    }
+
     public IEnumerator Type()
     {
         foreach (char letter in SeeText.ToCharArray())

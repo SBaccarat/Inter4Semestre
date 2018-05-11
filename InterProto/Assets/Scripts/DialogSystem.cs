@@ -16,6 +16,7 @@ public class DialogSystem : MonoBehaviour {
     public GameObject Everything;
     bool callOneTime;
     static public bool FirstDialog = true;
+    static public bool StartType;
     public Image ImageMae;
     public Image ImageIrmao;
 
@@ -34,10 +35,16 @@ public class DialogSystem : MonoBehaviour {
     private void Update()
     {
 
-        if(MainText.text == sentences[Index])
+        /*if(MainText.text == sentences[Index])
         {
             NextButton.SetActive(true);        
-        }       
+        }*/
+        if (StartType)
+        {
+            StartCoroutine(Type());
+            StartType = false;
+        }
+        NextButton.SetActive(true);
 
     }
 
@@ -52,23 +59,26 @@ public class DialogSystem : MonoBehaviour {
 
     public void NextSentence()
     {
-        NextButton.SetActive(false);
+        //NextButton.SetActive(false);
         if (Index < sentences.Length - 1)
         {
             Character.SetActive(!Character.activeSelf);
             OtherPerson.SetActive(!OtherPerson.activeSelf);
             Index++;
             MainText.text = "";
+            StopAllCoroutines();
             StartCoroutine(Type());
         } else
         {
             Character.SetActive(false);
             OtherPerson.SetActive(false);
             MainText.text = "";
-            StartCoroutine(InteractableBase.ReturToMove());
             NextButton.SetActive(false);
             Everything.SetActive(false);
             callOneTime = true;
+            StopAllCoroutines();
+            StartCoroutine(InteractableBase.ReturToMove());
+
         }
     }
 
