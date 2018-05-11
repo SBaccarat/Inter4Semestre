@@ -9,6 +9,8 @@ public class CliclToMove : MonoBehaviour {
     public Rigidbody2D rgb; // fisicas do corpo do personagem
     public float Speed = 5; // velocidade de movimentaçao
     public static int Direçao;   // direçao em que o personagem esta andando
+    public Animator Anim;
+    public SpriteRenderer Sprite;
     private bool _movedFinguer;
 
 
@@ -22,6 +24,10 @@ public class CliclToMove : MonoBehaviour {
     {
         // aplica as forças vetorias no objeto
         rgb.velocity = new Vector2(Speed * Direçao, rgb.velocity.y);
+
+        Anim.SetInteger("Speed", Direçao);
+        if (Direçao >= 0) { Sprite.flipX = false; }
+        if (Direçao < 0) { Sprite.flipX = true; }
 
 #if UNITY_EDITOR
 
@@ -65,7 +71,7 @@ public class CliclToMove : MonoBehaviour {
             { Direçao = 1; }
 
             if (transform.position.x > newPos.x)
-            { Direçao = -1; }
+            { Direçao =-1;  }
 
             if (transform.position.x > newPos.x - .8f && transform.position.x < newPos.x + .8f)
             {

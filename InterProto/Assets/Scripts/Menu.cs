@@ -15,16 +15,24 @@ public class Menu : MonoBehaviour {
     {
         Persistence.ReturnValues();
         if (Persistence.Scene == 1)
-            SceneToLoad = "Prot";
+            SceneToLoad = "CenaInterna";
         MyLoad.Loading(SceneToLoad);
+        InteractableBase.ClickOnObject = false;
     }
 
     public void LoadGame()
     {
-        if (Persistence.Scene == 1)
+        if (Persistence.Scene == 2)
             SceneToLoad = "Prot";
-        else if (Persistence.Scene == 2)
+        else if (Persistence.Scene == 1)
             SceneToLoad = "CenaInterna";
         MyLoad.Loading(SceneToLoad);
+        InteractableBase.ClickOnObject = false;
+    }
+
+    public void sair() {
+
+        Application.Quit();
+        
     }
 }

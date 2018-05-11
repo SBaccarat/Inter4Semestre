@@ -5,15 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: eedcc2315d3850a46825f8d3fe53db37
   - enabled: 1
-    path: Assets/scena/Prot.unity
-    guid: fe60bde1fff590b4d8e5d96a8571d67a
+    path: Assets/scena/prototipoAlfa/Menu.unity
+    guid: b2ce15d06f84e1949a5bd47d50b19393
   - enabled: 1
-    path: Assets/scena/CenaInterna.unity
-    guid: 37b0ac2740345be47a1878fbaf2a7dcd
-  - enabled: 1
-    path: Assets/scena/Load.unity
+    path: Assets/scena/prototipoAlfa/Load.unity
     guid: ea8dc004e5f10364180a961a663911cb
+  - enabled: 1
+    path: Assets/scena/prototipoAlfa/CenaInterna.unity
+    guid: ecc79e0840b1bf14990750a8cbc12178
+  - enabled: 1
+    path: Assets/scena/prototipoAlfa/Prot.unity
+    guid: 27cd56271026ebc418fa1175b4de3d8e
+  - enabled: 1
+    path: Assets/scena/Bailarina.unity
+    guid: 62185ce422574c047a8bbb24e665c84c
+  - enabled: 1
+    path: Assets/scena/prototipoAlfa/EndAlfaScene.unity
+    guid: 68c06d4c7f1e8d348beebf56604d1b06
