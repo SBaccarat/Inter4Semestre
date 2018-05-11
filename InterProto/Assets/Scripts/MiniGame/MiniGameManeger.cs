@@ -1,32 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MiniGameManeger : MonoBehaviour
 {
     public Animator anim;
-	private List<GameObject> _senha;
-	// Use this for initialization
+	public List<GameObject> Senha;
+	public GameObject Tutorial;
 	public static MiniGameManeger Instace;
 	private bool once= false;
+	
 	void Start ()
 	{
 
+		
 		Instace = this;
-		_senha=new List<GameObject>();
-		foreach (var choseColor in FindObjectsOfType<ChoseColor>())
+		Senha=new List<GameObject>();
+		var list = FindObjectsOfType<ChoseColor>().ToList().OrderBy((a)=> a.name);
+		foreach (var choseColor in list)
 		{
-			_senha.Add(choseColor.GetCores());
+			Debug.Log(choseColor.name);
+			Senha.Add(choseColor.GetCores());
 		}
+		Invoke("SomeTutorial",4);
 	}
-	
+
+	private void SomeTutorial()
+	{
+		Tutorial.SetActive(false);
+	}
+
 	// Update is called once per frame
 	void Update ()
 	{
 		
-		var array = _senha.ToArray();
-		if (_senha.Count<1&&once==false)
+		if (Senha.Count<1&&once==false)
 		{
 			Debug.Log("sai");
 			once = true;
@@ -46,11 +56,11 @@ public class MiniGameManeger : MonoBehaviour
 
 	public void CheckColor(string colorClicked)
 	{
-		var array = _senha.ToArray();
+		var array = Senha.ToArray();
 		if (array[0].name.Equals(colorClicked))
 		{
 			array[0].transform.parent.gameObject.SetActive(false);
-			_senha.RemoveAt(0);	
+			Senha.RemoveAt(0);	
 		}	
 	}
 }
