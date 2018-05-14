@@ -2,45 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class Door : MonoBehaviour {
 
     public string NextCene; //Nome da cena onde a porta vai levar 
     public Vector2 setPos; //posiçao em que o personagem vai aparecer na prox cena
-    protected bool interactTime = false; // indica quando o item esta interativo
     public bool IsStair=false;
+    public Transform PlayerTrasnform;
+    public SpriteRenderer IconDoor;
 
     private void OnMouseDown()
     {
-        if (!IsStair)
+        if (IconDoor.enabled)
         {
-            interactTime = true;
-            StartCoroutine("InteractableDoor");
+            DoorTransition();
+        }
+    }
+
+    private void Update()
+    {
+        float dist;
+        dist = Vector2.Distance(transform.position, PlayerTrasnform.position);
+        if (dist > -3.5f && dist < 3.5f)
+        {
+            IconDoor.enabled = true;
         }
         else
         {
-            StartCoroutine(DoorTransition());
+            IconDoor.enabled = false;
         }
-    }
 
-    //chechagem de colisao, para executar a funçao 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") && interactTime)
-        { StartCoroutine("DoorTransition"); }
     }
-   
-    IEnumerator InteractableDoor()
+    public void DoorTransition()
     {
-        yield return new WaitForSeconds(5);
-        interactTime = false;
-    }
-
-    //funçao pra abrir a porta
-    IEnumerator DoorTransition()
-    {
-        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(NextCene);
         Persistence.NewPos = setPos;
     }
-
 }

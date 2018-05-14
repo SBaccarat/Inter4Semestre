@@ -21,7 +21,7 @@ public class InteractableBase : MonoBehaviour {
     {
         ClickOnObject = true;
         PanelInteraction.SetActive(true);
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(10);
         ClickOnObject = false;
         PanelInteraction.SetActive(false);
     }
