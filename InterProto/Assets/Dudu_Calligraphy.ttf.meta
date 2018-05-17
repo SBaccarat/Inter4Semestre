@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: cd5d2702a38a890458a3a0635f525d76
+timeCreated: 1525977423
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Dudu Calligraphy
+  fontNames:
+  - Dudu Calligraphy
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
