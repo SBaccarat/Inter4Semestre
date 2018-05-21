@@ -22,6 +22,13 @@ public class Menu : MonoBehaviour {
 
     public void LoadGame()
     {
+        if (!Persistence.HaveASave)
+        {
+            SceneToLoad = "CenaInterna";
+            MyLoad.Loading(SceneToLoad);
+            InteractableBase.ClickOnObject = false;
+        }
+        
         if (Persistence.Scene == 2)
             SceneToLoad = "Prot";
         else if (Persistence.Scene == 1)
