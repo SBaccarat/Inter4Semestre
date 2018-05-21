@@ -12,18 +12,19 @@ public class MiniGameInteract : InteractableBase {
     float typingSpeed = 0.04f;
     public GameObject PanelSee;
     public GameObject ButtonSee;
-    public GameObject ButtonBrincar;
     public Text MainText;
     static public bool CanPlay = false;
+    static public bool Piked = false;
+    public bool IsIcon;
 
 	
 	// Update is called once per frame
 	void Update () {
 
-        if (CanPlay)
-            ButtonBrincar.SetActive(true);
-        else
-            ButtonBrincar.SetActive(false);
+        if (Piked && !IsIcon)
+        {
+            gameObject.SetActive(false);
+        }
 
         if (MainText.text == SeeText)
         {
@@ -48,9 +49,11 @@ public class MiniGameInteract : InteractableBase {
 
     }
 
-    void Interaction()
+    public void Interaction()
     {
-        MyLoad.Loading("Bailarina");
+        if (QuestLog.Quest04 && !Piked)
+            Piked = true;
+        else MyLoad.Loading("Bailarina");
     }
 
     public void BottonVer()
@@ -61,6 +64,13 @@ public class MiniGameInteract : InteractableBase {
     }
 
     public void ButtonLoadBalarina()
+    {
+        PlayerInComeToPick = true;
+        PanelInteraction.SetActive(false);
+        ClickOnObject = false;
+    }
+
+    public void ButtonPegar()
     {
         PlayerInComeToPick = true;
         PanelInteraction.SetActive(false);

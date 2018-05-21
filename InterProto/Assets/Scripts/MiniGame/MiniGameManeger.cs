@@ -51,7 +51,24 @@ public class MiniGameManeger : MonoBehaviour
 
 	void ExitLevel()
 	{
-        SceneManager.LoadScene("EndAlfaScene");
+        if (Persistence.Scene == 1 && QuestLog.Quest02)
+        {
+            MyLoad.Loading("CenaInterna");
+            Persistence.SceneQuartoStatus = 2;
+            DialogSystem.FirstDialog = true;
+            QuestLog.Quest02 = false;
+            QuestLog.Quest03 = true;
+        }
+
+        if (Persistence.Scene == 4 && QuestLog.Quest04)
+        {
+            DialogSystem.FirstDialog = true;
+            MyLoad.Loading("exterior_cortico");
+            QuestLog.Quest04 = false;
+            QuestLog.Quest05 = true;
+        }
+        
+   
     }
 
 	public void CheckColor(string colorClicked)

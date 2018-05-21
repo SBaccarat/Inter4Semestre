@@ -7,7 +7,7 @@ public class ObjectToInteract : InteractableBase {
 
     public GameObject UseItemButton;
     public GameObject Player;
-    private SpriteRenderer sprite;
+    //private SpriteRenderer sprite;
     bool PlayerInCome;
     public enum Items { RedBox, GreenBox,cigarro}
     public Items WhatIten;
@@ -25,7 +25,7 @@ public class ObjectToInteract : InteractableBase {
 
     private void Start()
     {
-        sprite = GetComponent<SpriteRenderer>();
+        //sprite = GetComponent<SpriteRenderer>();
 
         if (WhatIten == Items.RedBox)
         {
@@ -113,10 +113,7 @@ public class ObjectToInteract : InteractableBase {
                 PlayerInCome = false;
             }
         }
-        if (ItemState == States.Used)
-        {
-            sprite.color = Color.blue;
-        }
+
     }
 
     void Interaction()

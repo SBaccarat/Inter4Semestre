@@ -8,9 +8,12 @@ public class SimpleInvertory : MonoBehaviour {
     public GameObject GreenBoxIcon; //icone do feedback por ter pego o item
     public GameObject cigarroIcon; // icone do cigarro
     public GameObject toalhaIcon;
+    public GameObject BonecaIcon;
 
     void Update () {
+
         
+
         // checa se o item esta pego ou n. se em uma cena exite um item que ja foi pego, ele é destruido
         if (Persistence.redBoxStatus == 1)
         {
@@ -44,5 +47,15 @@ public class SimpleInvertory : MonoBehaviour {
         {
             toalhaIcon.SetActive(false);
         }
+
+        if (MiniGameInteract.Piked)
+        {
+            BonecaIcon.SetActive (true);
+        }
+        else
+        {
+            BonecaIcon.SetActive(false);
+        }
+
     }
 }

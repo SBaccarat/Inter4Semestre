@@ -19,6 +19,7 @@ public class Item : InteractableBase {
     float typingSpeed = 0.04f;
     public GameObject PanelSee;
     public GameObject ButtonSee;
+    public DialogInteract NpcScript;
     public Text MainText;
 
     private void Start()
@@ -140,7 +141,7 @@ public class Item : InteractableBase {
         // checa se o item esta pego ou n. se em uma cena exite um item que ja foi pego, ele é destruido
         if (ItemState != States.Avaliable)
         {
-            Destroy(gameObject);
+            gameObject.SetActive (false);
         }
 
         if (PlayerInComeToPick)
@@ -165,7 +166,10 @@ public class Item : InteractableBase {
     {
         // muda o status do item para pego
         if (WhatIten == Items.pao)
+        {           
             ItemState = States.Used;
+            //NpcScript.ButtonConversar();
+        }
         else
             ItemState = States.Piked;
     }
