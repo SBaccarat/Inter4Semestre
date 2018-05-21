@@ -47,7 +47,7 @@ public class MiniGameManeger : MonoBehaviour
 				colliders.gameObject.SetActive(false);
 			}
             //colocar aq para tocar a animação da baliarina dançando
-            anim.SetBool("ativado", true);
+            anim.SetBool("fim", true);
             var animTime = 4; //mude o valor para o tempo q quiser q a bailarina fique dançando;
 			Invoke("ExitLevel",animTime);
 		}
@@ -81,11 +81,13 @@ public class MiniGameManeger : MonoBehaviour
 		var array = Senha.ToArray();
 		if (array[0].name.Equals(colorClicked))
 		{
+			anim.SetBool("click",true);
 			Florclicada.GetComponent<Collider2D>().enabled = false;
 			_acertoAudio.Play();
 			Florclicada.transform.DOLocalRotate(Vector3.back*1080, 1f)
 				.OnComplete(() => Florclicada.transform.localPosition = Vector2.right * 100)
-				.OnComplete(()=>Florclicada.GetComponent<Collider2D>().enabled = true);
+				.OnComplete(()=>Florclicada.GetComponent<Collider2D>().enabled = true)
+				.OnComplete(()=>anim.SetBool("click",false));
 			array[0].transform.parent.gameObject.SetActive(false);
 			Senha.RemoveAt(0);	
 		}
