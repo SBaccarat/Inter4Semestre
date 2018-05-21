@@ -83,7 +83,7 @@ public class MiniGameManeger : MonoBehaviour
 		{
 			Florclicada.GetComponent<Collider2D>().enabled = false;
 			_acertoAudio.Play();
-			Florclicada.transform.DOLocalRotate(Vector3.back*3600, 1f)
+			Florclicada.transform.DOLocalRotate(Vector3.back*1080, 1f)
 				.OnComplete(() => Florclicada.transform.localPosition = Vector2.right * 100)
 				.OnComplete(()=>Florclicada.GetComponent<Collider2D>().enabled = true);
 			array[0].transform.parent.gameObject.SetActive(false);
