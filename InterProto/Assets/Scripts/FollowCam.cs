@@ -22,7 +22,7 @@ public class FollowCam : MonoBehaviour {
 
         Vector3 newpos = new Vector3(
             target.transform.position.x ,
-            target.transform.position.y + 3.5f,
+            target.transform.position.y + 2.65f,
 			transform.position.z);
 
 		transform.position = Vector3.Lerp(

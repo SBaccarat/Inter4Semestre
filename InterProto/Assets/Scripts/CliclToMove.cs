@@ -22,6 +22,8 @@ public class CliclToMove : MonoBehaviour {
 
     private void Update()
     {
+        
+
         // aplica as forças vetorias no objeto
         rgb.velocity = new Vector2(Speed * Direçao, rgb.velocity.y);
 

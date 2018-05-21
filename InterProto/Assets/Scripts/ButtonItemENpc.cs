@@ -12,7 +12,7 @@ public class ButtonItemENpc : MonoBehaviour
     public DialogInteract dialogScript; //Variavel que salva o script que controla a interaçao com os Npcs
     public MiniGameInteract BonecaScript;
 
-    public enum Buttons {Ver,Pegar,conversar,VerNpc,VerBoneca,Brincar,QuitItem,QuitBoneca,QuitNpc} // Enum que salva as funçoes do botao
+    public enum Buttons {Ver,Pegar,conversar,VerNpc,VerBoneca,Brincar,pegarBoneca,BrincarInventario,QuitItem,QuitBoneca,QuitNpc} // Enum que salva as funçoes do botao
     public Buttons WhatButton; //variavel que puxa uma das funçoes 
 
     private void OnMouseDown() //é chamado quando um click/tap acontece no objeto(botao)
@@ -45,6 +45,12 @@ public class ButtonItemENpc : MonoBehaviour
                 break;
             case Buttons.QuitNpc:// se o botao for converçar
                 dialogScript.ButtonQuit();
+                break;
+            case Buttons.pegarBoneca:// se o botao for converçar
+                BonecaScript.ButtonPegar();
+                break;
+            case Buttons.BrincarInventario:// se o botao for converçar
+                BonecaScript.Interaction();
                 break;
         }
     }

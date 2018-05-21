@@ -56,7 +56,24 @@ public class MiniGameManeger : MonoBehaviour
 
 	void ExitLevel()
 	{
-        SceneManager.LoadScene("EndAlfaScene");
+        if (Persistence.Scene == 1 && QuestLog.Quest02)
+        {
+            MyLoad.Loading("CenaInterna");
+            Persistence.SceneQuartoStatus = 2;
+            DialogSystem.FirstDialog = true;
+            QuestLog.Quest02 = false;
+            QuestLog.Quest03 = true;
+        }
+
+        if (Persistence.Scene == 4 && QuestLog.Quest04)
+        {
+            DialogSystem.FirstDialog = true;
+            MyLoad.Loading("exterior_cortico");
+            QuestLog.Quest04 = false;
+            QuestLog.Quest05 = true;
+        }
+        
+   
     }
 
 	public void CheckColor(string colorClicked)
@@ -66,7 +83,7 @@ public class MiniGameManeger : MonoBehaviour
 		{
 			Florclicada.GetComponent<Collider2D>().enabled = false;
 			_acertoAudio.Play();
-			Florclicada.transform.DOLocalRotate(Vector3.back*3600, 1f)
+			Florclicada.transform.DOLocalRotate(Vector3.back*1080, 1f)
 				.OnComplete(() => Florclicada.transform.localPosition = Vector2.right * 100)
 				.OnComplete(()=>Florclicada.GetComponent<Collider2D>().enabled = true);
 			array[0].transform.parent.gameObject.SetActive(false);

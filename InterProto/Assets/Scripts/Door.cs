@@ -23,7 +23,7 @@ public class Door : MonoBehaviour {
     {
         float dist;
         dist = Vector2.Distance(transform.position, PlayerTrasnform.position);
-        if (dist > -3.5f && dist < 3.5f)
+        if (dist > -4f && dist < 4f)
         {
             IconDoor.enabled = true;
         }
