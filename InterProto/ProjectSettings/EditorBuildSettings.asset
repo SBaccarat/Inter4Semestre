@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/scena/prototipoAlfa/Bailarina.unity
     guid: 62185ce422574c047a8bbb24e665c84c
   - enabled: 1
+    path: Assets/scena/prototipoAlfa/Terreo.unity
+    guid: 87319f16cf4af7a43935b5e236d55984
+  - enabled: 1
     path: Assets/scena/prototipoAlfa/exterior_cortico.unity
     guid: 3f7d5b213cc84bb4098e19db50fb103a
   - enabled: 1
