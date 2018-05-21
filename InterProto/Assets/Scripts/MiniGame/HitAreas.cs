@@ -42,20 +42,38 @@ public class HitAreas : MonoBehaviour
 
     void Update()
     {
-        //If the left mouse button is clicked.
-        if (Input.GetMouseButtonDown(0))
+#if  PLATFORM_ANDROID
+         if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
-            //Get the mouse position on the screen and send a raycast into the game world from that position.
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
-            //If something was hit, the RaycastHit2D.collider will not be null.
             if (hit.collider != null)
             {
-                hit.collider.transform.localPosition = Vector2.right * 100;
-                Debug.Log(hit.collider.name);
+                var flor = hit.collider.gameObject;
+                MiniGameManeger.Instace.Florclicada = flor;
                 MiniGameManeger.Instace.CheckColor(hit.collider.name);
+                flor.transform.DOShakePosition(0.8f,0.2f,5);
+
             }
         }
+#endif
+#if UNITY_EDITOR
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+
+            if (hit.collider != null)
+            {
+                var flor = hit.collider.gameObject;
+                MiniGameManeger.Instace.Florclicada = flor;
+                MiniGameManeger.Instace.CheckColor(hit.collider.name);
+                flor.transform.DOShakePosition(0.8f,0.2f,5);
+
+            }
+        }
+#endif
+       
     }
 }

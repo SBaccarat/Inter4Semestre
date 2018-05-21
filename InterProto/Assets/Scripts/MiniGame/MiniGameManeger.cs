@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,9 @@ public class MiniGameManeger : MonoBehaviour
 	public List<GameObject> Senha;
 	public GameObject Tutorial;
 	public static MiniGameManeger Instace;
-	private bool once= false;
+	public GameObject Florclicada;
+	public AudioSource _acertoAudio;
+	private bool _once= false;
 	
 	void Start ()
 	{
@@ -21,7 +24,6 @@ public class MiniGameManeger : MonoBehaviour
 		var list = FindObjectsOfType<ChoseColor>().ToList().OrderBy((a)=> a.name);
 		foreach (var choseColor in list)
 		{
-			Debug.Log(choseColor.name);
 			Senha.Add(choseColor.GetCores());
 		}
 		Invoke("SomeTutorial",4);
@@ -36,11 +38,14 @@ public class MiniGameManeger : MonoBehaviour
 	void Update ()
 	{
 		
-		if (Senha.Count<1&&once==false)
+		if (Senha.Count<1&&_once==false)
 		{
-			Debug.Log("sai");
-			once = true;
-
+			_once = true;
+			var flores = FindObjectsOfType<HitAreas>();
+			foreach (var colliders in flores)
+			{
+				colliders.gameObject.SetActive(false);
+			}
             //colocar aq para tocar a animação da baliarina dançando
             anim.SetBool("ativado", true);
             var animTime = 4; //mude o valor para o tempo q quiser q a bailarina fique dançando;
@@ -76,8 +81,13 @@ public class MiniGameManeger : MonoBehaviour
 		var array = Senha.ToArray();
 		if (array[0].name.Equals(colorClicked))
 		{
+			Florclicada.GetComponent<Collider2D>().enabled = false;
+			_acertoAudio.Play();
+			Florclicada.transform.DOLocalRotate(Vector3.back*3600, 1f)
+				.OnComplete(() => Florclicada.transform.localPosition = Vector2.right * 100)
+				.OnComplete(()=>Florclicada.GetComponent<Collider2D>().enabled = true);
 			array[0].transform.parent.gameObject.SetActive(false);
 			Senha.RemoveAt(0);	
-		}	
+		}
 	}
 }
