@@ -297,13 +297,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7edb1f01ca21d41829dc31240bed2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PegarToalha: {fileID: 0}
-  ComversarMae: {fileID: 0}
+  PegarToalha: {fileID: 1106536908}
+  ComversarMae: {fileID: 1106536908}
   BrincarBoneca: {fileID: 1497182758}
-  PegarBoneca: {fileID: 0}
-  BrincarBonecaPega: {fileID: 0}
-  Door: {fileID: 0}
-  DoorBanheiro: {fileID: 0}
+  PegarBoneca: {fileID: 1106536908}
+  BrincarBonecaPega: {fileID: 1106536908}
+  Door: {fileID: 1106536908}
+  Fila: {fileID: 1106536908}
 --- !u!1001 &215104011
 Prefab:
   m_ObjectHideFlags: 0
@@ -540,7 +540,7 @@ Prefab:
     - target: {fileID: 224476819789921852, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
@@ -550,7 +550,7 @@ Prefab:
     - target: {fileID: 224719733215274998, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
@@ -698,6 +698,7 @@ Transform:
   - {fileID: 446483060}
   - {fileID: 1281273793}
   - {fileID: 1508188166}
+  - {fileID: 1106536909}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -948,6 +949,34 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1 &1106536908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1106536909}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1106536909
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1106536908}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 457254517}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1137081881 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1960700250937736, guid: 3301ea1caf0948744894e0f99fa11f3d,

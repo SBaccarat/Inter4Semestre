@@ -113,6 +113,34 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &2061939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2061940}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2061940
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2061939}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1454662382}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &149949210
 Prefab:
   m_ObjectHideFlags: 0
@@ -223,13 +251,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7edb1f01ca21d41829dc31240bed2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PegarToalha: {fileID: 0}
-  ComversarMae: {fileID: 0}
-  BrincarBoneca: {fileID: 0}
-  PegarBoneca: {fileID: 0}
+  PegarToalha: {fileID: 2061939}
+  ComversarMae: {fileID: 2061939}
+  BrincarBoneca: {fileID: 2061939}
+  PegarBoneca: {fileID: 2061939}
   BrincarBonecaPega: {fileID: 1497182758}
-  Door: {fileID: 0}
-  DoorBanheiro: {fileID: 0}
+  Door: {fileID: 2061939}
+  Fila: {fileID: 2061939}
 --- !u!1001 &215104011
 Prefab:
   m_ObjectHideFlags: 0
@@ -466,7 +494,7 @@ Prefab:
     - target: {fileID: 224476819789921852, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
@@ -476,7 +504,7 @@ Prefab:
     - target: {fileID: 224719733215274998, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
@@ -1047,6 +1075,11 @@ EdgeCollider2D:
   - {x: 22.59412, y: -6.0943933}
   - {x: 26.33126, y: -6.001245}
   - {x: 26.251205, y: -0.26639986}
+--- !u!4 &1454662382 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4794423381417914, guid: 0c353583567d43143b23b2a7e11c469b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1454662379}
 --- !u!1 &1497182758
 GameObject:
   m_ObjectHideFlags: 0

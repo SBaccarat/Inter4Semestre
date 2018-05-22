@@ -51,7 +51,7 @@ public class MiniGameInteract : InteractableBase {
 
     public void Interaction()
     {
-        if (QuestLog.Quest04 && !Piked)
+        if (QuestLog.MainQuestStaus == 4 && !Piked)
             Piked = true;
         else MyLoad.Loading("Bailarina");
     }

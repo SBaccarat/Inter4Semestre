@@ -5,7 +5,7 @@ using UnityEngine;
 public class BordaDeCatupiry : MonoBehaviour {
 
     public Transform PlayerTrasnform;
-    public SpriteRenderer SpriteBorda;
+    public GameObject SpriteBorda;
     public float Range = 4.5f;
     [HideInInspector] public bool CanInteract; 
 
@@ -16,11 +16,11 @@ public class BordaDeCatupiry : MonoBehaviour {
 
         if (dist > -Range && dist < Range)
         {
-            SpriteBorda.enabled = true;
+            SpriteBorda.SetActive(true);
             CanInteract = true;
         } else
         {
-            SpriteBorda.enabled = false;
+            SpriteBorda.SetActive(false);
             CanInteract = false;
         }
         

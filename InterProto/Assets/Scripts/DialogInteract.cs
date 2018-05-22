@@ -16,8 +16,8 @@ public class DialogInteract : InteractableBase
     //public GameObject Stair;
     [HideInInspector] public ObjectToInteract objectToInteractScript;//savla o game script do objeto interativel(que tbm pode estar em um npc)
     string[] InteractionSentences;//dialogos que ele tem antes de vc fazer o q ele quer 
-    public enum Quest {Pao,Nothing,cigarro,brincar,banheiro}//caso seja uma quest, qual quest    
-    public Quest quest;
+    public enum NPC {Mae,Irmao,EstranhosFila}//caso seja uma quest, qual quest    
+    public NPC WhatNpc;
     bool PlayerInCome;//player se movendo   
     bool CharacterFirst;// é true quando o personagem comessa falando em um dialogo 
 
@@ -78,24 +78,6 @@ public class DialogInteract : InteractableBase
         DialogCanvas.SetActive(true);
         DialogSystem.StartType = true;
 
-        if(quest == Quest.Pao)
-        {
-            if(Persistence.paoStatus == 2)
-            {
-                QuestLog.Quest01 = false;
-                QuestLog.Quest02 = true;
-                quest = Quest.brincar;
-            }
-        }
-        else if (quest == Quest.banheiro)
-        {
-            if (Persistence.toalhaStatus == 1 && QuestLog.Quest03 == true)
-            {
-                QuestLog.Quest03 = false;
-                QuestLog.Quest04 = true;
-            }
-        }
-
     }
 
     public void ButtonQuit()
@@ -106,42 +88,39 @@ public class DialogInteract : InteractableBase
 
     public void BottonVer()//Funçao que deve ser chamada caso o botao ver desse item seja pressionado 
     {
-       
-            if (quest == Quest.cigarro)//se a quest for x, checa se a missao foi concluida e muda o dialogo
+             if (WhatNpc == NPC.Mae)//se a quest for x, checa se a missao foi concluida e muda o dialogo
             {
-                if (objectToInteractScript.ItemState != ObjectToInteract.States.Used)
-                {               
-                StartCoroutine(Type(SeeText));
-                }
-                else if (objectToInteractScript.ItemState == ObjectToInteract.States.Used)
-                {                
-                StartCoroutine(Type(SeeText));
-                }
-            }
-            else if (quest == Quest.Pao)//se a quest for x, checa se a missao foi concluida e muda o dialogo
-            {
-                if (Persistence.paoStatus != 2)
+                if (QuestLog.MainQuestStaus == 1)
                 {
                 SeeText = "Minha mae. Ela ja ta me olhando brava...";
                 StartCoroutine(Type(SeeText));
                 }
-                else{
+                else if(QuestLog.MainQuestStaus == 2)
+            {
                 SeeText = "Agora ela ta mais calma.";
                 StartCoroutine(Type(SeeText));
                 }
+                else {
+                SeeText = "Ela ta ocupada, cuidando do meu Irmaozinho.";
+                StartCoroutine(Type(SeeText));
             }
-        else if (quest == Quest.banheiro)//se a quest for x, checa se a missao foi concluida e muda o dialogo
+            }
+        else if (WhatNpc == NPC.Irmao)//se a quest for x, checa se a missao foi concluida e muda o dialogo
         {
-            if (QuestLog.Quest03)
+            if (QuestLog.MainQuestStaus == 3)
             {
                 SeeText = "Meu irmao ... Ele ta me esperando, parece que ele acabou de chegar.";
                 StartCoroutine(Type(SeeText));
-            }
-            else if(QuestLog.Quest04)
+            }else
             {
                 SeeText = "Meu irmao ... Ele ta me esperando...";
                 StartCoroutine(Type(SeeText));
             }
+        }
+        else if (WhatNpc == NPC.EstranhosFila)//se a quest for x, checa se a missao foi concluida e muda o dialogo
+        {
+            SeeText = "Sao duas pessoas que moram aqui conversando, acho q se eu chegar mais perto eu consigo ouvir ...";
+            StartCoroutine(Type(SeeText));
         }
 
         PanelSee.SetActive(true); //painel de texto fica true 
@@ -150,7 +129,6 @@ public class DialogInteract : InteractableBase
 
     public void ButtonConversar() //é chamado quando quando o botao de conversar do npc e apertado
     {
-
         Setsentences();//checa as sentenças 
         PlayerInCome = true;//player se mexe
         PanelInteraction.SetActive(false);
@@ -161,39 +139,38 @@ public class DialogInteract : InteractableBase
     public void Setsentences()//funçao que checa as sentensas 
     {
  
-       if(quest == Quest.Pao)
-        {            
-
-                if(Persistence.paoStatus != 2)
-                {
-                CharacterFirst = false;
-                InteractionSentences = new string[2];
-                InteractionSentences[0] = "Tá cega menina? pega seu pao e come, e não me enche mais a paciência !!";
-                InteractionSentences[1] = "Ta bom ....";
-                }
-                else
-                {
-                CharacterFirst = true;
-                InteractionSentences = new string[3];
-                InteractionSentences[0] = "Pronto Mae";
-                InteractionSentences[1] = "Isso!! Agora brinca quietinha aí que seu irmão já volta para você ir tomar banho.";
-                InteractionSentences[2] = "Oba! Isso sim!! Minha Bailarina me aguarda!";
-                }
-        }
-        else if (quest == Quest.brincar)
+       if(WhatNpc == NPC.Mae)
         {
-
-            
+            if (QuestLog.MainQuestStaus == 1)
+            {
+                if (Persistence.paoStatus != 2)
+                {
+                    CharacterFirst = false;
+                    InteractionSentences = new string[2];
+                    InteractionSentences[0] = "Tá cega menina? pega seu pao e come, e não me enche mais a paciência !!";
+                    InteractionSentences[1] = "Ta bom ....";
+                }
+                else if (Persistence.paoStatus == 2)
+                {
+                    CharacterFirst = true;
+                    InteractionSentences = new string[3];
+                    InteractionSentences[0] = "Pronto Mae";
+                    InteractionSentences[1] = "Isso!! Agora brinca quietinha aí que seu irmão já volta para você ir tomar banho.";
+                    InteractionSentences[2] = "Oba! Isso sim!! Minha Bailarina me aguarda!";
+                    QuestLog.MainQuestStaus = 2;
+                }
+            }
+            else if (QuestLog.MainQuestStaus == 2)
+            {
                 CharacterFirst = false;
                 InteractionSentences = new string[1];
                 InteractionSentences[0] = "Me ouviu nao menina ?! Vai brincar!!";
-            
-  
+            }
         }
-        else if (quest == Quest.banheiro)
+        else if (WhatNpc == NPC.Irmao)
         {
 
-            if (QuestLog.Quest03)
+            if (QuestLog.MainQuestStaus == 3)
             {
                 if (Persistence.toalhaStatus == 1)
                 {
@@ -206,7 +183,7 @@ public class DialogInteract : InteractableBase
                     InteractionSentences[4] = "Você trouxe a boneca ??";
                     InteractionSentences[5] = "Nao ... :(";
                     InteractionSentences[6] = "Vai ter que ir buscar entao... Se vc perder a fila eu te dou um soco!!!";
-                    QuestLog.Quest04 = true;
+                    QuestLog.MainQuestStaus = 4;
                 }
                 else
                 {
@@ -219,18 +196,35 @@ public class DialogInteract : InteractableBase
               
                 }
             }
-            else if(QuestLog.Quest04)
+            else if(QuestLog.MainQuestStaus == 4)
             {
                 CharacterFirst = false;
                 InteractionSentences = new string[1];
                 InteractionSentences[0] = "Brinca ai no xao entao... Nossa vez ainda vai demorar...";
             }
-            else if (QuestLog.Quest05)
+            else if (QuestLog.MainQuestStaus == 5)
             {
                 CharacterFirst = false;
                 InteractionSentences = new string[1];
                 InteractionSentences[0] = "Anda logo, cê vai perder a vez... to falando... ";
             }
+        }
+        else if (WhatNpc == NPC.EstranhosFila)
+        {
+            ScriptDialogo.Character = ScriptDialogo.RandomNpc1;
+            ScriptDialogo.OtherPerson = ScriptDialogo.RandomNpc2;
+
+            CharacterFirst = false;
+            InteractionSentences = new string[9];
+            InteractionSentences[0] = "Teu irmão tinha um quarto duas quadras pra lá né? cimentaram tudo não foi?";
+            InteractionSentences[1] = "Foi sim, os PM tiraram todo mundo de dentro e já tinha um cara colocando os tijolos na porta! ";
+            InteractionSentences[2] = "Nossa!!.";
+            InteractionSentences[3] = "Deu tempo nem do junior tirar o fogão que ele tinha arrumado";
+            InteractionSentences[4] = "É foda viu, não deixarem a gente tirar o pouco que temos, ficou sabendo da criança que ficou presa?";
+            InteractionSentences[5] = "Isso é mentira, conheço a peste, o moleque tinha saído mais cedo pra arrumar pedra";
+            InteractionSentences[6] = "Esses noia é foda ...";
+            InteractionSentences[7] = "a mãe não conseguiu achar o traste depois do tumulto saiu falando que tinham cimentado o filho la";
+            InteractionSentences[8] = "Onde já se viu isso gente...";
         }
 
         DialogSystem.sentences = InteractionSentences;

@@ -14,6 +14,8 @@ public class DialogSystem : MonoBehaviour {
     public GameObject Mae;
     public GameObject Stte;
     public GameObject Irmao;
+    public GameObject RandomNpc1;
+    public GameObject RandomNpc2;
     public GameObject OtherPerson;
     public GameObject Everything;
     bool callOneTime;

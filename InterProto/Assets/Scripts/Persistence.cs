@@ -44,11 +44,7 @@ public static class Persistence {
         PlayerPrefsX.SetVector2("newPos", NewPos);
         PlayerPrefsX.SetBool("FirstDialog", DialogSystem.FirstDialog);
         PlayerPrefsX.SetBool("canPlay", MiniGameInteract.CanPlay);
-        PlayerPrefsX.SetBool("quest01", QuestLog.Quest01);
-        PlayerPrefsX.SetBool("quest02", QuestLog.Quest02);
-        PlayerPrefsX.SetBool("quest03", QuestLog.Quest03);
-        PlayerPrefsX.SetBool("quest04", QuestLog.Quest04);
-        PlayerPrefsX.SetBool("quest05", QuestLog.Quest05);
+        PlayerPrefs.SetInt("MainQuestStaus", QuestLog.MainQuestStaus);
         PlayerPrefs.SetInt("SceneQuartoStatus", SceneQuartoStatus);
         PlayerPrefsX.SetBool("Piked", MiniGameInteract.Piked);
         PlayerPrefs.Save();
@@ -68,11 +64,7 @@ public static class Persistence {
         paoStatus = PlayerPrefs.GetInt("paoStatus");
         MiniGameInteract.CanPlay = PlayerPrefsX.GetBool("canPlay");
         DialogSystem.FirstDialog = PlayerPrefsX.GetBool("FirstDialog");
-        QuestLog.Quest01 = PlayerPrefsX.GetBool("quest01");
-        QuestLog.Quest02 = PlayerPrefsX.GetBool("quest02");
-        QuestLog.Quest03 = PlayerPrefsX.GetBool("quest03");
-        QuestLog.Quest04 = PlayerPrefsX.GetBool("quest04");
-        QuestLog.Quest05 = PlayerPrefsX.GetBool("quest05");
+        QuestLog.MainQuestStaus = PlayerPrefs.GetInt("MainQuestStaus");
         MiniGameInteract.Piked = PlayerPrefsX.GetBool("Piked");
         SceneQuartoStatus = PlayerPrefs.GetInt("SceneQuartoStatus");       
     }
@@ -89,11 +81,7 @@ public static class Persistence {
         paoStatus = 0;
         DialogSystem.FirstDialog = true;
         MiniGameInteract.CanPlay = false;
-        QuestLog.Quest01 = true;
-        QuestLog.Quest02 = false;
-        QuestLog.Quest03 = false;
-        QuestLog.Quest04 = false;
-        QuestLog.Quest05 = false;
+        QuestLog.MainQuestStaus = 1;
         MiniGameInteract.Piked = false;
         HaveASave = false;
         SceneQuartoStatus = 1;

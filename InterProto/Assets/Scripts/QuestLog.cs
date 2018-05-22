@@ -5,43 +5,32 @@ using UnityEngine.UI;
 
 public class QuestLog : MonoBehaviour {
 
-    public static bool Quest01 = true, Quest02, Quest03,Quest04,Quest05;
-    private string Quest01String, Quest02String,Quest03String,Quest04String,Quest05String;
+    public static int MainQuestStaus;
+    private string MainQuestString;
 
     public Text QuestLogText;
 
     void Update()
     {
-        if (Quest01)
-            Quest01String = "- Tome seu café da manha. \n\n";
-        else
-            Quest01String = "";
+        if (MainQuestStaus == 1)
+            MainQuestString = "- Tome seu café da manha. \n\n";
 
-        if (Quest02)
-            Quest02String = "- Brinque com a sua Boneca, até seu irmao chegar \n\n";
-        else
-            Quest02String = "";
+       else if (MainQuestStaus == 2)
+            MainQuestString = "- Brinque com a sua Boneca, até seu irmao chegar \n\n";
+   
+       else if (MainQuestStaus == 3)
+            MainQuestString = "- Pegue sua toalha e emcontre seu irmao na fila do banheiro, na parte externa do cortiço \n\n";
 
-        if (Quest03)
-            Quest03String = "- Pegue sua toalha e emcontre seu irmao na fila do banheiro, na parte externa do cortiço \n\n";
-        else
-            Quest03String = "";
+       else if (MainQuestStaus == 4)
+            MainQuestString = "- Pegue sua boneca no quarto e brinque na fila pra passar o tempo \n\n";
 
-        if (Quest04)
-            Quest04String = "- Pegue sua boneca no quarto e brinque na fila pra passar o tempo \n\n";
-        else
-            Quest04String = "";
+       else if (MainQuestStaus == 5)
+            MainQuestString = "- Entre no Banheiro \n\n";
 
-        if (Quest05)
-            Quest05String = "- Entre no Banheiro \n\n";
         else
-            Quest05String = "";
+            MainQuestString = "";
 
         QuestLogText.text = "Coisas pra Fazer \n\n\n" +
-            Quest01String +
-            Quest02String +
-            Quest03String +
-            Quest04String +
-            Quest05String ;
+            MainQuestString;
     }
 }
