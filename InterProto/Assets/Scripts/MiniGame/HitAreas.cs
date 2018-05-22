@@ -38,6 +38,7 @@ public class HitAreas : MonoBehaviour
         var anima = transform.GetComponent<SpriteRenderer>().DOFade(0, _time);
         anima.SetDelay(randTime);
         anima.OnComplete(ChangePosition);
+        gameObject.GetComponent<Collider2D>().enabled = true;
     }
 
     void Update()
