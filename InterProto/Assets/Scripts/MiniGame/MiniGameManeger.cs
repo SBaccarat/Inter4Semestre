@@ -54,7 +54,7 @@ public class MiniGameManeger : MonoBehaviour
 		
 	}
 
-	void ExitLevel()
+	public void ExitLevel()
 	{
         if (Persistence.Scene == 1 && QuestLog.Quest02)
         {
