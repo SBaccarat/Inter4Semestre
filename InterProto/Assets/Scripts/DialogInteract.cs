@@ -89,7 +89,7 @@ public class DialogInteract : InteractableBase
         }
         else if (quest == Quest.banheiro)
         {
-            if (Persistence.toalhaStatus == 1)
+            if (Persistence.toalhaStatus == 1 && QuestLog.Quest03 == true)
             {
                 QuestLog.Quest03 = false;
                 QuestLog.Quest04 = true;
