@@ -1,11 +1,6 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterProto", "InterProto.csproj", "{F2BB935A-C67A-8CFA-7E96-0C329A18B939}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterProto.Editor", "InterProto.Editor.csproj", "{981F5B8B-2929-B355-8F5A-6A1CEC91722C}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{442CBC43-D8FE-8EAD-A090-B17E92809C1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,19 +8,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F2BB935A-C67A-8CFA-7E96-0C329A18B939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2BB935A-C67A-8CFA-7E96-0C329A18B939}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2BB935A-C67A-8CFA-7E96-0C329A18B939}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2BB935A-C67A-8CFA-7E96-0C329A18B939}.Release|Any CPU.Build.0 = Release|Any CPU
-		{981F5B8B-2929-B355-8F5A-6A1CEC91722C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{981F5B8B-2929-B355-8F5A-6A1CEC91722C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{981F5B8B-2929-B355-8F5A-6A1CEC91722C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{981F5B8B-2929-B355-8F5A-6A1CEC91722C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{442CBC43-D8FE-8EAD-A090-B17E92809C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{442CBC43-D8FE-8EAD-A090-B17E92809C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{442CBC43-D8FE-8EAD-A090-B17E92809C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{442CBC43-D8FE-8EAD-A090-B17E92809C1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C19FF741-09A3-412F-A4C5-ED212964C6E4}
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
