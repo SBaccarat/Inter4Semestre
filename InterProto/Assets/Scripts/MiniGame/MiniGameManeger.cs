@@ -54,7 +54,7 @@ public class MiniGameManeger : MonoBehaviour
 		{
 			_once = true;
 			var flores = FindObjectsOfType<HitAreas>();
-			PlayerPrefs.SetFloat("MinigameCount",_contagem+1);
+			PlayerPrefs.SetInt("MinigameCount",_contagem+1);
 			foreach (var colliders in flores)
 			{
 				colliders.gameObject.SetActive(false);
