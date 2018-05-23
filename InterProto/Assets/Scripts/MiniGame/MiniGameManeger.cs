@@ -62,16 +62,17 @@ public class MiniGameManeger : MonoBehaviour
             Persistence.SceneQuartoStatus = 2;
             DialogSystem.FirstDialog = true;
             QuestLog.MainQuestStaus = 3;
-        }
-
+        }else
         if (Persistence.Scene == 4 && QuestLog.MainQuestStaus == 4)
         {
             DialogSystem.FirstDialog = true;
             MyLoad.Loading("exterior_cortico");
             QuestLog.MainQuestStaus = 5;
+        }else
+        if(Persistence.Scene == 9)
+        {
+            MyLoad.Loading("EndAlfaScene");
         }
-        
-   
     }
 
 	public void CheckColor(string colorClicked)

@@ -7,7 +7,7 @@ public class Destroy : MonoBehaviour {
 
     public void DestroySelf()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
     public void LoadFimDia1()
     {
@@ -15,6 +15,6 @@ public class Destroy : MonoBehaviour {
     }
     public void LoadFimDia2()
     {
-        SceneManager.LoadScene("EndAlfaScene");
+        SceneManager.LoadScene("EndGameScene");
     }
 }

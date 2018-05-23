@@ -72,7 +72,7 @@ public class DialogSystem : MonoBehaviour {
                     sentences[6] = "Stteffany me ajuda aqui menina, mexe a panela pra n queimar o almoço! Anda rapido!";
                     QuestLog.MainQuestStaus = 6;
                 }
-            }
+            }else
             if (Persistence.Scene == 4 && QuestLog.MainQuestStaus == 5)
             {
                     Character = Stte;
@@ -80,7 +80,43 @@ public class DialogSystem : MonoBehaviour {
                     sentences = new string[2];
                     sentences[0] = "Vem Logo Stte!!! É a sua vez... Se nao Andar logo vai perder. ";
                     sentences[1] = "To indo...";      
+            }else
+            if (Persistence.Scene == 7)
+            {
+                Character = Stte;
+                OtherPerson = Mae;
+                sentences = new string[3];
+                sentences[0] = "Meninas, Acordem!!";
+                sentences[1] = "Valesca: Preciza de alguma coisa mae??/n Stte:Que foi manhee...";
+                sentences[2] = "Agente vive trancado nesse lugar... Precizamos sair daqui, tomar um pouco de ar... Vamos para praça!!";
             }
+            else
+            if (Persistence.Scene == 8)
+            {
+                Character = Mae;
+                OtherPerson = RandomNpc1;
+                sentences = new string[9];
+                sentences[0] = "Olá dona Nilda, que bom que a senhora conseguiu trazer sua filhas para brincar!";
+                sentences[1] = "Foi dificil mas eu tirei elas de casa!";
+                sentences[2] = "Esse é um otimo lugar pra suas filha se desenvolverem, e brincarem.";
+                sentences[3] = "Que bom que eu encontrei vocês!!";
+                sentences[4] = "Nosso trabalho é garantir que a criança possa brincar livre e em segurança,sair é bom pra saude sabia ??";
+                sentences[5] = "Sabia hehehe";
+                sentences[6] = "Queremos melhorar a qualidade de vida de crianlas de baixa renda. E contamos com as pessoas pra nos ajudar!";
+                sentences[7] = "Como as pessoas podem ajudar ?? ";
+                sentences[8] = "Muitas pessoas podem nos ajudar com de brinquedos e dinheiro, nós tambem fazemos campanhas de roupas e alimento";
+            }
+            if (Persistence.Scene == 9)
+            {
+                Character = RandomNpc1;
+                OtherPerson = Stte;
+                sentences = new string[3];
+                sentences[0] = "Moço, Posso brincar com a minha Bailarina?";
+                sentences[1] = "Que linda bailarina! Que tal se juntar aquelas meninas ali? Vocês podem fazer uma bela apresentaçao!";
+                sentences[2] = "Adorei a Ideia!!!";
+             
+            }
+
             OtherPerson.SetActive(true);
             StartCoroutine(Type());
             FirstDialog = false;
@@ -126,8 +162,28 @@ public class DialogSystem : MonoBehaviour {
             StopAllCoroutines();
             Character = Stte;
             StartCoroutine(InteractableBase.ReturToMove());
+            if(Persistence.Scene == 7)
+            {
+                Persistence.Scene = 8;
+                Invoke("setFirstDialig", 5);
+                SetEndSceneStatus.CallOneTime = true;
+            }
+            else if(Persistence.Scene == 8)
+            {
+                Persistence.Scene = 9;
+                Invoke("setFirstDialig", 2);
+            }
+            else if (Persistence.Scene == 9)
+            {
+                MyLoad.Loading("Bailarina");
+            }
 
         }
+    }
+
+    void setFirstDialig()
+    {
+        FirstDialog = true;
     }
 
 }
