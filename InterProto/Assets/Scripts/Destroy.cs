@@ -13,4 +13,8 @@ public class Destroy : MonoBehaviour {
     {
         SceneManager.LoadScene("CeneEndDia1");
     }
+    public void LoadFimDia2()
+    {
+        SceneManager.LoadScene("EndAlfaScene");
+    }
 }

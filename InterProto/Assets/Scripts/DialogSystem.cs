@@ -14,6 +14,7 @@ public class DialogSystem : MonoBehaviour {
     public GameObject Mae;
     public GameObject Stte;
     public GameObject Irmao;
+    public GameObject Irmã;
     public GameObject RandomNpc1;
     public GameObject RandomNpc2;
     public GameObject OtherPerson;
@@ -27,7 +28,7 @@ public class DialogSystem : MonoBehaviour {
         if (FirstDialog)
         {
             Everything.SetActive(true);
-            InteractableBase.ClickOnObject = true;
+            InteractableBase.ClickOnObject = true;         
             Index = 0;
 
             if (Persistence.Scene == 1)
@@ -56,9 +57,23 @@ public class DialogSystem : MonoBehaviour {
                     sentences[5] = "Calma, eu tenho que fazer uma fita antes, é o tempo dela pegar a toalha e me encontrar na fila...";
                     sentences[6] = "Oxi!! fazer o que moleque?? Ce sabe que tem que levar ela ";
                     sentences[7] = "Nao sou moleque!! E ela tbm n é mais criança. o caminho é facil, só decer a escada e ir pra esquerda até o patio!";
+                }else
+                if (Persistence.SceneQuartoStatus == 3)
+                {
+                    Character = Irmao;
+                    OtherPerson = Irmã;
+                    sentences = new string[7];
+                    sentences[0] = "Tem como voce me ajudar Everson?ou eu cozinho ou cuido do Mauricio";
+                    sentences[1] = "Ele não para de chorar eu já cansei";
+                    sentences[2] = "Para de ser idiota menino, pega ele no colo!! AONDE VOCÊ PENSA QUE VAI???";
+                    sentences[3] = "Eu vou sair pra fumar se vira ai...";
+                    sentences[4] = "Como assim? não, Everson!! EVERSON!! Você vai ver só quando a mãe voltar.";
+                    sentences[5] = "Nem to te ouvindo mais.. (voz de lonje)";
+                    sentences[6] = "Stteffany me ajuda aqui menina, mexe a panela pra n queimar o almoço! Anda rapido!";
+                    QuestLog.MainQuestStaus = 6;
                 }
             }
-            if (Persistence.Scene == 4)
+            if (Persistence.Scene == 4 && QuestLog.MainQuestStaus == 5)
             {
                     Character = Stte;
                     OtherPerson = Irmao;
@@ -66,6 +81,7 @@ public class DialogSystem : MonoBehaviour {
                     sentences[0] = "Vem Logo Stte!!! É a sua vez... Se nao Andar logo vai perder. ";
                     sentences[1] = "To indo...";      
             }
+            OtherPerson.SetActive(true);
             StartCoroutine(Type());
             FirstDialog = false;
         }

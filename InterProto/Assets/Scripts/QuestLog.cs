@@ -27,6 +27,24 @@ public class QuestLog : MonoBehaviour {
        else if (MainQuestStaus == 5)
             MainQuestString = "- Entre no Banheiro \n\n";
 
+       else if (MainQuestStaus == 6)
+            MainQuestString = "- Mecha o Almoço... \n\n";
+
+       else if (MainQuestStaus == 7)
+            MainQuestString = "- Va até o teraço pedir ao senhor Cota por Gaz. \n\n";
+
+       else if (MainQuestStaus == 8)
+            MainQuestString = "- Pergunte para sua irma, se ela sabe onde conseguir cigarro \n\n";
+
+        else if (MainQuestStaus == 9)
+            MainQuestString = "- Compre cigarros com o Homem no teraço \n\n";
+
+        else if (MainQuestStaus == 10)
+            MainQuestString = "- Entregue o cigarro para o senhor Cota \n\n";
+
+        else if (MainQuestStaus == 11)
+            MainQuestString = "- Volte para casa \n\n";
+
         else
             MainQuestString = "";
 

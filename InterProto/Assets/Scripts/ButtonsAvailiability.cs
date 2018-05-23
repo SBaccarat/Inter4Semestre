@@ -9,8 +9,12 @@ public class ButtonsAvailiability : MonoBehaviour {
     public GameObject BrincarBoneca;
     public GameObject PegarBoneca;
     public GameObject BrincarBonecaPega;
+    public GameObject BotaoMecherNoFogao;
     public GameObject Door;
     public GameObject Fila;
+    public GameObject EscadaCota;
+    public GameObject PortaFora;
+    public GameObject FadeFim;
 
 	// Update is called once per frame
 	void Update ()
@@ -43,6 +47,18 @@ public class ButtonsAvailiability : MonoBehaviour {
         if (QuestLog.MainQuestStaus < 5)
             Fila.SetActive(true);
         else Fila.SetActive(false);
+
+        if (QuestLog.MainQuestStaus < 6)
+            PortaFora.SetActive(true);
+        else PortaFora.SetActive(false);
+
+        if (QuestLog.MainQuestStaus == 6)
+            BotaoMecherNoFogao.SetActive(true);
+        else BotaoMecherNoFogao.SetActive(false);
+
+        if (QuestLog.MainQuestStaus == 11 && Persistence.Scene == 1)
+            FadeFim.SetActive(true);
+        else FadeFim.SetActive(false);
 
     }
 }

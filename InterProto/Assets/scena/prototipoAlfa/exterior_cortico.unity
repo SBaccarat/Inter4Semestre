@@ -2845,7 +2845,7 @@ Prefab:
     - target: {fileID: 224476819789921852, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
@@ -2855,7 +2855,7 @@ Prefab:
     - target: {fileID: 224719733215274998, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224974887088528766, guid: 3301ea1caf0948744894e0f99fa11f3d,
         type: 2}
@@ -3925,7 +3925,7 @@ MonoBehaviour:
   ScriptDialogo: {fileID: 1738904562}
   ThisPerson: {fileID: 827314801}
   objectToInteractScript: {fileID: 0}
-  WhatNpc: 2
+  WhatNpc: 4
   PanelSee: {fileID: 973034621}
   ButtonExitSee: {fileID: 973034620}
   MainText: {fileID: 973034619}
@@ -4484,8 +4484,12 @@ MonoBehaviour:
   BrincarBoneca: {fileID: 428905968}
   PegarBoneca: {fileID: 428905968}
   BrincarBonecaPega: {fileID: 761142035}
+  BotaoMecherNoFogao: {fileID: 428905968}
   Door: {fileID: 428905968}
   Fila: {fileID: 1410719152}
+  EscadaCota: {fileID: 428905968}
+  PortaFora: {fileID: 428905968}
+  FadeFim: {fileID: 428905968}
 --- !u!1 &1944838854 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1165741372474876, guid: 3301ea1caf0948744894e0f99fa11f3d,

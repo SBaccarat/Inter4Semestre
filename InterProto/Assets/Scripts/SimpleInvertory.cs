@@ -31,7 +31,7 @@ public class SimpleInvertory : MonoBehaviour {
             GreenBoxIcon.SetActive(false);
         }
 
-        if (Persistence.cigarroStatus == 1)
+        if (QuestLog.MainQuestStaus == 10)
         {
             cigarroIcon.SetActive(true);
         }

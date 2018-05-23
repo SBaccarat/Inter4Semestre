@@ -16,7 +16,7 @@ public class DialogInteract : InteractableBase
     //public GameObject Stair;
     [HideInInspector] public ObjectToInteract objectToInteractScript;//savla o game script do objeto interativel(que tbm pode estar em um npc)
     string[] InteractionSentences;//dialogos que ele tem antes de vc fazer o q ele quer 
-    public enum NPC {Mae,Irmao,EstranhosFila}//caso seja uma quest, qual quest    
+    public enum NPC {Mae,Irmao,Irma,Cota,EstranhosFila,Fogao,Vendedor}//caso seja uma quest, qual quest    
     public NPC WhatNpc;
     bool PlayerInCome;//player se movendo   
     bool CharacterFirst;// é true quando o personagem comessa falando em um dialogo 
@@ -117,9 +117,32 @@ public class DialogInteract : InteractableBase
                 StartCoroutine(Type(SeeText));
             }
         }
+        else if (WhatNpc == NPC.Irma)//se a quest for x, checa se a missao foi concluida e muda o dialogo
+        {
+            if (QuestLog.MainQuestStaus == 6)
+            {
+                SeeText = "Ela segura o Mauricio em uma mao enquanto com a outra aponta deseesperada para o foão...";
+                StartCoroutine(Type(SeeText));
+            }
+            else
+            {
+                SeeText = "Ela parece cançada, triste e impaciente. Melhor pegar o botijao logo... ";
+                StartCoroutine(Type(SeeText));
+            }
+        }
         else if (WhatNpc == NPC.EstranhosFila)//se a quest for x, checa se a missao foi concluida e muda o dialogo
         {
             SeeText = "Sao duas pessoas que moram aqui conversando, acho q se eu chegar mais perto eu consigo ouvir ...";
+            StartCoroutine(Type(SeeText));
+        }
+        else if (WhatNpc == NPC.Fogao)//se a quest for x, checa se a missao foi concluida e muda o dialogo
+        {
+            SeeText = "Um fogao velho e caindo aos pedaços. É todo improvidado, e sempre da ruim!!";
+            StartCoroutine(Type(SeeText));
+        }
+        else if (WhatNpc == NPC.Cota)//se a quest for x, checa se a missao foi concluida e muda o dialogo
+        {
+            SeeText = "Um Senhor japones, ele fuma um cigarro, e olha pro ceu com um olhar eestranho...";
             StartCoroutine(Type(SeeText));
         }
 
@@ -138,8 +161,8 @@ public class DialogInteract : InteractableBase
 
     public void Setsentences()//funçao que checa as sentensas 
     {
- 
-       if(WhatNpc == NPC.Mae)
+
+        if (WhatNpc == NPC.Mae)
         {
             if (QuestLog.MainQuestStaus == 1)
             {
@@ -193,10 +216,10 @@ public class DialogInteract : InteractableBase
                     InteractionSentences[1] = "E a toalha ?? ";
                     InteractionSentences[2] = "Esqueci....";
                     InteractionSentences[3] = "Que vontade de te dar um soco... Vai la pegar logo!!!";
-              
+
                 }
             }
-            else if(QuestLog.MainQuestStaus == 4)
+            else if (QuestLog.MainQuestStaus == 4)
             {
                 CharacterFirst = false;
                 InteractionSentences = new string[1];
@@ -214,22 +237,135 @@ public class DialogInteract : InteractableBase
             ScriptDialogo.Character = ScriptDialogo.RandomNpc1;
             ScriptDialogo.OtherPerson = ScriptDialogo.RandomNpc2;
 
-            CharacterFirst = false;
-            InteractionSentences = new string[9];
-            InteractionSentences[0] = "Teu irmão tinha um quarto duas quadras pra lá né? cimentaram tudo não foi?";
-            InteractionSentences[1] = "Foi sim, os PM tiraram todo mundo de dentro e já tinha um cara colocando os tijolos na porta! ";
-            InteractionSentences[2] = "Nossa!!.";
-            InteractionSentences[3] = "Deu tempo nem do junior tirar o fogão que ele tinha arrumado";
-            InteractionSentences[4] = "É foda viu, não deixarem a gente tirar o pouco que temos, ficou sabendo da criança que ficou presa?";
-            InteractionSentences[5] = "Isso é mentira, conheço a peste, o moleque tinha saído mais cedo pra arrumar pedra";
-            InteractionSentences[6] = "Esses noia é foda ...";
-            InteractionSentences[7] = "a mãe não conseguiu achar o traste depois do tumulto saiu falando que tinham cimentado o filho la";
-            InteractionSentences[8] = "Onde já se viu isso gente...";
+            if (QuestLog.MainQuestStaus < 6)
+            {
+                CharacterFirst = false;
+                InteractionSentences = new string[9];
+                InteractionSentences[0] = "Teu irmão tinha um quarto duas quadras pra lá né? cimentaram tudo não foi?";
+                InteractionSentences[1] = "Foi sim, os PM tiraram todo mundo de dentro e já tinha um cara colocando os tijolos na porta! ";
+                InteractionSentences[2] = "Nossa!!.";
+                InteractionSentences[3] = "Deu tempo nem do junior tirar o fogão que ele tinha arrumado";
+                InteractionSentences[4] = "É foda viu, não deixarem a gente tirar o pouco que temos, ficou sabendo da criança que ficou presa?";
+                InteractionSentences[5] = "Isso é mentira, conheço a peste, o moleque tinha saído mais cedo pra arrumar pedra";
+                InteractionSentences[6] = "Esses noia é foda ...";
+                InteractionSentences[7] = "a mãe não conseguiu achar o traste depois do tumulto saiu falando que tinham cimentado o filho la";
+                InteractionSentences[8] = "Onde já se viu isso gente...";
+            }
+            else if (QuestLog.MainQuestStaus > 6)
+            {
+                CharacterFirst = true;
+                InteractionSentences = new string[9];
+                InteractionSentences[0] = "Tu chegou a passar um tempo lá naquele prédio que caiu né?";
+                InteractionSentences[1] = "sim fiquei quase um ano, sai de lá pq não dava não, quando cheguei la tinha água até o 6 andar, tinha jeito n ";
+                InteractionSentences[2] = "caraca, tinha conhecido lá?";
+                InteractionSentences[3] = "uma prima tava lá, mas ela já me procurou, ela n tava lá na hora do fogo tava trabalhando";
+                InteractionSentences[4] = "ao menos ela não se machucou né??";
+                InteractionSentences[5] = "é mas ela perdeu tudinho, sobrou nem os documentos dela, mas pelo que ela falou a prefeitura ta ajudando";
+                InteractionSentences[6] = "ajudando com oq.";
+                InteractionSentences[7] = "judando a piorar a desgraça";
+                InteractionSentences[8] = "só deus na causa mesmo, Jesus ajuda esse povo";
+            }
+        }
+        else if (WhatNpc == NPC.Irma)
+        {
+
+            if (QuestLog.MainQuestStaus == 6)
+            {
+                CharacterFirst = false;
+                InteractionSentences = new string[1];
+                InteractionSentences[0] = "Anda Logo Mana!! Eu sou uma Só!";
+
+            }
+            else if (QuestLog.MainQuestStaus == 7)
+            {
+                CharacterFirst = false;
+                InteractionSentences = new string[2];
+                InteractionSentences[0] = "Ta esperando o que menina? Vai logo arrumar esse gaz!!";
+                InteractionSentences[1] = "To indo Mana, calma ...";
+            }
+            else if (QuestLog.MainQuestStaus == 8)
+            {
+                CharacterFirst = true;
+                InteractionSentences = new string[10];
+                InteractionSentences[0] = "Mana o senhor Cota disse que pra ele ajudar com o gás ele quer um maço";
+                InteractionSentences[1] = "Um maço de cigarro? Maldito vicio em, acho que tem um maço da tia do lado da tv….";
+                InteractionSentences[2] = "To vendo nao Mana";
+                InteractionSentences[3] = "A esquece o Evenson levou a porcaria do cigarro, ai que raiva desse menino.... Vc vai ter que ir comprar mais";
+                InteractionSentences[4] = "Ta bom... Como eu fasso?";
+                InteractionSentences[5] = "ó presta atenção, se vai lá em baixo no terreo.";
+                InteractionSentences[6] = "E dai ??";
+                InteractionSentences[7] = "tem um cara com cara de mal, mas ele é bem de boas, só voce falar que os cigarros são pra tia Nalda que ele vai te dar";
+                InteractionSentences[8] = "ta ta entendi";
+                InteractionSentences[9] = "Toma o dinheiro";
+                QuestLog.MainQuestStaus = 9;
+            }
+
+        }
+        else if (WhatNpc == NPC.Fogao)
+        {
+            if (QuestLog.MainQuestStaus == 6)
+            {
+                CharacterFirst = true;
+                InteractionSentences = new string[8];
+                InteractionSentences[0] = "Mana............. O fogo sumiu !!";
+                InteractionSentences[1] = "O gás deve ter acabado. Vou ficar olhando o mauricio aq e voce vai atras do gás pra terminarmos a comida!";
+                InteractionSentences[2] = "Onde que eu pego o gaz mana ??";
+                InteractionSentences[3] = "Sabe aquele senhor Cota? Um japonês que vive reclamando e falando com as paredes?";
+                InteractionSentences[4] = "Sei.. Ele tem cara de bravo...";
+                InteractionSentences[5] = "Ele vai emprestar o gás, ele sempre empresta, ele deve de estar no terraço fumando.";
+                InteractionSentences[6] = "Onde é o terraço msm mana ?";
+                InteractionSentences[7] = "No final desse corredor tem uma escada, dai é só subir. Corre Lá!";
+                QuestLog.MainQuestStaus = 7;
+            }
+        }
+        else if (WhatNpc == NPC.Cota)
+        {
+            if (QuestLog.MainQuestStaus == 7)
+            {
+                CharacterFirst = true;
+                InteractionSentences = new string[9];
+                InteractionSentences[0] = "senhor Cota?";
+                InteractionSentences[1] = "Diga jovem, ta dando pé ai?";
+                InteractionSentences[2] = "ham??!!";
+                InteractionSentences[3] = "Ta precisando de algo menina?";
+                InteractionSentences[4] = "O gás da minha casa acabou… minha irmã disse que voce podia ajudar";
+                InteractionSentences[5] = "Ajudar até posso, mas se tem q me ajudar primeiro";
+                InteractionSentences[6] = "O que voce quer senhor";
+                InteractionSentences[7] = "Este foi meu ultimo cigarro pode arrumar um maço para mim?";
+                InteractionSentences[8] = "Acho que tem um maço lá em casa, já volto";
+                QuestLog.MainQuestStaus = 8;
+            }
+            if (QuestLog.MainQuestStaus == 10)
+            {
+                CharacterFirst = false;
+                InteractionSentences = new string[5];
+                InteractionSentences[0] = "então o que temos aqui jovem?";
+                InteractionSentences[1] = "ta aqui o seu cigarro senhor";
+                InteractionSentences[2] = "muito obrigado minha pequena, eu ja sabia que você ia voltar e pedi para um rapaz levar o botijao até a sua casa";
+                InteractionSentences[3] = "obrigada senhor cota";
+                InteractionSentences[4] = "Agora vocês podem terminar o almoço.";
+                QuestLog.MainQuestStaus = 11;
+            }
+        }
+        else if (WhatNpc == NPC.Vendedor)
+        {
+            if (QuestLog.MainQuestStaus == 9)
+            {
+                CharacterFirst = false;
+                InteractionSentences = new string[6];
+                InteractionSentences[0] = "que q se quer guria?";
+                InteractionSentences[1] = "cigarro pra titia Nilda";
+                InteractionSentences[2] = "cigarro pra Nilda, cadê o dinheiro?";
+                InteractionSentences[3] = "eu tenho aqui os 3 reais";
+                InteractionSentences[4] = "bele bele, ta aq o cigarro";
+                InteractionSentences[5] = "obrigado moço";
+                QuestLog.MainQuestStaus = 10;
+            }
         }
 
         DialogSystem.sentences = InteractionSentences;
         DialogSystem.Index = 0;
-
+        
     }
 
     public IEnumerator Type(string text)//funçao que escreve o texto letra por letra 
