@@ -29,6 +29,8 @@ public static class Persistence {
 
     static public bool HaveASave;
 
+    public static int MinigameCount=0;
+
 
     //comando para dar SaveGame
     public static void SaveData()
@@ -51,6 +53,7 @@ public static class Persistence {
         PlayerPrefsX.SetBool("quest05", QuestLog.Quest05);
         PlayerPrefs.SetInt("SceneQuartoStatus", SceneQuartoStatus);
         PlayerPrefsX.SetBool("Piked", MiniGameInteract.Piked);
+        PlayerPrefs.SetInt("MinigameCount", MinigameCount);
         PlayerPrefs.Save();
         Debug.Log("Caraio");
     }
@@ -74,7 +77,8 @@ public static class Persistence {
         QuestLog.Quest04 = PlayerPrefsX.GetBool("quest04");
         QuestLog.Quest05 = PlayerPrefsX.GetBool("quest05");
         MiniGameInteract.Piked = PlayerPrefsX.GetBool("Piked");
-        SceneQuartoStatus = PlayerPrefs.GetInt("SceneQuartoStatus");       
+        SceneQuartoStatus = PlayerPrefs.GetInt("SceneQuartoStatus");
+        MinigameCount = PlayerPrefs.GetInt("MinigameCount");
     }
 
     public static void ReturnValues()
@@ -97,6 +101,7 @@ public static class Persistence {
         MiniGameInteract.Piked = false;
         HaveASave = false;
         SceneQuartoStatus = 1;
+        MinigameCount = 0;
     }
 
 }

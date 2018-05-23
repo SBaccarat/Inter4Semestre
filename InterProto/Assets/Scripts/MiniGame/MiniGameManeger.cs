@@ -7,17 +7,20 @@ using UnityEngine.SceneManagement;
 
 public class MiniGameManeger : MonoBehaviour
 {
-    public Animator anim;
+	public GameObject FlorPretaPrefab;
+	private GameObject[] _florPreta;
+	private int _contagem;
+    public Animator Anim;
 	public List<GameObject> Senha;
 	public GameObject Tutorial;
 	public static MiniGameManeger Instace;
 	public GameObject Florclicada;
-	public AudioSource _acertoAudio;
+	public AudioSource AcertoAudio;
 	private bool _once= false;
 	
 	void Start ()
 	{
-
+		_contagem = PlayerPrefs.GetInt("MinigameCount");
 		
 		Instace = this;
 		Senha=new List<GameObject>();
@@ -25,6 +28,15 @@ public class MiniGameManeger : MonoBehaviour
 		foreach (var choseColor in list)
 		{
 			Senha.Add(choseColor.GetCores());
+		}
+
+		if (_contagem!=0)
+		{
+			Tutorial.SetActive(false);
+			_florPreta = new GameObject[_contagem];
+			for (int i = 0; i < _florPreta.Length; i++)
+				_florPreta[i] = (GameObject) Instantiate(FlorPretaPrefab);
+			return;
 		}
 		Invoke("SomeTutorial",4);
 	}
@@ -42,12 +54,13 @@ public class MiniGameManeger : MonoBehaviour
 		{
 			_once = true;
 			var flores = FindObjectsOfType<HitAreas>();
+			PlayerPrefs.SetFloat("MinigameCount",_contagem+1);
 			foreach (var colliders in flores)
 			{
 				colliders.gameObject.SetActive(false);
 			}
             //colocar aq para tocar a animação da baliarina dançando
-            anim.SetBool("fim", true);
+            Anim.SetBool("fim", true);
             var animTime = 4; //mude o valor para o tempo q quiser q a bailarina fique dançando;
 			Invoke("ExitLevel",animTime);
 		}
@@ -81,13 +94,13 @@ public class MiniGameManeger : MonoBehaviour
 		var array = Senha.ToArray();
 		if (array[0].name.Equals(colorClicked))
 		{
-			anim.SetBool("click",true);
+			Anim.SetBool("click",true);
 			Florclicada.GetComponent<Collider2D>().enabled = false;
-			_acertoAudio.Play();
+			AcertoAudio.Play();
 			Florclicada.transform.DOLocalRotate(Vector3.back*1080, 1f)
 				.OnComplete(() => Florclicada.transform.localPosition = Vector2.right * 100)
 				.OnComplete(()=>Florclicada.GetComponent<Collider2D>().enabled = true)
-				.OnComplete(()=>anim.SetBool("click",false));
+				.OnComplete(()=>Anim.SetBool("click",false));
 			array[0].transform.parent.gameObject.SetActive(false);
 			Senha.RemoveAt(0);	
 		}
