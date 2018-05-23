@@ -1705,7 +1705,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91c38746924e8f04993f6765a5e162ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 519298442}
+  FlorPretaPrefab: {fileID: 1207160988715236, guid: 8115e5b0d5b6d9e4381f9723523dad42,
+    type: 2}
+  Anim: {fileID: 519298442}
   Senha:
   - {fileID: 851164760}
   - {fileID: 1735010180}
@@ -1714,7 +1716,7 @@ MonoBehaviour:
   - {fileID: 1074024242}
   Tutorial: {fileID: 1943846768}
   Florclicada: {fileID: 0}
-  _acertoAudio: {fileID: 438968922}
+  AcertoAudio: {fileID: 438968922}
 --- !u!114 &1334110616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1895,6 +1897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1476415596}
   - component: {fileID: 1476415595}
+  - component: {fileID: 1476415597}
   m_Layer: 0
   m_Name: mini_game_itens_sprites_11
   m_TagString: Untagged
@@ -1937,7 +1940,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -100
-  m_Sprite: {fileID: 21300022, guid: c73328717fa2af648964e1741a76ad9b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c0571c501e8fed43a0b81cb953e0ae8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.1764706}
   m_FlipX: 0
   m_FlipY: 0
@@ -1954,12 +1957,30 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1476415594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09640695, y: 0.02, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.13, y: -0.56, z: 0}
+  m_LocalScale: {x: 0.61898667, y: 0.61898667, z: 0.61898667}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1476415597
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1476415594}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 52fc33dea9e701b4aba74a60fc7cc2df, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1479334896
 GameObject:
   m_ObjectHideFlags: 0
