@@ -5,13 +5,11 @@ using UnityEngine;
 public class FollowCam : MonoBehaviour {
 
 	public GameObject target;
-    int poscan;
-
     
 
 	// Use this for initialization
 	void Start () {
-
+        transform.position = new Vector3(Persistence.NewPos.x, Persistence.NewPos.y,-20);
     }
 	
 	// Update is called once per frame

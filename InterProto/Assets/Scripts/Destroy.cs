@@ -16,5 +16,6 @@ public class Destroy : MonoBehaviour {
     public void LoadFimDia2()
     {
         SceneManager.LoadScene("EndGameScene");
+        DialogSystem.FirstDialog = true;
     }
 }

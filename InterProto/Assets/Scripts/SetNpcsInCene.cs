@@ -9,16 +9,21 @@ public class SetNpcsInCene : MonoBehaviour {
 
     public GameObject NpcsTerraço;
 
+    public GameObject Cigarro;
+
     private void Update()
     {
         if(Persistence.SceneQuartoStatus <= 2)
         {
             MaeNpc.SetActive(true);
             IrmaNpc.SetActive(false);
-        }else if(Persistence.SceneQuartoStatus == 3)
+            Cigarro.SetActive(true);
+        }
+        else if(Persistence.SceneQuartoStatus == 3)
         {
             MaeNpc.SetActive(false);
             IrmaNpc.SetActive(true);
+            Cigarro.SetActive(false);
         }
 
         if (QuestLog.MainQuestStaus >= 9)

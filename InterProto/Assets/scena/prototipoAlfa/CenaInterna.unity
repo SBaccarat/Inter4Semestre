@@ -2671,6 +2671,7 @@ MonoBehaviour:
   MaeNpc: {fileID: 1474731979}
   IrmaNpc: {fileID: 139241940}
   "NpcsTerra\xE7o": {fileID: 1480068899}
+  Cigarro: {fileID: 33952296}
 --- !u!114 &602729853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5863,7 +5864,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 791bbd0cb6c40a14589faadf3df327cc, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8271,7 +8272,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4596528680733470, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -25.03
+      value: -21.75
       objectReference: {fileID: 0}
     - target: {fileID: 4596528680733470, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}
       propertyPath: m_LocalRotation.x
