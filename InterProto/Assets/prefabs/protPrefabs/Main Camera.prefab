@@ -78,11 +78,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!81 &81843571220408128
 AudioListener:
   m_ObjectHideFlags: 1
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a90c4e0080c654fa4dc2e94b76006a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PanelPause: {fileID: 0}
+  PanelPause: {fileID: 1428863988938374, guid: 3a9c6462eb725254f99e5c91e12718c4, type: 2}
 --- !u!124 &124950796332240510
 Behaviour:
   m_ObjectHideFlags: 1
