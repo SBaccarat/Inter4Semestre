@@ -324,11 +324,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4110611004236746, guid: 6a5ceec76a897cf468e8bea798eade0b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -105.53
+      value: -102.74
       objectReference: {fileID: 0}
     - target: {fileID: 4110611004236746, guid: 6a5ceec76a897cf468e8bea798eade0b, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.4
+      value: -1.32
       objectReference: {fileID: 0}
     - target: {fileID: 4110611004236746, guid: 6a5ceec76a897cf468e8bea798eade0b, type: 2}
       propertyPath: m_LocalPosition.z
@@ -850,11 +850,11 @@ Prefab:
         type: 3}
     - target: {fileID: 4791724043905480, guid: 6ec6f51a405af68418bcf8132440cfd3, type: 2}
       propertyPath: m_LocalScale.x
-      value: -0.5
+      value: -0.45000002
       objectReference: {fileID: 0}
     - target: {fileID: 4791724043905480, guid: 6ec6f51a405af68418bcf8132440cfd3, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.45000002
       objectReference: {fileID: 0}
     - target: {fileID: 212248453761996566, guid: 6ec6f51a405af68418bcf8132440cfd3,
         type: 2}
@@ -863,7 +863,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4791724043905480, guid: 6ec6f51a405af68418bcf8132440cfd3, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.45000002
       objectReference: {fileID: 0}
     - target: {fileID: 61677007879644694, guid: 6ec6f51a405af68418bcf8132440cfd3,
         type: 2}
@@ -2347,7 +2347,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4457727694299078, guid: 48732220cb9a78f4a81a6f7f4041cb8d, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -92
+      value: -91.66
       objectReference: {fileID: 0}
     - target: {fileID: 4457727694299078, guid: 48732220cb9a78f4a81a6f7f4041cb8d, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2402,6 +2402,21 @@ Prefab:
       propertyPath: BonecaIcon
       value: 
       objectReference: {fileID: 2102822494}
+    - target: {fileID: 61402404773008424, guid: 48732220cb9a78f4a81a6f7f4041cb8d,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 0.0008006245
+      objectReference: {fileID: 0}
+    - target: {fileID: 61402404773008424, guid: 48732220cb9a78f4a81a6f7f4041cb8d,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.11906719
+      objectReference: {fileID: 0}
+    - target: {fileID: 61402404773008424, guid: 48732220cb9a78f4a81a6f7f4041cb8d,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.16330385
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48732220cb9a78f4a81a6f7f4041cb8d, type: 2}
   m_IsPrefabParent: 0
@@ -3549,7 +3564,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 58f7f3acb18da044abef7fc8a169febd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62da8e5aa94025c47a541f3ba9b91dec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3757,8 +3772,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1472704618}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -122.79, y: -1.42, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -120.51, y: -1.42, z: 0}
+  m_LocalScale: {x: 0.9733785, y: 0.9733785, z: 0.9733785}
   m_Children:
   - {fileID: 453626848}
   - {fileID: 80080202}

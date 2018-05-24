@@ -2970,7 +2970,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 58f7f3acb18da044abef7fc8a169febd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 62da8e5aa94025c47a541f3ba9b91dec, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5872,12 +5872,12 @@ Prefab:
     - target: {fileID: 61402404773008424, guid: 48732220cb9a78f4a81a6f7f4041cb8d,
         type: 2}
       propertyPath: m_Offset.y
-      value: 0.058922052
+      value: 0.16619277
       objectReference: {fileID: 0}
     - target: {fileID: 61402404773008424, guid: 48732220cb9a78f4a81a6f7f4041cb8d,
         type: 2}
       propertyPath: m_Size.y
-      value: 0.21077538
+      value: 0.24295616
       objectReference: {fileID: 0}
     - target: {fileID: 4457727694299078, guid: 48732220cb9a78f4a81a6f7f4041cb8d, type: 2}
       propertyPath: m_LocalScale.x
