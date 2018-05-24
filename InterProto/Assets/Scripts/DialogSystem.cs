@@ -27,6 +27,7 @@ public class DialogSystem : MonoBehaviour {
     {
         if (FirstDialog)
         {
+            OtherPerson.SetActive(true);
             Everything.SetActive(true);
             InteractableBase.ClickOnObject = true;         
             Index = 0;

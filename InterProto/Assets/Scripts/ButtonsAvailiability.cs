@@ -56,6 +56,10 @@ public class ButtonsAvailiability : MonoBehaviour {
             BotaoMecherNoFogao.SetActive(true);
         else BotaoMecherNoFogao.SetActive(false);
 
+        if (QuestLog.MainQuestStaus >= 7)
+            EscadaCota.SetActive(true);
+        else EscadaCota.SetActive(false);
+
         if (QuestLog.MainQuestStaus == 11 && Persistence.Scene == 1)
             FadeFim.SetActive(true);
         else FadeFim.SetActive(false);

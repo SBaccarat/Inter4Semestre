@@ -4545,7 +4545,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerTrasnform: {fileID: 336527301}
   SpriteBorda: {fileID: 797135640}
-  Range: 4.5
   CanInteract: 0
 --- !u!1 &802170993
 GameObject:
@@ -5825,7 +5824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &973034612
 GameObject:
   m_ObjectHideFlags: 0
@@ -9235,7 +9234,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerTrasnform: {fileID: 336527301}
   SpriteBorda: {fileID: 457678548}
-  Range: 5.5
   CanInteract: 0
 --- !u!114 &1410719154
 MonoBehaviour:
