@@ -1,7 +1,9 @@
 fileFormatVersion: 2
-guid: 9e95bd74030a8904ebb95534c30ce423
+guid: a4fadb8ced8683242b658228d42fb22a
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: botoes_3_0
+    21300002: botoes_3_1
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -91,11 +93,51 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: botoes_3_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 173
+        width: 262
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc391b80f1edf041876f84891f753a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: botoes_3_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 43
+        width: 262
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d2e84c03a43f241b05e409349915e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e6f0bc4096be3ce4ab74b6df98a8b8cd
+    spriteID: d15276713169a7349b93949ff647eceb
     vertices: []
     indices: 
     edges: []

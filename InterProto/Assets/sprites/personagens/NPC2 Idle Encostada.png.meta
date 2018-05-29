@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: 8ad8562cb15a1e04a9a76f968b09df6a
+guid: 3f44c6f42e487684a8b7b8e7b7b8f92a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Everson Idle_0
-    21300002: Everson Idle_1
-    21300004: Everson Idle_2
-    21300006: Everson Idle_3
-    21300008: Everson Idle_4
-    21300010: Everson Idle_5
-    21300012: Everson Idle_6
-    21300014: Everson Idle_7
-    21300016: Everson Idle_8
-    21300018: Everson Idle_9
+    21300000: NPC2 Idle Encostada_0
+    21300002: NPC2 Idle Encostada_1
+    21300004: NPC2 Idle Encostada_2
+    21300006: NPC2 Idle Encostada_3
+    21300008: NPC2 Idle Encostada_4
+    21300010: NPC2 Idle Encostada_5
+    21300012: NPC2 Idle Encostada_6
+    21300014: NPC2 Idle Encostada_7
+    21300016: NPC2 Idle Encostada_8
+    21300018: NPC2 Idle Encostada_9
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Everson Idle_0
+      name: NPC2 Idle Encostada_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 19
         y: 0
-        width: 362
-        height: 1207
+        width: 389
+        height: 1159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,19 +117,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63e31df644ad65742a61a069549356cf
+      spriteID: 02e5d50036d72234e9841ea82c200b38
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Everson Idle_1
+      name: NPC2 Idle Encostada_1
       rect:
         serializedVersion: 2
-        x: 366
+        x: 439
         y: 0
-        width: 362
-        height: 1207
+        width: 388
+        height: 1159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb594c2ccff380240bb2d7846a2fde8d
+      spriteID: 2e8cac32c42874149a8eb8105c0971ca
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Everson Idle_2
+      name: NPC2 Idle Encostada_2
       rect:
         serializedVersion: 2
-        x: 732
+        x: 856
         y: 0
-        width: 360
-        height: 1205
+        width: 391
+        height: 1159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,19 +157,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2b9b9b9aadab9b44a96e51d96932e3b
+      spriteID: 5f43271e25c80704c9182845aa80439d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Everson Idle_3
+      name: NPC2 Idle Encostada_3
       rect:
         serializedVersion: 2
-        x: 1097
+        x: 1276
         y: 0
-        width: 360
-        height: 1204
+        width: 389
+        height: 1158
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,19 +177,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d5fb5912b5fd5e4db8922de791a6d31
+      spriteID: 2fffb6bce5e8203418b132a39a873bf4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Everson Idle_4
+      name: NPC2 Idle Encostada_4
       rect:
         serializedVersion: 2
-        x: 1461
+        x: 1695
         y: 0
-        width: 360
-        height: 1202
+        width: 389
+        height: 1158
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,19 +197,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df28c96e3cd78d4479597b63794b326b
+      spriteID: 42eaba2e991990c4797ad349604698c4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Everson Idle_5
+      name: NPC2 Idle Encostada_5
       rect:
         serializedVersion: 2
-        x: 1826
+        x: 2114
         y: 0
-        width: 360
-        height: 1201
+        width: 389
+        height: 1156
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,19 +217,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f723632c9fd2994d889777e1e999416
+      spriteID: 99f1f836f64b7e44280dba1377542fe7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Everson Idle_6
+      name: NPC2 Idle Encostada_6
       rect:
         serializedVersion: 2
-        x: 2191
+        x: 2534
         y: 0
-        width: 360
-        height: 1202
+        width: 388
+        height: 1158
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,19 +237,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28d0b54ce2e0bad4b843617f288a4724
+      spriteID: 35838435fd3aee44eb5450bb2bb95279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Everson Idle_7
+      name: NPC2 Idle Encostada_7
       rect:
         serializedVersion: 2
-        x: 2555
+        x: 2951
         y: 0
-        width: 362
-        height: 1204
+        width: 391
+        height: 1158
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,19 +257,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5eb6507684c3e34394b6f2a3ce11b50
+      spriteID: f5b3032404616424dab3465d12745c18
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Everson Idle_8
+      name: NPC2 Idle Encostada_8
       rect:
         serializedVersion: 2
-        x: 2920
+        x: 3371
         y: 0
-        width: 362
-        height: 1205
+        width: 388
+        height: 1159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,19 +277,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97b9baef29313f54badc15282df73654
+      spriteID: 1ebe1f47da5a4c34c9fdf914a995325e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Everson Idle_9
+      name: NPC2 Idle Encostada_9
       rect:
         serializedVersion: 2
-        x: 3287
+        x: 3790
         y: 0
-        width: 360
-        height: 1207
+        width: 389
+        height: 1159
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,7 +297,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a063d5ba993ec64c9272f8cea90182d
+      spriteID: c5b24ca06c5fc174ca025291bbb40a5f
       vertices: []
       indices: 
       edges: []
@@ -305,7 +305,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6059650dd5d6f8540a3860ae502a1e3f
+    spriteID: e6d7440576ef03245868b17b3936ab19
     vertices: []
     indices: 
     edges: []
