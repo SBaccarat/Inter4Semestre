@@ -161,7 +161,14 @@ public class DialogSystem : MonoBehaviour {
             callOneTime = true;
             StopAllCoroutines();
             Character = Stte;
-            StartCoroutine(InteractableBase.ReturToMove());
+            if (QuestLog.MainQuestStaus != 1)
+            {
+                StartCoroutine(InteractableBase.ReturToMove());
+            }
+            else
+            {
+                Tutorial.ShowTutorial = true;
+            }
             if(Persistence.Scene == 7)
             {
                 Persistence.Scene = 8;
