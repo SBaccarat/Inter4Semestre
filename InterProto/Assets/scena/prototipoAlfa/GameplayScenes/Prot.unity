@@ -782,7 +782,8 @@ Prefab:
       propertyPath: orthographic size
       value: 3.6276898
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 81843571220408128, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &149949212 stripped
@@ -3664,10 +3665,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 2.1690369
-  MaxDistance: 7.9008484
+  MinDistance: 1.5910797
+  MaxDistance: 10.920357
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3675,23 +3676,41 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.12542114
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -7.976314
+      outSlope: -7.976314
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      time: 0.25084227
+      value: 0.5
+      inSlope: -1.9940785
+      outSlope: -1.9940785
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.54108274
+      value: 0.13381958
+      inSlope: -0.49851963
+      outSlope: -0.49851963
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.9852295
+      value: 0
+      inSlope: -0.12547132
+      outSlope: -0.12547132
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -3715,7 +3734,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3730,7 +3749,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.98910904
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -9036,11 +9055,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114390646047459522, guid: 48732220cb9a78f4a81a6f7f4041cb8d,
         type: 2}
-      propertyPath: cigarroIcon
-      value: 
-      objectReference: {fileID: 1137081888}
-    - target: {fileID: 114390646047459522, guid: 48732220cb9a78f4a81a6f7f4041cb8d,
-        type: 2}
       propertyPath: RedBoxIcon
       value: 
       objectReference: {fileID: 1137081890}
@@ -9049,6 +9063,11 @@ Prefab:
       propertyPath: GreenBoxIcon
       value: 
       objectReference: {fileID: 1137081889}
+    - target: {fileID: 114390646047459522, guid: 48732220cb9a78f4a81a6f7f4041cb8d,
+        type: 2}
+      propertyPath: cigarroIcon
+      value: 
+      objectReference: {fileID: 1137081888}
     - target: {fileID: 114390646047459522, guid: 48732220cb9a78f4a81a6f7f4041cb8d,
         type: 2}
       propertyPath: toalhaIcon
