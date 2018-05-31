@@ -10878,7 +10878,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1855252136}
         m_MethodName: CloseTutorial
         m_Mode: 1
         m_Arguments:
@@ -14971,6 +14971,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9aa793f219c04247aa7037877cd8c2a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1855252135 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1098673936842176, guid: f9aa793f219c04247aa7037877cd8c2a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1855252134}
+--- !u!114 &1855252136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1855252135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fa91fd6427285c43a37c3c6b819dad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TutorialPanel: {fileID: 193813737}
 --- !u!1 &1861708110
 GameObject:
   m_ObjectHideFlags: 0
