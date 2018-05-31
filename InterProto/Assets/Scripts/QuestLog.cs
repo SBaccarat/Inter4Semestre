@@ -12,7 +12,7 @@ public class QuestLog : MonoBehaviour {
 
     void Update()
     {
-        if (MainQuestStaus == 1)
+            if (MainQuestStaus == 1)
             MainQuestString = "- Tome seu café da manhã. \n\n";
 
        else if (MainQuestStaus == 2)
@@ -31,7 +31,7 @@ public class QuestLog : MonoBehaviour {
             MainQuestString = "- Mecha o Almoço... \n\n";
 
        else if (MainQuestStaus == 7)
-            MainQuestString = "- Va até o teraço pedir gás ao senhor Cota  \n\n";
+            MainQuestString = "- Va até o teraço pedir gás ao senhor Costa  \n\n";
 
        else if (MainQuestStaus == 8)
             MainQuestString = "- Pergunte para sua irmã, onde pode conseguir cigarro \n\n";
