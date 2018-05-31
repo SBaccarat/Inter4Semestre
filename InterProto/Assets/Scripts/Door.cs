@@ -15,12 +15,15 @@ public class Door : MonoBehaviour {
     {
         if (IconDoor.enabled)
         {
+            InteractableBase.ClickOnObject = false;
+            CliclToMove.Direçao = 0;
             DoorTransition();
         }
     }
 
     private void Update()
     {
+
         float dist;
         dist = Vector2.Distance(transform.position, PlayerTrasnform.position);
         if (dist > -4f && dist < 4f)

@@ -17,7 +17,8 @@ public class CliclToMove : MonoBehaviour {
     private void Start()
     {
         // determina a posiçao do player no inicio da cena 
-        transform.position = Persistence.NewPos;      
+        transform.position = Persistence.NewPos;
+        Direçao = 0;
     }
 
     private void Update()

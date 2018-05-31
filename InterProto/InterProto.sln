@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterProto", "Assembly-CSharp.csproj", "{442CBC43-D8FE-8EAD-A090-B17E92809C1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterProto", "Assembly-CSharp-Editor-firstpass.csproj", "{B981B56A-F2CE-4B5C-490A-F3B3935F53E5}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,10 +13,6 @@ Global
 		{442CBC43-D8FE-8EAD-A090-B17E92809C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{442CBC43-D8FE-8EAD-A090-B17E92809C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{442CBC43-D8FE-8EAD-A090-B17E92809C1E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B981B56A-F2CE-4B5C-490A-F3B3935F53E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B981B56A-F2CE-4B5C-490A-F3B3935F53E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B981B56A-F2CE-4B5C-490A-F3B3935F53E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B981B56A-F2CE-4B5C-490A-F3B3935F53E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
