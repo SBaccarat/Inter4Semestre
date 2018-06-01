@@ -319,6 +319,7 @@
     <Compile Include="Assets\Scripts\ButtonItemENpc.cs" />
     <Compile Include="Assets\Scripts\ButtonsAvailiability.cs" />
     <Compile Include="Assets\Scripts\ButtonUseItem.cs" />
+    <Compile Include="Assets\Scripts\CheatManager.cs" />
     <Compile Include="Assets\Scripts\CliclToMove.cs" />
     <Compile Include="Assets\Scripts\Destroy.cs" />
     <Compile Include="Assets\Scripts\DialogInteract.cs" />
@@ -342,10 +343,12 @@
     <Compile Include="Assets\Scripts\PlayerPrefsX.cs" />
     <Compile Include="Assets\Scripts\QuestLog.cs" />
     <Compile Include="Assets\Scripts\SetActualScene.cs" />
+    <Compile Include="Assets\Scripts\SetEndSceneStatus.cs" />
     <Compile Include="Assets\Scripts\SetNpcsInCene.cs" />
     <Compile Include="Assets\Scripts\SetValuesToNextDay.cs" />
     <Compile Include="Assets\Scripts\SimpleInvertory.cs" />
-    <Compile Include="Assets\SetEndSceneStatus.cs" />
+    <Compile Include="Assets\Scripts\Tutorial.cs" />
+    <Compile Include="Assets\Scripts\URLLink.cs" />
     <Compile Include="Assets\Sounds\sound_menu\Audio\audio.cs" />
     <Compile Include="Assets\Sounds\sound_menu\Audio\MixerController.cs" />
   </ItemGroup>

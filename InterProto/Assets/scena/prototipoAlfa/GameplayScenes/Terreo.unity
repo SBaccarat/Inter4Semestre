@@ -1406,6 +1406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerTrasnform: {fileID: 1912230944}
   SpriteBorda: {fileID: 1069345088}
+  Range: 3.5
   CanInteract: 0
 --- !u!114 &227258730
 MonoBehaviour:
@@ -5347,7 +5348,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 924276418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.081, y: 0.037, z: 0.0068245647}
+  m_LocalPosition: {x: 0.081, y: 0.0346, z: 0.0068245647}
   m_LocalScale: {x: 0.07428521, y: 0.036430933, z: 0.066873655}
   m_Children: []
   m_Father: {fileID: 1069345089}
@@ -12596,8 +12597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -73, y: -46}
-  m_SizeDelta: {x: 77.32001, y: 93.109985}
+  m_AnchoredPosition: {x: -91.6, y: -46}
+  m_SizeDelta: {x: 78, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2071335829
 MonoBehaviour:
@@ -12665,14 +12666,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.53333336}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 6044a295795f5574eae4c501a2d65117, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 03593bbb6f33f0a4b99272ac73694e60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12886,6 +12887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerTrasnform: {fileID: 1912230944}
   SpriteBorda: {fileID: 743832104}
+  Range: 3.5
   CanInteract: 0
 --- !u!61 &2098958615
 BoxCollider2D:
