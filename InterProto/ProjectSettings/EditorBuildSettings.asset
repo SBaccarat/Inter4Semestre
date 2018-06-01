@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/scena/prototipoAlfa/Load.unity
     guid: ea8dc004e5f10364180a961a663911cb
   - enabled: 1
+    path: Assets/scena/prototipoAlfa/IntroFamilha.unity
+    guid: 6ad3b9a53f7d95c4bbcc159c3a97f3e5
+  - enabled: 1
     path: Assets/scena/prototipoAlfa/GameplayScenes/CenaInterna.unity
     guid: ecc79e0840b1bf14990750a8cbc12178
   - enabled: 1

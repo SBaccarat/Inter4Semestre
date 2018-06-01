@@ -14,8 +14,7 @@ public class Menu : MonoBehaviour {
     public void NewGame()
     {
         Persistence.ReturnValues();
-        if (Persistence.Scene == 1)
-            SceneToLoad = "CenaInterna";
+        SceneToLoad = "IntroFamilha";
         MyLoad.Loading(SceneToLoad);
         InteractableBase.ClickOnObject = false;
     }
@@ -23,18 +22,25 @@ public class Menu : MonoBehaviour {
     public void LoadGame()
     {
         if (!Persistence.HaveASave)
+            SceneToLoad = "CenaInterna";
+        else
         {
-            SceneToLoad = "CenaInterna";
-            MyLoad.Loading(SceneToLoad);
-            InteractableBase.ClickOnObject = false;
+            if (Persistence.Scene == 1)
+                SceneToLoad = "CenaInterna";
+            else if (Persistence.Scene == 2)
+                SceneToLoad = "Prot";
+            else if (Persistence.Scene == 3)
+                SceneToLoad = "Terreo";
+            else if (Persistence.Scene == 4)
+                SceneToLoad = "exterior_cortico";
+            else if (Persistence.Scene == 5)
+                SceneToLoad = "Banheiro";
+            else if (Persistence.Scene == 6)
+                SceneToLoad = "Laje";
+            Persistence.LoadData();
         }
-        
-        if (Persistence.Scene == 2)
-            SceneToLoad = "Prot";
-        else if (Persistence.Scene == 1)
-            SceneToLoad = "CenaInterna";
+       
         MyLoad.Loading(SceneToLoad);
-        InteractableBase.ClickOnObject = false;
     }
 
     public void sair() {
