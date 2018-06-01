@@ -6,7 +6,7 @@ public class BordaDeCatupiry : MonoBehaviour {
 
     public Transform PlayerTrasnform;
     public GameObject SpriteBorda;
-    float Range = 3.5f;
+    public float Range = 3.5f;
     [HideInInspector] public bool CanInteract; 
 
     private void Update()
