@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Destroy : MonoBehaviour {
 
+    public void TrullyDestroy()
+    {
+        Destroy(gameObject);
+    }
+
     public void DestroySelf()
     {
         gameObject.SetActive(false);
