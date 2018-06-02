@@ -22,7 +22,7 @@ public class CheatManager : MonoBehaviour {
     {
         MyLoad.Loading("Laje");
         Persistence.NewPos = new Vector2(-92f, -3.2f);
-        Persistence.SceneQuartoStatus = 2;
+        Persistence.SceneQuartoStatus = 3;
         QuestLog.MainQuestStaus = 7;
         DialogSystem.FirstDialog = false;
         InteractableBase.ClickOnObject = false;
@@ -36,7 +36,7 @@ public class CheatManager : MonoBehaviour {
     {
         MyLoad.Loading("Terreo");
         Persistence.NewPos = new Vector2(-61f, -4f);
-        Persistence.SceneQuartoStatus = 2;
+        Persistence.SceneQuartoStatus = 3;
         QuestLog.MainQuestStaus = 9;
         DialogSystem.FirstDialog = false;
         InteractableBase.ClickOnObject = false;

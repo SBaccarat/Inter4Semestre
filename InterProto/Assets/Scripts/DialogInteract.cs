@@ -145,6 +145,11 @@ public class DialogInteract : InteractableBase
             SeeText = "Um Senhor japones, ele fuma um cigarro, e olha pro ceu com um olhar eestranho...";
             StartCoroutine(Type(SeeText));
         }
+        else if (WhatNpc == NPC.Vendedor)//se a quest for x, checa se a missao foi concluida e muda o dialogo
+        {
+            SeeText = "É um homem bigodudo, bem diferente de como eu imaginava. Nao parece tao assustador, mas tem um olhar suspeito...";
+            StartCoroutine(Type(SeeText));
+        }
 
         PanelSee.SetActive(true); //painel de texto fica true 
         PanelInteraction.SetActive(false);//painel de botoes desliga 

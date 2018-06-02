@@ -19,6 +19,7 @@ public class DialogSystem : MonoBehaviour {
     public GameObject RandomNpc2;
     public GameObject OtherPerson;
     public GameObject Everything;
+    public GameObject NpcVendedor;
     bool callOneTime;
     static public bool FirstDialog = true;
     static public bool StartType;

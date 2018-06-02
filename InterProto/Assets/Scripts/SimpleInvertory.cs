@@ -9,7 +9,7 @@ public class SimpleInvertory : MonoBehaviour {
     public GameObject cigarroIcon; // icone do cigarro
     public GameObject toalhaIcon;
     public GameObject BonecaIcon;
-
+    public GameObject MONEYBITCH;
     void Update () {
 
         
@@ -56,6 +56,13 @@ public class SimpleInvertory : MonoBehaviour {
         {
             BonecaIcon.SetActive(false);
         }
-
+        if (QuestLog.MainQuestStaus == 9)
+        {
+            MONEYBITCH.SetActive(true);
+        }
+        else
+        {
+            MONEYBITCH.SetActive(false);
+        }
     }
 }
