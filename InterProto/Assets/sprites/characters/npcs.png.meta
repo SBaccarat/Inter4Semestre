@@ -1,9 +1,9 @@
 fileFormatVersion: 2
-guid: be5eaefaac10e314dba5afd6139fc07c
+guid: 8677c700221f1114c9c851fa0f57a1c8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: balao_dialogo_0
-    21300002: balao_dialogo_1
+    21300000: npcs_0
+    21300002: npcs_1
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -95,13 +95,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: balao_dialogo_0
+      name: npcs_0
       rect:
         serializedVersion: 2
-        x: 84
-        y: 103
-        width: 412
-        height: 118
+        x: 27
+        y: 14
+        width: 161
+        height: 263
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -109,19 +109,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da1cdb855bd03d74cb48a3f6ff79a635
+      spriteID: 388c3d967a71c804282d1e18bd7f699d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: balao_dialogo_1
+      name: npcs_1
       rect:
         serializedVersion: 2
-        x: 475
-        y: 25
-        width: 52
-        height: 51
+        x: 245
+        y: 23
+        width: 170
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,7 +129,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea0e04331b422e549ba7b21660a5dc6f
+      spriteID: 72a59c425afe22148818e4105c9d45df
       vertices: []
       indices: 
       edges: []
@@ -137,7 +137,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a8a01f5e71f1ca349a027183c7ead177
+    spriteID: 695a64eff1e8877498e4ba097101fe43
     vertices: []
     indices: 
     edges: []
