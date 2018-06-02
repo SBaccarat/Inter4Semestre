@@ -12,6 +12,7 @@ public class MiniGameInteract : InteractableBase {
     float typingSpeed = 0.04f;
     public GameObject PanelSee;
     public GameObject ButtonSee;
+    public GameObject Fade;
     public Text MainText;
     static public bool CanPlay = false;
     static public bool Piked = false;
@@ -53,7 +54,16 @@ public class MiniGameInteract : InteractableBase {
     {
         if (QuestLog.MainQuestStaus == 4 && !Piked)
             Piked = true;
-        else MyLoad.Loading("Bailarina");
+        else
+        {
+            Instantiate(Fade);
+            Invoke("LoadBailarina", 0.7f);
+        }
+    }
+    void LoadBailarina()
+    {
+        MyLoad.Loading("Bailarina");
+        Destroy(Fade);
     }
 
     public void BottonVer()

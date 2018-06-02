@@ -5,6 +5,7 @@ using UnityEngine;
 public class Menu : MonoBehaviour {
 
     string SceneToLoad;
+    public GameObject Fade;
 
     private void Start()
     {
@@ -15,7 +16,8 @@ public class Menu : MonoBehaviour {
     {
         Persistence.ReturnValues();
         SceneToLoad = "IntroFamilha";
-        MyLoad.Loading(SceneToLoad);
+        Invoke("LoadNewCene", 0.7f);
+        Instantiate(Fade);
         InteractableBase.ClickOnObject = false;
     }
 
@@ -39,7 +41,13 @@ public class Menu : MonoBehaviour {
                 SceneToLoad = "Laje";
             Persistence.LoadData();
         }
-       
+        Invoke("LoadNewCene", 0.7f);
+        Instantiate(Fade);
+    }
+
+    void LoadNewCene()
+    {
+        Destroy(Fade);
         MyLoad.Loading(SceneToLoad);
     }
 

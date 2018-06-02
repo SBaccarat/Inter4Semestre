@@ -2885,6 +2885,12 @@ Prefab:
       propertyPath: IconDoor
       value: 
       objectReference: {fileID: 577254525}
+    - target: {fileID: 114346796915002454, guid: 6ec6f51a405af68418bcf8132440cfd3,
+        type: 2}
+      propertyPath: FadeExit
+      value: 
+      objectReference: {fileID: 1923077944713246, guid: bc5d32d8d386e0e4bad855e750eee399,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ec6f51a405af68418bcf8132440cfd3, type: 2}
   m_IsPrefabParent: 0
@@ -5243,6 +5249,7 @@ MonoBehaviour:
   SeeText: Minha Bailarina, eu adoro brincar com ela!
   PanelSee: {fileID: 1592075175}
   ButtonSee: {fileID: 1017707322}
+  Fade: {fileID: 1923077944713246, guid: bc5d32d8d386e0e4bad855e750eee399, type: 2}
   MainText: {fileID: 1932182608}
   IsIcon: 1
 --- !u!114 &1006049403
@@ -9068,6 +9075,7 @@ MonoBehaviour:
   SeeText: Minha Bailarina, eu adoro brincar com ela!
   PanelSee: {fileID: 1592075175}
   ButtonSee: {fileID: 1017707322}
+  Fade: {fileID: 1923077944713246, guid: bc5d32d8d386e0e4bad855e750eee399, type: 2}
   MainText: {fileID: 1932182608}
   IsIcon: 0
 --- !u!61 &1554044124

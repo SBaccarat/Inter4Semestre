@@ -10,7 +10,5 @@ public class MyLoad {
 		Persistence.NextLevel = Name;
 		SceneManager.LoadScene ("Load");
         Time.timeScale = 1;
-
 	}
-
 }

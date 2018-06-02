@@ -1272,6 +1272,12 @@ Prefab:
       propertyPath: m_FlipX
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114346796915002454, guid: 6ec6f51a405af68418bcf8132440cfd3,
+        type: 2}
+      propertyPath: FadeExit
+      value: 
+      objectReference: {fileID: 1923077944713246, guid: bc5d32d8d386e0e4bad855e750eee399,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ec6f51a405af68418bcf8132440cfd3, type: 2}
   m_IsPrefabParent: 0
@@ -2423,7 +2429,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.11883879, y: 0}
@@ -3360,6 +3366,7 @@ MonoBehaviour:
   SeeText: Minha Bailarina, eu adoro brincar com ela!
   PanelSee: {fileID: 973034621}
   ButtonSee: {fileID: 973034620}
+  Fade: {fileID: 1923077944713246, guid: bc5d32d8d386e0e4bad855e750eee399, type: 2}
   MainText: {fileID: 973034619}
   IsIcon: 1
 --- !u!114 &802170996

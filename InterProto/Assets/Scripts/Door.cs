@@ -10,6 +10,7 @@ public class Door : MonoBehaviour {
     public bool IsStair=false;
     public Transform PlayerTrasnform;
     public SpriteRenderer IconDoor;
+    public GameObject FadeExit;
 
     private void OnMouseDown()
     {
@@ -38,6 +39,12 @@ public class Door : MonoBehaviour {
     }
     public void DoorTransition()
     {
+        Invoke("LoadNewScene",0.7f);
+        Instantiate(FadeExit);
+    }
+    void LoadNewScene()
+    {
+        Destroy(FadeExit);
         SceneManager.LoadScene(NextCene);
         Persistence.NewPos = setPos;
     }
