@@ -146,8 +146,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 9, y: 30}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 9, y: -14.5}
+  m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &766883411
 MonoBehaviour:
@@ -170,10 +170,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: cd5d2702a38a890458a3a0635f525d76, type: 3}
-    m_FontSize: 22
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -181,14 +181,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\nMuitas fam\xEDlias moram em corti\xE7os espalhados pelo centro de s\xE3o
-    paulo, trabalhadores informais deixam suas crian\xE7as dentro do quarto enquanto
+  m_Text: "\nMuitas fam\xEDlias moram em corti\xE7os espalhados pelo centro de S\xE3o
+    Paulo, trabalhadores informais deixam suas crian\xE7as dentro do quarto enquanto
     v\xE3o ganhar o p\xE3o de cada dia, para as crian\xE7as \xE9 dif\xEDcil a vida
     dentro de um quarto \xFAmido, mal ventilado e mal iluminado.\n\nAs crian\xE7as
     que t\xEAm a sorte de frequentar uma creche ou escola conseguem crescer com mais
-    liberdade e saude, mas aquelas que n\xE3o conseguem uma vaga, os poucos momentos
+    liberdade e sa\xFAde, mas aquelas que n\xE3o conseguem uma vaga, os poucos momentos
     que saem do quarto s\xE3o para fazer obriga\xE7\xF5es de casa, e s\xE3o expostas
-    as dificuldades e situa\xE7\xF5es que n\xE3o deveriam ser."
+    as dificuldades e situa\xE7\xF5es terriv\xE9is para \nseu desenvolvimento.."
 --- !u!222 &766883412
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -453,8 +453,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.15, y: 0.03}
-  m_SizeDelta: {x: 595.846, y: 322.845}
+  m_AnchoredPosition: {x: -0.15, y: -0.136}
+  m_SizeDelta: {x: 595.846, y: 335.509}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2072894938
 GameObject:
@@ -563,7 +563,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300010, guid: 5c9d82c41154a024ba60e5146c27773b, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 03593bbb6f33f0a4b99272ac73694e60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
