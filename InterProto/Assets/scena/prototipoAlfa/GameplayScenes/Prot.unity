@@ -513,7 +513,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4596528680733470, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -85.39
+      value: -97.8
       objectReference: {fileID: 0}
     - target: {fileID: 4596528680733470, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}
       propertyPath: m_LocalPosition.y
@@ -612,22 +612,27 @@ Prefab:
     - target: {fileID: 20990100500709432, guid: c5b2929a46d27be4da335a1877fbce59,
         type: 2}
       propertyPath: m_BackGroundColor.r
-      value: 0
+      value: 0.4039216
       objectReference: {fileID: 0}
     - target: {fileID: 20990100500709432, guid: c5b2929a46d27be4da335a1877fbce59,
         type: 2}
       propertyPath: m_BackGroundColor.g
-      value: 0
+      value: 0.47058827
       objectReference: {fileID: 0}
     - target: {fileID: 20990100500709432, guid: c5b2929a46d27be4da335a1877fbce59,
         type: 2}
       propertyPath: m_BackGroundColor.b
-      value: 0
+      value: 0.5058824
       objectReference: {fileID: 0}
     - target: {fileID: 20990100500709432, guid: c5b2929a46d27be4da335a1877fbce59,
         type: 2}
       propertyPath: orthographic size
       value: 3.6276898
+      objectReference: {fileID: 0}
+    - target: {fileID: 20990100500709432, guid: c5b2929a46d27be4da335a1877fbce59,
+        type: 2}
+      propertyPath: m_BackGroundColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 81843571220408128, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}
@@ -792,11 +797,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cd5d2702a38a890458a3a0635f525d76, type: 3}
-    m_FontSize: 27
+    m_Font: {fileID: 12800000, guid: c33d0a6a5e66db547a16d6a60964734b, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 48
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -1044,7 +1049,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 439620225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.77, y: 0.05, z: 0}
+  m_LocalPosition: {x: 16.79, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 457254517}
@@ -2944,7 +2949,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1114371944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.02, y: 0.69038093, z: 0}
+  m_LocalPosition: {x: -8.92, y: 0.69038093, z: 0}
   m_LocalScale: {x: 1, y: 6.2761827, z: 1}
   m_Children: []
   m_Father: {fileID: 618510403}
@@ -3091,11 +3096,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cd5d2702a38a890458a3a0635f525d76, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: c33d0a6a5e66db547a16d6a60964734b, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 48
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -3909,8 +3914,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.89, y: 13.67}
-  m_SizeDelta: {x: 568.8, y: 118.74}
+  m_AnchoredPosition: {x: -57.61, y: 7.23}
+  m_SizeDelta: {x: 609.6, y: 131.63}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1320126303
 GameObject:
@@ -6183,7 +6188,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2029082046}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.83, y: 0.69038093, z: 0}
+  m_LocalPosition: {x: 42.34, y: 0.69038093, z: 0}
   m_LocalScale: {x: 1, y: 6.2761827, z: 1}
   m_Children: []
   m_Father: {fileID: 618510403}
@@ -6682,8 +6687,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 74.8, y: 8}
-  m_SizeDelta: {x: 801.7, y: 128.3}
+  m_AnchoredPosition: {x: -17.55, y: 9.08}
+  m_SizeDelta: {x: 617, y: 127.59}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2071913834
 GameObject:

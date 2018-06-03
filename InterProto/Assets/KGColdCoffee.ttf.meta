@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: c33d0a6a5e66db547a16d6a60964734b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: KG Cold Coffee
+  fontNames:
+  - KG Cold Coffee
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b7760ddece768c248af066b5cc8ae2c4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

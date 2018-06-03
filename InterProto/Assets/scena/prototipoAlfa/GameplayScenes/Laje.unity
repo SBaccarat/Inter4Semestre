@@ -228,8 +228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.99, y: 8}
-  m_SizeDelta: {x: 674.08, y: 128.3}
+  m_AnchoredPosition: {x: -14.775, y: 9.79}
+  m_SizeDelta: {x: 622.55, y: 124.72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &80080201
 GameObject:
@@ -2231,10 +2231,11 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -16.048355, y: 0.83065104}
-  - {x: -9.738129, y: 0.8067763}
-  - {x: -9.737144, y: -3.532803}
-  - {x: 7.7902145, y: -3.5291257}
-  - {x: 7.796097, y: 0.110826135}
+  - {x: -8.774178, y: 0.85497475}
+  - {x: -9.056183, y: 0.7678689}
+  - {x: -9.06237, y: -3.532803}
+  - {x: 6.9057236, y: -3.5161185}
+  - {x: 6.937622, y: 0.16285467}
   - {x: 15.94, y: 0}
 --- !u!1001 &1036633292
 Prefab:
@@ -2694,11 +2695,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cd5d2702a38a890458a3a0635f525d76, type: 3}
-    m_FontSize: 27
+    m_Font: {fileID: 12800000, guid: c33d0a6a5e66db547a16d6a60964734b, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 48
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -2832,11 +2833,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cd5d2702a38a890458a3a0635f525d76, type: 3}
-    m_FontSize: 30
+    m_Font: {fileID: 12800000, guid: c33d0a6a5e66db547a16d6a60964734b, type: 3}
+    m_FontSize: 22
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 48
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -4255,8 +4256,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.89, y: 13.67}
-  m_SizeDelta: {x: 568.8, y: 118.74}
+  m_AnchoredPosition: {x: -46.86, y: 5.44}
+  m_SizeDelta: {x: 586.7, y: 135.21}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1801187110
 Prefab:
@@ -5171,7 +5172,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300008, guid: 5c9d82c41154a024ba60e5146c27773b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: be5eaefaac10e314dba5afd6139fc07c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
