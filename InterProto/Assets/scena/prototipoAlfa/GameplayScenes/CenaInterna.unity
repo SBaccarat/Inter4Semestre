@@ -9493,6 +9493,12 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1006161665}
+    - target: {fileID: 114913849738301014, guid: c5b2929a46d27be4da335a1877fbce59,
+        type: 2}
+      propertyPath: Fade
+      value: 
+      objectReference: {fileID: 1923077944713246, guid: bc5d32d8d386e0e4bad855e750eee399,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 81843571220408128, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}
     - {fileID: 114959915683090478, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}

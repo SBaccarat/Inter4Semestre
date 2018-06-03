@@ -198,7 +198,7 @@ SpriteRenderer:
   m_Size: {x: 14.606675, y: 8.826273}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &72579634
 GameObject:
@@ -2645,6 +2645,12 @@ Prefab:
       propertyPath: m_Name
       value: Main Camera (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114913849738301014, guid: c5b2929a46d27be4da335a1877fbce59,
+        type: 2}
+      propertyPath: Fade
+      value: 
+      objectReference: {fileID: 1923077944713246, guid: bc5d32d8d386e0e4bad855e750eee399,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 114045498593714970, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c5b2929a46d27be4da335a1877fbce59, type: 2}
@@ -4116,7 +4122,7 @@ SpriteRenderer:
   m_Size: {x: 14.68, y: 8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &758009346
 GameObject:
@@ -4193,7 +4199,7 @@ SpriteRenderer:
   m_Size: {x: 22.02, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &790162980
 GameObject:
@@ -10057,7 +10063,7 @@ SpriteRenderer:
   m_Size: {x: 14.606675, y: 8.826273}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &1680628714
 GameObject:
@@ -12038,7 +12044,7 @@ SpriteRenderer:
   m_Size: {x: 17.616, y: 9.6}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &2120865199
 GameObject:
