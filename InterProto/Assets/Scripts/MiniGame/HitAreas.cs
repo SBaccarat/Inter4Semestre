@@ -16,7 +16,7 @@ public class HitAreas : MonoBehaviour
 
     private void ChangePosition()
     {
-        var rnd = new System.Random((gameObject.name + Time.time).GetHashCode());
+        var rnd = new System.Random((gameObject.name + Time.time).GetHashCode()*Random.Range(1,10));
 
         var randTime = (float) rnd.NextDouble() * 1.5f;
         var randSide = rnd.Next(0, 100);

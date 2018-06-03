@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,7 @@ public class MiniGameManeger : MonoBehaviour
 	private GameObject[] _florPreta;
 	private int _contagem;
     public Animator Anim;
+	public GameObject StteOk, StteRuim;
 	public List<GameObject> Senha;
 	public GameObject Tutorial;
 	public static MiniGameManeger Instace;
@@ -30,15 +32,22 @@ public class MiniGameManeger : MonoBehaviour
 			Senha.Add(choseColor.GetCores());
 		}
 
-		if (_contagem!=0)
+		if (_contagem<=2)
 		{
-			Tutorial.SetActive(false);
-			_florPreta = new GameObject[_contagem];
-			for (int i = 0; i < _florPreta.Length; i++)
-				_florPreta[i] = (GameObject) Instantiate(FlorPretaPrefab);
-			return;
+			if (_contagem>=2)
+			{
+				Tutorial.SetActive(false);
+				StteOk.SetActive(false);
+				StteRuim.SetActive(true);
+			}
+			if (_contagem < 4)
+			{
+				_florPreta = new GameObject[_contagem + 2];
+				for (int i = 0; i < _florPreta.Length; i++)
+					_florPreta[i] = (GameObject) Instantiate(FlorPretaPrefab);
+			}
+			Invoke("SomeTutorial",10);
 		}
-		Invoke("SomeTutorial",4);
 	}
 
 	private void SomeTutorial()
@@ -54,7 +63,7 @@ public class MiniGameManeger : MonoBehaviour
 		{
 			_once = true;
 			var flores = FindObjectsOfType<HitAreas>();
-			PlayerPrefs.SetInt("MinigameCount",_contagem+1);
+			PlayerPrefs.SetInt("MinigameCount",_contagem+2);
 			foreach (var colliders in flores)
 			{
 				colliders.gameObject.SetActive(false);
