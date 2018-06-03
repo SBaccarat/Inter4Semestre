@@ -3723,6 +3723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Fade: {fileID: 1923077944713246, guid: bc5d32d8d386e0e4bad855e750eee399, type: 2}
+  ButtonContinue: {fileID: 1136213051}
 --- !u!1 &1577198804
 GameObject:
   m_ObjectHideFlags: 0
