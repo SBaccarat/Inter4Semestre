@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 636b25bb8a553f94eb864d0817a7fc8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fade: {fileID: 1923077944713246, guid: bc5d32d8d386e0e4bad855e750eee399, type: 2}
 --- !u!212 &1507357180
 SpriteRenderer:
   m_ObjectHideFlags: 0
