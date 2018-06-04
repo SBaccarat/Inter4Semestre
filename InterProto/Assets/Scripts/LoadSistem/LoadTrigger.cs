@@ -8,12 +8,13 @@ public class LoadTrigger : MonoBehaviour {
 
     public void LoadScene(string Scene)
     {
+        Time.timeScale = 1;
         Instantiate(Fade);
         StartCoroutine(Load(Scene));
     }
-   IEnumerator Load(string Level)
-    {
-        Destroy(Fade);
+
+    IEnumerator Load(string Level)
+    {        
         yield return new WaitForSeconds(0.7f);
         MyLoad.Loading(Level);
     }
