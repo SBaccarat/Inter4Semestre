@@ -1242,6 +1242,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 114920638910177326, guid: 2f3777cfb9b37a941ba9ec63880393ee,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 224802743236639156, guid: 2f3777cfb9b37a941ba9ec63880393ee,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -1379,6 +1384,31 @@ Prefab:
     - target: {fileID: 1302176502256694, guid: 2f3777cfb9b37a941ba9ec63880393ee, type: 2}
       propertyPath: m_Name
       value: voltar
+      objectReference: {fileID: 0}
+    - target: {fileID: 114920638910177326, guid: 2f3777cfb9b37a941ba9ec63880393ee,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114920638910177326, guid: 2f3777cfb9b37a941ba9ec63880393ee,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114920638910177326, guid: 2f3777cfb9b37a941ba9ec63880393ee,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 928402159}
+    - target: {fileID: 114920638910177326, guid: 2f3777cfb9b37a941ba9ec63880393ee,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SaveGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114920638910177326, guid: 2f3777cfb9b37a941ba9ec63880393ee,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f3777cfb9b37a941ba9ec63880393ee, type: 2}
@@ -5092,6 +5122,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96f037f0b5426aa4bad8e0c5089933c9, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &928402159 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114082249815182584, guid: 96f037f0b5426aa4bad8e0c5089933c9,
+    type: 2}
+  m_PrefabInternal: {fileID: 928402158}
+  m_Script: {fileID: 11500000, guid: 92a90c4e0080c654fa4dc2e94b76006a, type: 3}
 --- !u!1001 &959516511
 Prefab:
   m_ObjectHideFlags: 0
