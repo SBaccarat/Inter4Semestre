@@ -36,23 +36,33 @@ public class CliclToMove : MonoBehaviour {
 #if UNITY_EDITOR
 
         // checa o input para realizar a movimentaçao e salva a posiçao do click
-        if (Input.GetMouseButtonUp(0)&&!InteractableBase.ClickOnObject)
+        if (Input.GetMouseButton(0)&&!InteractableBase.ClickOnObject)
         {
             newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             inComing = true;
             
+        }
+        if (Input.GetMouseButtonUp(0)&&!InteractableBase.ClickOnObject)
+        {
+            inComing = false;
+            Direçao = 0;
         }
 
 #endif
 
 #if UNITY_STANDALONE_WIN
 
-        // checa o input para realizar a movimentaçao e salva a posiçao do click
-        if (Input.GetMouseButtonUp(0)&&!InteractableBase.ClickOnObject)
+// checa o input para realizar a movimentaçao e salva a posiçao do click
+        if (Input.GetMouseButton(0)&&!InteractableBase.ClickOnObject)
         {
             newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             inComing = true;
             
+        }
+        if (Input.GetMouseButtonUp(0)&&!InteractableBase.ClickOnObject)
+        {
+            inComing = false;
+            Direçao = 0;
         }
 
 #endif
@@ -61,19 +71,16 @@ public class CliclToMove : MonoBehaviour {
         {
             if (Input.GetTouch(0).phase == TouchPhase.Began && !InteractableBase.ClickOnObject)
             {
-                _movedFinguer = false;
-            }
-            if (Input.GetTouch(0).phase == TouchPhase.Moved && !InteractableBase.ClickOnObject)
-            {
-                _movedFinguer = true;
+                newPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+                inComing = true;
+
             }
             if (Input.GetTouch(0).phase == TouchPhase.Ended && !InteractableBase.ClickOnObject)
             {
-                if (!_movedFinguer)
-                {
-                    newPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-                    inComing = true;
-                }
+              
+                inComing = false;
+                Direçao = 0;
+
             }
         }
         
@@ -92,9 +99,7 @@ public class CliclToMove : MonoBehaviour {
             if (transform.position.x > newPos.x - .8f && transform.position.x < newPos.x + .8f)
             {
                 Direçao = 0;
-                inComing = false;
             }
-
         }
 
     }
