@@ -169,11 +169,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: cd5d2702a38a890458a3a0635f525d76, type: 3}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: c33d0a6a5e66db547a16d6a60964734b, type: 3}
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -181,14 +181,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\nMuitas fam\xEDlias moram em corti\xE7os espalhados pelo centro de S\xE3o
-    Paulo, trabalhadores informais deixam suas crian\xE7as dentro do quarto enquanto
-    v\xE3o ganhar o p\xE3o de cada dia, para as crian\xE7as \xE9 dif\xEDcil a vida
-    dentro de um quarto \xFAmido, mal ventilado e mal iluminado.\n\nAs crian\xE7as
-    que t\xEAm a sorte de frequentar uma creche ou escola conseguem crescer com mais
-    liberdade e sa\xFAde, mas aquelas que n\xE3o conseguem uma vaga, os poucos momentos
-    que saem do quarto s\xE3o para fazer obriga\xE7\xF5es de casa, e s\xE3o expostas
-    as dificuldades e situa\xE7\xF5es terriv\xE9is para \nseu desenvolvimento.."
+  m_Text: "\nMuitas fam\xEDlias moram em corti\xE7os espalhados pelo centro \nde S\xE3o
+    Paulo, trabalhadores informais deixam suas crian\xE7as \ndentro do quarto enquanto
+    v\xE3o ganhar o p\xE3o de cada dia, \npara as crian\xE7as \xE9 dif\xEDcil a vida
+    dentro de um quarto \xFAmido, \nmal ventilado e mal iluminado.\n\nAs crian\xE7as
+    que t\xEAm a sorte de frequentar uma creche \nou escola conseguem crescer com
+    mais liberdade e sa\xFAde, \nmas aquelas que n\xE3o conseguem uma vaga, os poucos
+    \nmomentos que saem do quarto s\xE3o para fazer obriga\xE7\xF5es \nde casa, e
+    s\xE3o expostas as dificuldades e situa\xE7\xF5es terriv\xE9is \npara seu desenvolvimento.."
 --- !u!222 &766883412
 CanvasRenderer:
   m_ObjectHideFlags: 0
