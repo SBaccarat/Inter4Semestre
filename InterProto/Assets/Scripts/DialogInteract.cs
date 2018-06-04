@@ -137,7 +137,7 @@ public class DialogInteract : InteractableBase
         }
         else if (WhatNpc == NPC.Fogao)//se a quest for x, checa se a missao foi concluida e muda o dialogo
         {
-            SeeText = "Um fogão velho e caindo aos pedaços. É todo improvidado e sempre da ruim!!";
+            SeeText = "Um fogão velho e caindo aos pedaços. É todo improvidado e sempre quebra!!";
             StartCoroutine(Type(SeeText));
         }
         else if (WhatNpc == NPC.Cota)//se a quest for x, checa se a missao foi concluida e muda o dialogo

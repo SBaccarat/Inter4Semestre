@@ -43,6 +43,18 @@ public class CliclToMove : MonoBehaviour {
         }
 
 #endif
+
+#if UNITY_STANDALONE_WIN
+
+        // checa o input para realizar a movimentaçao e salva a posiçao do click
+        if (Input.GetMouseButtonUp(0)&&!InteractableBase.ClickOnObject)
+        {
+            newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            inComing = true;
+            
+        }
+
+#endif
 #if PLATFORM_ANDROID
         if (Input.touchCount == 1)
         {
