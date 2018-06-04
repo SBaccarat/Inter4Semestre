@@ -48,7 +48,7 @@ public class SimpleInvertory : MonoBehaviour {
             toalhaIcon.SetActive(false);
         }
 
-        if (MiniGameInteract.Piked)
+        if (MiniGameInteract.Piked && QuestLog.MainQuestStaus < 6)
         {
             BonecaIcon.SetActive (true);
         }
