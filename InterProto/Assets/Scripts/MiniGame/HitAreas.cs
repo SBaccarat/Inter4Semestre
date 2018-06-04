@@ -43,23 +43,6 @@ public class HitAreas : MonoBehaviour
 
     void Update()
     {
-#if PLATFORM_ANDROID
-         if (Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-
-            if (hit.collider != null)
-            {
-                var flor = hit.collider.gameObject;
-                MiniGameManeger.Instace.Florclicada = flor;
-                MiniGameManeger.Instace.CheckColor(hit.collider.name);
-                flor.transform.DOShakePosition(0.8f,0.2f,5);
-
-            }
-        }
-#endif
-#if UNITY_EDITOR
         if (Input.GetMouseButtonDown(0))
         {
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -74,23 +57,5 @@ public class HitAreas : MonoBehaviour
 
             }
         }
-#endif
-
-#if UNITY_STANDALONE_WIN
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
-
-            if (hit.collider != null)
-            {
-                var flor = hit.collider.gameObject;
-                MiniGameManeger.Instace.Florclicada = flor;
-                MiniGameManeger.Instace.CheckColor(hit.collider.name);
-                flor.transform.DOShakePosition(0.8f,0.2f,5);
-
-            }
-        }
-#endif
     }
 }

@@ -33,7 +33,6 @@ public class CliclToMove : MonoBehaviour {
         if (Direçao >= 0) { Sprite.flipX = false; }
         if (Direçao < 0) { Sprite.flipX = true; }
 
-#if UNITY_EDITOR
 
         // checa o input para realizar a movimentaçao e salva a posiçao do click
         if (Input.GetMouseButton(0)&&!InteractableBase.ClickOnObject)
@@ -47,44 +46,6 @@ public class CliclToMove : MonoBehaviour {
             inComing = false;
             Direçao = 0;
         }
-
-#endif
-
-#if UNITY_STANDALONE_WIN
-
-// checa o input para realizar a movimentaçao e salva a posiçao do click
-        if (Input.GetMouseButton(0)&&!InteractableBase.ClickOnObject)
-        {
-            newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            inComing = true;
-            
-        }
-        if (Input.GetMouseButtonUp(0)&&!InteractableBase.ClickOnObject)
-        {
-            inComing = false;
-            Direçao = 0;
-        }
-
-#endif
-#if PLATFORM_ANDROID
-        if (Input.touchCount == 1)
-        {
-            if (Input.GetTouch(0).phase == TouchPhase.Began && !InteractableBase.ClickOnObject)
-            {
-                newPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-                inComing = true;
-
-            }
-            if (Input.GetTouch(0).phase == TouchPhase.Ended && !InteractableBase.ClickOnObject)
-            {
-              
-                inComing = false;
-                Direçao = 0;
-
-            }
-        }
-        
-#endif
 
         // realiza o movimento baseado na posiçao do click
 
