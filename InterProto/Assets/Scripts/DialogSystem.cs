@@ -39,8 +39,8 @@ public class DialogSystem : MonoBehaviour {
                     Character = Stte;
                     OtherPerson = Mae;
                     sentences = new string[3];
-                    sentences[0] = "Eu nao vou mais falar ou você levanta ou vai ficar sem pão hoje!";
-                    sentences[1] = "Hmmm... Eu ainda to com sono mãe...";
+                    sentences[0] = "ACORDA! Eu nao vou mais falar ou você levanta ou vai ficar sem pão hoje!";
+                    sentences[1] = "Hmmm... Eu ainda to com sono tia...";
                     sentences[2] = "Levanta logo menina, seu irmão ja foi até buscar água, e você dormindo!! Come logo seu pão e não reclama!";
 
                 }
@@ -54,7 +54,7 @@ public class DialogSystem : MonoBehaviour {
                     sentences[1] = "Nem começa, tenho culpa não, os homi tavam tocando o povo da rua, não dava para passar! Achou que demorei? Vai você!";
                     sentences[2] = "E deixar você cuidando do Mauricio? Nem em sonho, seu moleque!";
                     sentences[3] = "Eu não sou moleque não!";
-                    sentences[4] = "Ta ta ta, não enche as minhas ventas! Pega a sua irmã e leva pra tomar banho.";
+                    sentences[4] = "Tá tá tá, não enche as minhas ventas! Pega a sua irmã e leva pra tomar banho.";
                     sentences[5] = "Calma, eu tenho que fazer uma fita antes, é o tempo dela pegar a toalha e me encontrar na fila...";
                     sentences[6] = "Oxi!! fazer o que moleque?? Cê sabe que tem que levar ela";
                     sentences[7] = "Não sou moleque! E ela tambem não é mais criança. O caminho é facil, só decer a escada e ir pra esquerda até o patio!";
@@ -66,9 +66,9 @@ public class DialogSystem : MonoBehaviour {
                     sentences = new string[7];
                     sentences[0] = "Tem como você me ajudar Everson? Ou eu cozinho ou cuido do Mauricio";
                     sentences[1] = "Ele não para de chorar eu já cansei..";
-                    sentences[2] = "Para de ser idiota menino, pega ele no colo!! AONDE VOCÊ PENSA QUE VAI???";
+                    sentences[2] = "Para de ser idiota menino, pega ele no colo! AONDE VOCÊ PENSA QUE VAI?";
                     sentences[3] = "Eu vou sair pra fumar se vira ai...";
-                    sentences[4] = "Como assim? Não, Everson!! EVERSON!! Você vai ver só quando a mãe voltar..";
+                    sentences[4] = "Como assim? Não, Everson! EVERSON! Você vai ver só quando a mãe voltar..";
                     sentences[5] = "Nem to te ouvindo mais.. (voz de longe)";
                     sentences[6] = "Stteffany me ajuda aqui menina, mexe a panela pra não queimar o almoço! Anda rápido!";
                     QuestLog.MainQuestStaus = 6;

@@ -92,7 +92,7 @@ public class DialogInteract : InteractableBase
             {
                 if (QuestLog.MainQuestStaus == 1)
                 {
-                SeeText = "Minha mãe parece brava, melhor eu fazer o que ela mandou...";
+                SeeText = "Minha tia parece brava, melhor eu fazer o que ela mandou...";
                 StartCoroutine(Type(SeeText));
                 }
                 else if(QuestLog.MainQuestStaus == 2)
@@ -137,12 +137,12 @@ public class DialogInteract : InteractableBase
         }
         else if (WhatNpc == NPC.Fogao)//se a quest for x, checa se a missao foi concluida e muda o dialogo
         {
-            SeeText = "Um fogão velho e caindo aos pedaços. É todo improvidado e sempre quebra!!";
+            SeeText = "Um fogão velho e caindo aos pedaços. É todo improvidado e sempre quebra..";
             StartCoroutine(Type(SeeText));
         }
         else if (WhatNpc == NPC.Cota)//se a quest for x, checa se a missao foi concluida e muda o dialogo
         {
-            SeeText = "Um Senhor japonês, ele fuma um cigarro, e olha pro céu com um olhar estranho...";
+            SeeText = "Um Senhor japonês, ele fuma um cigarro, e olha pro céu com um olhar estranho..";
             StartCoroutine(Type(SeeText));
         }
         else if (WhatNpc == NPC.Vendedor)//se a quest for x, checa se a missao foi concluida e muda o dialogo
@@ -182,7 +182,7 @@ public class DialogInteract : InteractableBase
                 {
                     CharacterFirst = true;
                     InteractionSentences = new string[3];
-                    InteractionSentences[0] = "Pronto mãe.";
+                    InteractionSentences[0] = "Pronto tia.";
                     InteractionSentences[1] = "Ótimo! Agora brinca quietinha aí que seu irmão já está voltando, dai ele leva você pro banho.";
                     InteractionSentences[2] = "Tá! Vou brincar, minha bela bailarina me aguarda!";
                     QuestLog.MainQuestStaus = 2;
