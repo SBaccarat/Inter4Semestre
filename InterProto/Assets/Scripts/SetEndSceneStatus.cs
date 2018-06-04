@@ -9,6 +9,8 @@ public class SetEndSceneStatus : MonoBehaviour {
 
     public GameObject FadePanel;
 
+    private bool Callfade = true;
+
     static public bool CallOneTime =false;
 
     private void Update()
@@ -20,6 +22,12 @@ public class SetEndSceneStatus : MonoBehaviour {
         }
         else
         {
+            if (Callfade)
+            {
+                CallOneTime = true;
+                Callfade = false;
+            }
+
             BgCasa.SetActive(false);
             BgParque.SetActive(true);
         }
