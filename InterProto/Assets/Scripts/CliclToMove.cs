@@ -12,7 +12,8 @@ public class CliclToMove : MonoBehaviour {
     public Animator Anim;
     public SpriteRenderer Sprite;
     private bool _movedFinguer;
-
+    public AudioSource tosse;
+    public AudioSource walk;
 
     private void Start()
     {
@@ -23,8 +24,8 @@ public class CliclToMove : MonoBehaviour {
 
     private void Update()
     {
-        
 
+        
         // aplica as forças vetorias no objeto
         rgb.velocity = new Vector2(Speed * Direçao, rgb.velocity.y);
 
@@ -95,6 +96,16 @@ public class CliclToMove : MonoBehaviour {
             }
 
         }
+
+    }
+
+    public void tosseSom() {
+           tosse.Play();            
+    }
+
+    public void walkSom()
+    {
+        walk.Play();
 
     }
 
