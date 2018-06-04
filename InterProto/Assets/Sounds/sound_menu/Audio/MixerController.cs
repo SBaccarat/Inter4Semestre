@@ -74,5 +74,22 @@ public class MixerController : MonoBehaviour
         sliderEfeitos.value = PlayerPrefs.GetFloat("volumeEfeitos");
     }
 
+    public void SomSalvarDadosVolume() {
+        //aqui quando entra no menu volume ele salva
+        PlayerPrefs.SetFloat("masterVolumeMemoria", PlayerPrefs.GetFloat("masterVolume")) ;
+        PlayerPrefs.SetFloat("volumeMusicaMemoria", PlayerPrefs.GetFloat("volumeMusica"));
+        PlayerPrefs.SetFloat("volumeEfeitosMemoria", PlayerPrefs.GetFloat("volumeEfeitos"));
+
+    }
+    public void CancelarCarregarDadosVolume()
+    {
+        //usa no cancelar
+        PlayerPrefs.SetFloat("masterVolume", PlayerPrefs.GetFloat("masterVolumeMemoria"));
+        PlayerPrefs.SetFloat("volumeMusica", PlayerPrefs.GetFloat("volumeMusicaMemoria"));
+        PlayerPrefs.SetFloat("volumeEfeitos", PlayerPrefs.GetFloat("volumeEfeitosMemoria"));
+        sliderMaster.value = PlayerPrefs.GetFloat("masterVolume");
+        sliderMusica.value = PlayerPrefs.GetFloat("volumeMusica");
+        sliderEfeitos.value = PlayerPrefs.GetFloat("volumeEfeitos");
+    }
 
 }
