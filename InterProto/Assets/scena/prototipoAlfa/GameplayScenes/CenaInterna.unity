@@ -813,7 +813,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4452884881817752, guid: 6a5ceec76a897cf468e8bea798eade0b, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114420420614533170, guid: 6a5ceec76a897cf468e8bea798eade0b, type: 2}

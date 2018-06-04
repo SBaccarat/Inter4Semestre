@@ -38,11 +38,16 @@ public class MiniGameManeger : MonoBehaviour
 				StteOk.SetActive(false);
 				StteRuim.SetActive(true);
 			}
-			if (_contagem < 4)
+			if (_contagem <= 4)
 			{
 				_florPreta = new GameObject[_contagem + 2];
 				for (int i = 0; i < _florPreta.Length; i++)
 					_florPreta[i] = (GameObject) Instantiate(FlorPretaPrefab);
+			}
+			else
+			{
+				StteOk.SetActive(true);
+				StteRuim.SetActive(false);
 			}
 			Invoke("SomeTutorial",10);
 		}
