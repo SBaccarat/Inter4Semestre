@@ -54,7 +54,7 @@ public class Menu : MonoBehaviour {
 
     void LoadNewCene()
     {
-        Destroy(Fade);
+       Fade.SetActive(false);
         MyLoad.Loading(SceneToLoad);
     }
 
