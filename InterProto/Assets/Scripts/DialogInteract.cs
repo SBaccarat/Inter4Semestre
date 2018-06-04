@@ -194,11 +194,17 @@ public class DialogInteract : InteractableBase
                 InteractionSentences = new string[1];
                 InteractionSentences[0] = "Me ouviu não menina?! Vai brincar, e some da minha frente!!";
             }
+            else if (QuestLog.MainQuestStaus > 2)
+            {
+                CharacterFirst = false;
+                InteractionSentences = new string[1];
+                InteractionSentences[0] = "To ocupada menina, vai arranjar o que fazer!!";
+            }
         }
         else if (WhatNpc == NPC.Irmao)
         {
 
-            if (QuestLog.MainQuestStaus == 3)
+            if (QuestLog.MainQuestStaus <= 3)
             {
                 if (Persistence.toalhaStatus == 1)
                 {
@@ -230,11 +236,17 @@ public class DialogInteract : InteractableBase
                 InteractionSentences = new string[1];
                 InteractionSentences[0] = "Brinca ai no chão então.. Nossa vez ainda vai demorar..";
             }
-            else if (QuestLog.MainQuestStaus == 5)
+            else if (QuestLog.MainQuestStaus >= 5)
             {
                 CharacterFirst = false;
                 InteractionSentences = new string[1];
-                InteractionSentences[0] = "Anda logo, cê vai perder a vez.. to falando..";
+                InteractionSentences[0] = "Anda logo, cê vai perder a vez.. To falando..";
+            }
+            else 
+            {
+                CharacterFirst = false;
+                InteractionSentences = new string[1];
+                InteractionSentences[0] = "Sa daqui minina burra, c ta no logar errado do jogo!";
             }
         }
         else if (WhatNpc == NPC.EstranhosFila)
@@ -278,7 +290,7 @@ public class DialogInteract : InteractableBase
             {
                 CharacterFirst = false;
                 InteractionSentences = new string[1];
-                InteractionSentences[0] = "Anda logo mana! Calma ai, eu sou uma só!";
+                InteractionSentences[0] = "Anda logo mana! Eu sou uma só!";
 
             }
             else if (QuestLog.MainQuestStaus == 7)
@@ -303,6 +315,13 @@ public class DialogInteract : InteractableBase
                 InteractionSentences[8] = "Tá tá entendi";
                 InteractionSentences[9] = "Toma o dinheiro, vê se não perde.";
                 QuestLog.MainQuestStaus = 9;
+            }
+            else 
+            {
+                CharacterFirst = false;
+                InteractionSentences = new string[1];
+                InteractionSentences[0] = "Anda logo maninha!!";
+
             }
 
         }
@@ -340,7 +359,7 @@ public class DialogInteract : InteractableBase
                 InteractionSentences[8] = "Acho que tem um maço lá em casa, já volto.";
                 QuestLog.MainQuestStaus = 8;
             }
-            if (QuestLog.MainQuestStaus == 10)
+            else if (QuestLog.MainQuestStaus == 10)
             {
                 CharacterFirst = false;
                 InteractionSentences = new string[5];
@@ -350,6 +369,14 @@ public class DialogInteract : InteractableBase
                 InteractionSentences[3] = "Obrigada senhor Cota.";
                 InteractionSentences[4] = "Agora vocês podem terminar o almoço.";
                 QuestLog.MainQuestStaus = 11;
+            }
+            else
+            {
+                CharacterFirst = false;
+                InteractionSentences = new string[3];
+                InteractionSentences[0] = "Tá dando pé ai?";
+                InteractionSentences[1] = "Ainda não entendi o que isso significa...";
+                InteractionSentences[2] = "Hehehe... Esquece jovem.";
             }
         }
         else if (WhatNpc == NPC.Vendedor)
@@ -365,6 +392,14 @@ public class DialogInteract : InteractableBase
                 InteractionSentences[4] = "Belê belê, tá aqui o cigarro.";
                 InteractionSentences[5] = "Obrigado senhor.";
                 QuestLog.MainQuestStaus = 10;
+            }
+            else
+            {
+                CharacterFirst = false;
+                InteractionSentences = new string[3];
+                InteractionSentences[0] = "E ai garota, querendo alguma coisa ?";
+                InteractionSentences[1] = "Não, nada por agora.";
+                InteractionSentences[2] = "Precisando eu to aqui...";
             }
         }
 
