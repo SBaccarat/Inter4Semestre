@@ -7,7 +7,7 @@ public class Destroy : MonoBehaviour {
 
     public void TrullyDestroy()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
     public void DestroySelf()

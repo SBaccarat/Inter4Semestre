@@ -63,7 +63,7 @@ public class MiniGameInteract : InteractableBase {
     void LoadBailarina()
     {
         MyLoad.Loading("Bailarina");
-        Destroy(Fade);
+        Fade.SetActive(false);
     }
 
     public void BottonVer()

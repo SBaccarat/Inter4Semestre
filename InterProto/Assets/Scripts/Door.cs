@@ -44,7 +44,7 @@ public class Door : MonoBehaviour {
     }
     void LoadNewScene()
     {
-        Destroy(FadeExit);
+        FadeExit.SetActive(false);
         SceneManager.LoadScene(NextCene);
         Persistence.NewPos = setPos;
     }
