@@ -89,22 +89,23 @@ public class DialogInteract : InteractableBase
     public void BottonVer()//Funçao que deve ser chamada caso o botao ver desse item seja pressionado 
     {
              if (WhatNpc == NPC.Mae)//se a quest for x, checa se a missao foi concluida e muda o dialogo
-            {
+             {
                 if (QuestLog.MainQuestStaus == 1)
                 {
                 SeeText = "Minha tia parece brava, melhor eu fazer o que ela mandou...";
                 StartCoroutine(Type(SeeText));
                 }
                 else if(QuestLog.MainQuestStaus == 2)
-            {
+                {
                 SeeText = "Agora ela parece estar mais calma.";
                 StartCoroutine(Type(SeeText));
                 }
-                else {
+                else
+                {
                 SeeText = "Ela ta ocupada, cuidando do meu irmãozinho.";
                 StartCoroutine(Type(SeeText));
-            }
-            }
+                }
+             }
         else if (WhatNpc == NPC.Irmao)//se a quest for x, checa se a missao foi concluida e muda o dialogo
         {
             if (QuestLog.MainQuestStaus == 3)
@@ -121,12 +122,12 @@ public class DialogInteract : InteractableBase
         {
             if (QuestLog.MainQuestStaus == 6)
             {
-                SeeText = "Ela segura o Mauricio em uma mão enquanto com a outra aponta deseesperada para o fogão...";
+                SeeText = "Ela segura o Mauricio enquanto aponta para o fogão...";
                 StartCoroutine(Type(SeeText));
             }
-            else
+            if (QuestLog.MainQuestStaus > 6)
             {
-                SeeText = "Ela parece cansada, triste e impaciente. Melhor pegar o botijão logo... ";
+                SeeText = "Ela parece cansada, triste e impaciente. ";
                 StartCoroutine(Type(SeeText));
             }
         }
@@ -147,7 +148,7 @@ public class DialogInteract : InteractableBase
         }
         else if (WhatNpc == NPC.Vendedor)//se a quest for x, checa se a missao foi concluida e muda o dialogo
         {
-            SeeText = "É um homem bigodudo, bem diferente de como eu imaginava. Não parece tao assustador, mas tem um olhar suspeito...";
+            SeeText = "É um homem bigodudo, bem diferente de como eu imaginava.";
             StartCoroutine(Type(SeeText));
         }
 
