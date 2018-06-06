@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Menu : MonoBehaviour {
+public class Menu : MonoBehaviour
+{
 
     string SceneToLoad;
     public GameObject Fade;
@@ -20,6 +21,16 @@ public class Menu : MonoBehaviour {
         {
             ButtonContinue.SetActive(false);
         }
+    }
+
+    public void GoToGrigo()
+    {
+        Application.OpenURL("https://bernardvanleer.org/pt-br/");
+    }
+
+    public void GoToAto()
+    {
+        Application.OpenURL("http://atocidadao.org.br/projeto/crianca-e-central/");
     }
 
     public void NewGame()
