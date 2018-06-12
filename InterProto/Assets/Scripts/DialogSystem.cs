@@ -42,7 +42,6 @@ public class DialogSystem : MonoBehaviour {
                     sentences[0] = "ACORDA! Eu nao vou mais falar ou você levanta ou vai ficar sem pão hoje!";
                     sentences[1] = "Hmmm... Eu ainda to com sono tia...";
                     sentences[2] = "Levanta logo menina, seu irmão ja foi até buscar água, e você dormindo!! Come logo seu pão e não reclama!";
-
                 }
                 else
                 if (Persistence.SceneQuartoStatus == 2)
@@ -107,7 +106,7 @@ public class DialogSystem : MonoBehaviour {
                 sentences[7] = "Vocês precisam de ajuda? Teria alguma coisa que eu possa fazer?";
                 sentences[8] = "Então toda ajuda é bem vida!"; 
                     //Precisamos de voluntários, doações de brinquedos e roupas, e podem contribuir monetariamente também";
-            }
+            }else
             if (Persistence.Scene == 9)
             {
                 Character = RandomNpc1;
@@ -144,7 +143,7 @@ public class DialogSystem : MonoBehaviour {
 
     public void NextSentence()
     {
-        //NextButton.SetActive(false);
+        
         if (Index < sentences.Length - 1)
         {
             Character.SetActive(!Character.activeSelf);
@@ -186,7 +185,6 @@ public class DialogSystem : MonoBehaviour {
             {
                 MyLoad.Loading("Bailarina");
             }
-
         }
     }
 

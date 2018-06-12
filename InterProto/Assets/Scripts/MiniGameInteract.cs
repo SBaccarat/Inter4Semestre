@@ -105,6 +105,6 @@ public class MiniGameInteract : InteractableBase {
     {
         MainText.text = "";
         PanelSee.SetActive(false);
-        StartCoroutine(ReturToMove());
+        ClickOnObject = false;
     }
 }

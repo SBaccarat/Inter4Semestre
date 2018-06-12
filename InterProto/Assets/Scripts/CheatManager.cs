@@ -49,7 +49,6 @@ public class CheatManager : MonoBehaviour {
     public void CenaFinal()
     {
         MyLoad.Loading("EndGameScene");
-        DialogSystem.FirstDialog = true;
     }
 
 
