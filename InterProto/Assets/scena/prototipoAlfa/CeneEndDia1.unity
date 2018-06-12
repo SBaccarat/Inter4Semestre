@@ -146,8 +146,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 9, y: -14.5}
-  m_SizeDelta: {x: 0, y: 30}
+  m_AnchoredPosition: {x: -8, y: -0.65}
+  m_SizeDelta: {x: -51, y: -1.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &766883411
 MonoBehaviour:
@@ -172,10 +172,10 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: c33d0a6a5e66db547a16d6a60964734b, type: 3}
     m_FontSize: 15
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 1084049800}
   - component: {fileID: 1084049804}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Camera/Manager
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -248,7 +248,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -296,10 +296,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1084049799}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 636b25bb8a553f94eb864d0817a7fc8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e98a2072728b264eb2605610069e299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Fade: {fileID: 1923077944713246, guid: bc5d32d8d386e0e4bad855e750eee399, type: 2}
 --- !u!1 &1344325776
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,14 +532,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1084049804}
-        m_MethodName: LoadScene
+        m_MethodName: DirectLoadScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: CenaInterna
+          m_StringArgument: DonnatioSCene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

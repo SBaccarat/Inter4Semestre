@@ -13,6 +13,12 @@ public class SetEndSceneStatus : MonoBehaviour {
 
     static public bool CallOneTime =false;
 
+    private void Start()
+    {
+        InteractableBase.ClickOnObject = true;
+        DialogSystem.FirstDialog = true;
+    }
+
     private void Update()
     {
         if (Persistence.Scene == 7)

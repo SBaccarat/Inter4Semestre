@@ -22,7 +22,7 @@ public class DialogInteract : InteractableBase
     bool CharacterFirst;// é true quando o personagem comessa falando em um dialogo 
 
     string SeeText;//texto da primeira fala do npc
-    float typingSpeed = 0.04f; //velocidade de digitaçao
+    float typingSpeed = 0.02f; //velocidade de digitaçao
     public GameObject PanelSee;//painel da opçao ver 
     public GameObject ButtonExitSee;//botao pra pular de texto
     public Text MainText;
@@ -133,6 +133,7 @@ public class DialogInteract : InteractableBase
         }
         else if (WhatNpc == NPC.EstranhosFila)//se a quest for x, checa se a missao foi concluida e muda o dialogo
         {
+            
             SeeText = "Sao duas pessoas que moram aqui conversando, acho que se eu chegar mais perto eu consigo ouvir...";
             StartCoroutine(Type(SeeText));
         }
@@ -411,6 +412,7 @@ public class DialogInteract : InteractableBase
 
     public IEnumerator Type(string text)//funçao que escreve o texto letra por letra 
     {
+        print(text);
         foreach (char letter in text.ToCharArray()){
             MainText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
@@ -420,6 +422,6 @@ public class DialogInteract : InteractableBase
     public void SeeClose()//funçao que desliga o texto da observaçao 
     {   MainText.text = "";
         PanelSee.SetActive(false);
-        StartCoroutine(ReturToMove());
+        ClickOnObject = false;
     }
 }
