@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class QuestLog : MonoBehaviour {
 
-    public static int MainQuestStaus;
+     public static int MainQuestStaus;
     private string MainQuestString;
 
     public Text QuestLogText;

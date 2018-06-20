@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogSystem : MonoBehaviour {
+public class DialogSystem : MonoBehaviour
+{
 
+    public bool SegundoDia;
     public Text MainText;
     static public string[] sentences;
     static public int Index;
@@ -24,6 +26,18 @@ public class DialogSystem : MonoBehaviour {
     static public bool FirstDialog = true;
     static public bool StartType;
 
+    private void Start()
+    {
+        if (SegundoDia)
+        {
+            Persistence.NewPos = new Vector2(-189, -3.2f);
+            FirstDialog = true;
+            Persistence.SceneQuartoStatus = 3;
+            Persistence.toalhaStatus = 2;
+            MiniGameInteract.Piked = true;
+        }
+    }
+
     private void Update()
     {
         if (FirstDialog)
@@ -42,6 +56,7 @@ public class DialogSystem : MonoBehaviour {
                     sentences[0] = "ACORDA! Eu nao vou mais falar ou você levanta ou vai ficar sem pão hoje!";
                     sentences[1] = "Hmmm... Eu ainda to com sono tia...";
                     sentences[2] = "Levanta logo menina, seu irmão ja foi até buscar água, e você dormindo!! Come logo seu pão e não reclama!";
+                    QuestLog.MainQuestStaus = 1;
                 }
                 else
                 if (Persistence.SceneQuartoStatus == 2)
@@ -118,6 +133,7 @@ public class DialogSystem : MonoBehaviour {
              
             }
 
+            if (!OtherPerson) return;
             OtherPerson.SetActive(true);
             StartCoroutine(Type());
             FirstDialog = false;
